@@ -17,19 +17,20 @@ const SocialNetworks = (props: IProps) => {
 
   return (
     <div className={`flex items-center gap-4 text-${size}`}>
-      <Link href="https://twitter.com/horizons_games">
+      <Link href="https://twitter.com/horizons_games" target="_blank">
         <FontAwesomeIcon icon={faTwitter} />
       </Link>
-      <Link href="https://instagram.com/horizons.games">
+      <Link href="https://instagram.com/horizons.games" target="_blank">
         <FontAwesomeIcon icon={faInstagram} />
       </Link>
-      <Link href="https://twitter.com/horizons_games">
+      <Link href="https://youtube.com/@horizonsgames" target="_blank">
         <FontAwesomeIcon icon={faYoutube} />
       </Link>
-      <Link href="https://tiktok.com/@horizonsgames">
+      <Link href="https://tiktok.com/@horizonsgames" target="_blank">
         <FontAwesomeIcon icon={faTiktok} />
       </Link>
-      <Link href="https://twitter.com/horizons_games">
+      {/* This link should be updated when our company is created in LinkedIn */}
+      <Link href="https://www.linkedin.com/" target="_blank">
         <FontAwesomeIcon icon={faLinkedin} />
       </Link>
     </div>
