@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
       <Layout>
         <ComingSoon />
-        <SocialNetworks size="4xl" />
+        <SocialNetworks />
       </Layout>
     </>
   );
