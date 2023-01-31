@@ -16,7 +16,7 @@ interface IProps {
 const ProfilePicture = ({ partner }: IProps) => {
   return (
     <li className="flex flex-col items-center">
-      <div className="rounded-full relative w-60 h-60">
+      <div className="rounded-full relative w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60">
         <Image
           src={`/${partner.image}`}
           alt={partner.name}
@@ -24,8 +24,8 @@ const ProfilePicture = ({ partner }: IProps) => {
           className="object-cover rounded-full"
         />
       </div>
-      <h2 className="mt-4 text-lg">{partner.name}</h2>
-      <p className="text-md">{partner.role}</p>
+      <h2 className="mt-4 text-lg text-center">{partner.name}</h2>
+      <p className="text-md text-center">{partner.role}</p>
       <SocialNetworks networks={partner.networks} />
     </li>
   );

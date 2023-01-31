@@ -18,7 +18,7 @@ export default function Team() {
       <Layout>
         <h1 className="text-xl mt-2">THE TEAM</h1>
         <hr className="bg-black w-9/12 lg:w-7/12 h-0.5" />
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 my-8">
+        <ul className="grid grid-cols-2 mx-2 sm:mx-8 sm:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-8 md:gap-12 my-8">
           {team.partners.map((partner) => {
             return <ProfilePicture partner={partner} key={partner.name} />;
           })}
