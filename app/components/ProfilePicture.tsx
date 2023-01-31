@@ -5,7 +5,6 @@ interface IProps {
   partner: {
     name: string;
     image: string;
-    role: string;
     networks?: {
       github?: string;
       linkedin?: string;
@@ -24,8 +23,7 @@ const ProfilePicture = ({ partner }: IProps) => {
           className="object-cover rounded-full"
         />
       </div>
-      <h2 className="mt-4 text-lg text-center">{partner.name}</h2>
-      <p className="text-md text-center">{partner.role}</p>
+      <h2 className="mt-4 text-lg text-center font-medium">{partner.name}</h2>
       <SocialNetworks networks={partner.networks} />
     </li>
   );

@@ -127,12 +127,12 @@ export const team = {
       },
     },
     {
-      name: 'Marc Gonzalez',
+      name: 'Marc González',
       image: 'MarcGonzalez.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://www.github.com/MarcGonzalezMoratona',
+        linkedin: 'https://www.linkedin.com/in/marc-gonzalez-moratona/',
       },
     },
     {
