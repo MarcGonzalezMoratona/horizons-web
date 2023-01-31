@@ -128,7 +128,7 @@ export const team = {
     },
     {
       name: 'Marc Gonzalez',
-      image: 'MarcGonzalez.JPG',
+      image: 'MarcGonzalez.jpg',
       role: 'Gameplay Programmer',
       networks: {
         github: 'https://www.github.com',
