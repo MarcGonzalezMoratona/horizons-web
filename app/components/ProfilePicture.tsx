@@ -17,7 +17,7 @@ const ProfilePicture = ({ partner }: IProps) => {
     <li className="flex flex-col items-center">
       <div className="rounded-full relative w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60">
         <Image
-          src={`/${partner.image}`}
+          src={`/team/${partner.image}`}
           alt={partner.name}
           fill
           className="object-cover rounded-full"

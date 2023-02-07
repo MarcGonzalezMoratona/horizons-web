@@ -209,7 +209,7 @@ export const team = {
     },
     {
       name: 'Eric Dacal',
-      image: 'placeholder.jpg',
+      image: 'EricDacal.jpg',
       role: 'Gameplay Programmer',
       networks: {
         github: 'https://www.github.com',
