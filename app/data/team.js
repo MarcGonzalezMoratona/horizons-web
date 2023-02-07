@@ -73,8 +73,8 @@ export const team = {
       },
     },
     {
-      name: 'Andrés Manchado',
-      image: 'AndresManchado.jpg',
+      name: 'Andrés Machado',
+      image: 'AndresMachado.jpg',
       role: 'Gameplay Programmer',
       networks: {
         github: 'https://www.github.com',
