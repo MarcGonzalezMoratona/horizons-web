@@ -1,16 +1,23 @@
 import Link from 'next/link';
 
+import { useState } from 'react';
+ import Menu from './Menu';
+ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+ import { faBars } from '@fortawesome/free-solid-svg-icons';
+
 const Header = () => {
+
+  const [isMenuOpen, toggleMenu] = useState(false);
+
   return (
-    <header className="flex justify-between bg-black text-white text-lg p-6 ">
+    <header className="flex flex-col bg-black text-white text-lg p-6">
+      <div className="flex items-center justify-between">
       <Link href="/">HORIZONS GAMES</Link>
-      <nav>
-        <ul>
-          <li>
-            <Link href="/team">TEAM</Link>
-          </li>
-        </ul>
-      </nav>
+      <div className="flex" onClick={()=>toggleMenu(!isMenuOpen)}>
+            <FontAwesomeIcon icon={faBars} className="text-xl" />
+        </div>
+      </div>
+      <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>
     </header>
   );
 };

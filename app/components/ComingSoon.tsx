@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPersonDigging } from '@fortawesome/free-solid-svg-icons';
+
 const ComingSoon = () => {
   return (
     <div className="w-full flex flex-col items-center gap-4">
