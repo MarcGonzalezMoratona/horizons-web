@@ -2,6 +2,7 @@ import Head from 'next/head';
 import ComingSoon from '../app/components/ComingSoon';
 import Layout from '../app/components/Layout';
 import SocialNetworks from '../app/components/SocialNetworks';
+import { socialNetworks } from '../app/data/socialNetworks';
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
       </Head>
       <Layout>
         <ComingSoon />
-        <SocialNetworks />
+        <SocialNetworks networks={socialNetworks}/>
       </Layout>
     </>
   );
