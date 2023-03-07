@@ -1,16 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPersonDigging } from '@fortawesome/free-solid-svg-icons';
+import useTranslation from 'next-translate/useTranslation';
 
 const ComingSoon = () => {
+  const { t } = useTranslation('common');
+
   return (
     <div className="w-full flex flex-col items-center gap-4">
       <FontAwesomeIcon icon={faPersonDigging} className="text-8xl " />
       <h1 className="text-4xl sm:text-6xl font-semibold text-center mx-2">
-        COMING SOON
+        {t('COMING_SOON').toUpperCase()}
       </h1>
       <h2 className="text-xl sm:text-2xl text-center mx-2">
-        Our website is under construction, follow us in our social networks to
-        stay tuned!
+        {t('UNDER_CONSTRUCTION')}
       </h2>
     </div>
   );
