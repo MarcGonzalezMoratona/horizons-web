@@ -23,6 +23,9 @@ const Header = () => {
             <Link href="/team">
               <li className="mx-4">{t('TEAM')}</li>
             </Link>
+            <Link href="/blog">
+              <li className="mx-4">{t('BLOG')}</li>
+            </Link>
           </ul>
         </nav>
         <div className="hidden sm:block absolute right-4">
