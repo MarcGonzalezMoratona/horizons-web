@@ -5,10 +5,9 @@ import LanguageSelector from './LanguageSelector';
 
 interface IProps {
   isMenuOpen: boolean;
-  toggleMenu: Dispatch<SetStateAction<boolean>>;
 }
 
-const Menu = ({ isMenuOpen, toggleMenu }: IProps) => {
+const Menu = ({ isMenuOpen }: IProps) => {
   const { t } = useTranslation('common');
 
   return (

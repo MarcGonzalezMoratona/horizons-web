@@ -13,9 +13,9 @@ const Header = () => {
 
   return (
     <header className="flex flex-col bg-black text-white text-lg p-6 sm:flex-row">
-      <Link href="/">HORIZONS GAMES</Link>
-      <div className="flex items-center justify-between sm:mx-12">
-        <nav className="hidden sm:block">
+      <div className="flex items-center justify-between">
+        <Link href="/">HORIZONS GAMES</Link>
+        <nav className="hidden sm:block sm:mx-12">
           <ul className="flex">
             <Link href="/">
               <li className="mx-4">{t('HOME')}</li>
@@ -35,7 +35,7 @@ const Header = () => {
           <FontAwesomeIcon icon={faBars} className="text-xl" />
         </div>
       </div>
-      <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+      <Menu isMenuOpen={isMenuOpen} />
     </header>
   );
 };
