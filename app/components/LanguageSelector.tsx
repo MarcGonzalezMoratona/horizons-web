@@ -26,7 +26,7 @@ const LanguageSelector = () => {
       <Select.Trigger className="flex items-center p-2">
         <Select.Value aria-label={value}>{value}</Select.Value>
         <Select.Icon className="mx-2">
-          <ChevronDownIcon className="h-4 w-4" />
+          <ChevronDownIcon className="h-6 w-6" />
         </Select.Icon>
       </Select.Trigger>
       <Select.Content position="popper" className="bg-black">
