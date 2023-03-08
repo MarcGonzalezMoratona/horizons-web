@@ -15,11 +15,6 @@ const Menu = ({ isMenuOpen }: IProps) => {
         <div className="sm:hidden">
           <nav className="bg-black text-white w-full py-3 flex flex-col">
             <ul>
-              <Link href="/">
-                <li className="p-3 rounded bg-white text-black my-3 w-full">
-                  {t('HOME')}
-                </li>
-              </Link>
               <Link href="/team">
                 <li className="p-3 rounded bg-white text-black my-3 w-full">
                   {t('TEAM')}

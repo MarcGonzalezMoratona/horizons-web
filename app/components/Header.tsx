@@ -17,9 +17,6 @@ const Header = () => {
         <Link href="/">HORIZONS GAMES</Link>
         <nav className="hidden sm:block sm:mx-12">
           <ul className="flex">
-            <Link href="/">
-              <li className="mx-4">{t('HOME')}</li>
-            </Link>
             <Link href="/team">
               <li className="mx-4">{t('TEAM')}</li>
             </Link>
