@@ -10,9 +10,9 @@ interface IProps {
     author: string;
     caption: string;
     paragraphs: {
-      heading: string;
+      heading?: string;
       content: string;
-      image: string;
+      image?: string;
     }[];
   };
 }
