@@ -23,13 +23,13 @@ const LanguageSelector = () => {
 
   return (
     <Select.Root value={value} onValueChange={setValue}>
-      <Select.Trigger className="flex items-center p-2">
+      <Select.Trigger className="flex items-center p-2 w-full">
         <Select.Value aria-label={value}>{value}</Select.Value>
         <Select.Icon className="mx-2">
           <ChevronDownIcon className="h-6 w-6" />
         </Select.Icon>
       </Select.Trigger>
-      <Select.Content position="popper" className="bg-black">
+      <Select.Content className="bg-black w-full my-12 z-10">
         <Select.Viewport className="flex flex-col">
           {currentLanguage !== 'Català' && (
             <Select.Item
