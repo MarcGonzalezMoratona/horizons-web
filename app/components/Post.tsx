@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 interface IProps {
   data: {
@@ -9,7 +9,7 @@ interface IProps {
     alt: string;
     date: string;
     author: string;
-    paragraph1?: string;
+    paragraphs: string[];
   };
 }
 
@@ -32,7 +32,7 @@ const Post = ({ data }: IProps) => {
           </div>
           <h1 className="text-xl font-medium">{data.title}</h1>
           <div className="text-justify my-4">
-            <p>{data.paragraph1}</p>
+            <p>{data.paragraphs[0]}</p>
           </div>
           <button className="py-2 px-4 my-1 rounded-sm bg-black text-white">
             READ MORE

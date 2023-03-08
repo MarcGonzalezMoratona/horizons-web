@@ -1,10 +1,13 @@
-import { useRouter } from 'next/dist/client/router';
-import Head from 'next/head';
-import FullPost from '../../../app/components/FullPost';
-import Layout from '../../../app/components/Layout';
-import { posts } from '../../../app/data/posts';
+import useTranslation from "next-translate/useTranslation";
+import { useRouter } from "next/dist/client/router";
+import Head from "next/head";
+import Link from "next/link";
+import FullPost from "../../../app/components/FullPost";
+import Layout from "../../../app/components/Layout";
+import { posts } from "../../../app/data/posts";
 
 export default function Post() {
+  const { t } = useTranslation("common");
   const router = useRouter();
   const id = Number(router.query.post) - 1;
 
@@ -21,6 +24,7 @@ export default function Post() {
       </Head>
       <Layout>
         <div className="mx-8 lg:w-2/3 lg:gap-8">
+          <Link href={"/blog"}>{t("BACK_TO_BLOG").toUpperCase()}</Link>
           <FullPost data={posts} />
         </div>
       </Layout>

@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import RelatedPost from './RelatedPost';
+import Image from "next/image";
+import { useRouter } from "next/router";
+import RelatedPost from "./RelatedPost";
 
 interface IProps {
   data: {
@@ -12,9 +12,7 @@ interface IProps {
     alt: string;
     date: string;
     author: string;
-    paragraph1?: string;
-    paragraph2?: string;
-    paragraph3?: string;
+    paragraphs: string[];
   }[];
 }
 
@@ -43,9 +41,13 @@ const FullPost = ({ data }: IProps) => {
           {data[id].title}
         </h1>
         <h2 className="text-xl py-2 text-justify">{data[id].subtitle}</h2>
-        <p className="my-4 text-justify">{data[id].paragraph1}</p>
-        <p className="my-4 text-justify">{data[id].paragraph2}</p>
-        <p className="my-4 text-justify">{data[id].paragraph3}</p>
+        {data[id].paragraphs.map((paragraph, index) => {
+          return (
+            <p className="my-4 text-justify" key={index}>
+              {paragraph}
+            </p>
+          );
+        })}
         <div className="flex justify-center relative h-96 lg:my-8">
           <Image
             src={`/blog/${data[id].image}`}
