@@ -25,10 +25,12 @@ export default function Post() {
       </Head>
       <Layout>
         <div className="mx-8 lg:w-2/3 lg:gap-8">
-          <div className="flex gap-2 my-4">
-            <ChevronLeftIcon className="h-6 w-6" />
-            <Link href={'/blog'}>{t('BACK_TO_BLOG').toUpperCase()}</Link>
-          </div>
+          <Link href={'/blog'}>
+            <div className="flex gap-2 my-4">
+              <ChevronLeftIcon className="h-6 w-6" />
+              {t('BACK_TO_BLOG').toUpperCase()}
+            </div>
+          </Link>
           <FullPost data={posts} />
         </div>
       </Layout>
