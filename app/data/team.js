@@ -173,7 +173,7 @@ export const team = {
     },
     {
       name: 'Alejandro Matus',
-      image: 'placeholder.jpg',
+      image: 'AlejandroMatus.jpg',
       role: 'Gameplay Programmer',
       networks: {
         github: 'https://www.github.com',
@@ -191,7 +191,7 @@ export const team = {
     },
     {
       name: 'Jesús Miguel Adrián',
-      image: 'placeholder.jpg',
+      image: 'JesusMiguelAdrian.jpg',
       role: 'Gameplay Programmer',
       networks: {
         github: 'https://www.github.com',
@@ -200,7 +200,7 @@ export const team = {
     },
     {
       name: 'Jan Marc Costa',
-      image: 'placeholder.jpg',
+      image: 'JanMarcCosta.jpg',
       role: 'Gameplay Programmer',
       networks: {
         github: 'https://www.github.com',

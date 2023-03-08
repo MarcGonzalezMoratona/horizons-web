@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Dispatch, SetStateAction } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import LanguageSelector from './LanguageSelector';
 
@@ -22,8 +21,13 @@ const Menu = ({ isMenuOpen }: IProps) => {
                 </li>
               </Link>
               <Link href="/team">
-                <li className="p-3 rounded bg-white text-black  my-3 w-full">
+                <li className="p-3 rounded bg-white text-black my-3 w-full">
                   {t('TEAM')}
+                </li>
+              </Link>
+              <Link href="/blog">
+                <li className="p-3 rounded bg-white text-black my-3 w-full">
+                  {t('BLOG')}
                 </li>
               </Link>
             </ul>
