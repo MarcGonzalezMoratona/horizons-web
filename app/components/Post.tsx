@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -15,11 +16,12 @@ interface IProps {
       image?: string;
     }[];
   };
+  locale?: string;
 }
 
-const Post = ({ data }: IProps) => {
+export default function Post({ data, locale }: IProps) {
   return (
-    <Link href={`/blog/${data.id}`}>
+    <Link href={`/blog/${data.id}`} locale={locale}>
       <article className="flex flex-col mx-4 my-4 shadow-md overflow-hidden hover:shadow-lg rounded-md max-h-[800px]">
         <div className="relative w-full h-96 sm:h-64">
           <Image
@@ -45,6 +47,10 @@ const Post = ({ data }: IProps) => {
       </article>
     </Link>
   );
-};
+}
 
-export default Post;
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: { locale },
+  };
+};

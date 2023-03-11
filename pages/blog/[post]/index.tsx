@@ -1,4 +1,5 @@
 import { ChevronLeftIcon } from '@radix-ui/react-icons';
+import { GetStaticProps } from 'next';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
@@ -37,3 +38,26 @@ export default function Post() {
     </>
   );
 }
+
+export type GetStaticPathsContext = {
+  locales: string[];
+};
+
+export const getStaticPaths = async ({ locales }: GetStaticPathsContext) => {
+  const paths = locales?.map((locale) => {
+    return posts.map(({ id }) => {
+      return { params: { post: `${id}` }, locale };
+    });
+  });
+
+  return {
+    paths: paths.flat(),
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {},
+  };
+};
