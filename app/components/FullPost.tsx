@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import React from 'react';
 import RelatedPost from './RelatedPost';
 
 interface IProps {
@@ -34,6 +35,7 @@ const FullPost = ({ data }: IProps) => {
               alt={data[id].author}
               fill
               className="object-cover rounded-full"
+              sizes="(min-width: 320px) 320px"
             />
           </div>
           <p className="text-lg col-span-2 sm:col-span-4 md:col-span-5 lg:col-span-6 xl:col-span-7 ">
@@ -45,18 +47,13 @@ const FullPost = ({ data }: IProps) => {
         <h2 className="text-xl">{data[id].subtitle}</h2>
         {data[id].paragraphs.map((paragraph, index) => {
           return (
-            <>
+            <React.Fragment key={`paragraph ${index}`}>
               {paragraph.heading && (
-                <div
-                  className="my-4 text-lg font-medium"
-                  key={`heading ${index}`}
-                >
+                <div className="my-4 text-lg font-medium">
                   {paragraph.heading}
                 </div>
               )}
-              <p className="my-4" key={`paragraph ${index}`}>
-                {paragraph.content}
-              </p>
+              <p className="my-4">{paragraph.content}</p>
               {paragraph.image && (
                 <div className="flex justify-center relative h-96 lg:my-8">
                   <Image
@@ -64,10 +61,11 @@ const FullPost = ({ data }: IProps) => {
                     alt={data[id].alt}
                     fill
                     className="object-contain"
+                    sizes="(min-width: 320px) 640px, (min-width: 640px) 720px (min-width: 768px) 1080px"
                   />
                 </div>
               )}
-            </>
+            </React.Fragment>
           );
         })}
       </article>
@@ -78,6 +76,7 @@ const FullPost = ({ data }: IProps) => {
             alt={data[id].author}
             fill
             className="object-cover rounded-full"
+            sizes="(min-width: 320px) 320px"
           />
         </div>
         <p className="my-2 font-medium text-lg">{data[id].author}</p>

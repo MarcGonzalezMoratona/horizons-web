@@ -25,6 +25,7 @@ const RelatedPost = ({ data }: IProps) => {
                   alt={data.author}
                   fill
                   className="object-cover rounded-full"
+                  sizes="(min-width: 320px) 320px"
                 />
               </div>
               <p className="text-sm">{data.author}</p>
@@ -35,6 +36,7 @@ const RelatedPost = ({ data }: IProps) => {
                 alt={data.alt}
                 fill
                 className="object-contain"
+                sizes="(min-width: 320px) 320px"
               />
             </div>
             <p className="font-medium col-span-2">{data.title}</p>

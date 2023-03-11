@@ -13,6 +13,7 @@ export const Horizons = ({ className }: IProps) => {
       alt="logo"
       height={48}
       width={48}
+      sizes="(min-width: 320px) 320px"
     />
   );
 };
@@ -25,6 +26,7 @@ export const HorizonsWhite = ({ className }: IProps) => {
       alt="logo"
       height={48}
       width={48}
+      sizes="(min-width: 320px) 320px"
     />
   );
 };
@@ -37,6 +39,7 @@ export const HorizonsWithText = ({ className }: IProps) => {
       alt="logo"
       height={48}
       width={48}
+      sizes="(min-width: 320px) 320px"
     />
   );
 };

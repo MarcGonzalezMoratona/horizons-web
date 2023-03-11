@@ -29,6 +29,7 @@ export default function Post({ data, locale }: IProps) {
             alt={data.alt}
             fill
             className="object-cover"
+            sizes="(min-width: 320px) 720px"
           />
         </div>
         <div className="m-4">

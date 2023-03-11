@@ -10,9 +10,10 @@ interface IProps {
       linkedin?: string;
     };
   };
+  index: number;
 }
 
-const ProfilePicture = ({ partner }: IProps) => {
+const ProfilePicture = ({ partner, index }: IProps) => {
   return (
     <li className="flex flex-col items-center">
       <div className="rounded-full relative w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60">
@@ -21,6 +22,8 @@ const ProfilePicture = ({ partner }: IProps) => {
           alt={partner.name}
           fill
           className="object-cover rounded-full"
+          sizes="(min-width: 320px) 480px"
+          priority={index < 12}
         />
       </div>
       <h2 className="mt-4 text-lg text-center font-medium">{partner.name}</h2>

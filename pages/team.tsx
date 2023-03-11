@@ -24,8 +24,14 @@ export default function Team() {
         </h1>
         <hr className="bg-black w-9/12 lg:w-7/12 h-0.5" />
         <ul className="grid grid-cols-2 mx-2 sm:mx-8 sm:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-8 md:gap-12 my-8">
-          {team.partners.map((partner) => {
-            return <ProfilePicture partner={partner} key={partner.name} />;
+          {team.partners.map((partner, index) => {
+            return (
+              <ProfilePicture
+                partner={partner}
+                index={index}
+                key={partner.name}
+              />
+            );
           })}
         </ul>
       </Layout>
