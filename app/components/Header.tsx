@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import LanguageSelector from './LanguageSelector';
 import useTranslation from 'next-translate/useTranslation';
+import { HorizonsWhite } from './Horizons';
 
 const Header = () => {
   const [isMenuOpen, toggleMenu] = useState(false);
@@ -14,7 +15,9 @@ const Header = () => {
   return (
     <header className="flex flex-col bg-black text-white text-lg p-6 sm:flex-row">
       <div className="flex items-center justify-between">
-        <Link href="/">HORIZONS GAMES</Link>
+        <Link href="/">
+          <HorizonsWhite className="ml-4" />
+        </Link>
         <nav className="hidden sm:block sm:mx-12">
           <ul className="flex">
             <Link href="/team">

@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       <Layout>
         <ComingSoon />
-        <SocialNetworks networks={socialNetworks}/>
+        <SocialNetworks networks={socialNetworks} />
       </Layout>
     </>
   );
