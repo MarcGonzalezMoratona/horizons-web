@@ -16,7 +16,7 @@ const Header = () => {
     <header className="flex flex-col bg-black text-white text-lg p-6 sm:flex-row">
       <div className="flex items-center justify-between">
         <Link href="/">
-          <HorizonsWhite className="ml-4" />
+          <HorizonsWhite className="ml-4 h-12 w-12" />
         </Link>
         <nav className="hidden sm:block sm:mx-12">
           <ul className="flex">
