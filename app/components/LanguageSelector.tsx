@@ -9,16 +9,17 @@ const LanguageSelector = () => {
   const currentLanguage = t('CURRENT_LANGUAGE');
   const [value, setValue] = useState(currentLanguage);
   const router = useRouter();
+  const { pathname, asPath, query } = router;
 
   useEffect(() => {
     if (value === 'Català')
-      router.push(router.pathname, router.pathname, { locale: 'ca' });
+      router.push({ pathname, query }, asPath, { locale: 'ca' });
     else if (value === 'English')
-      router.push(router.pathname, router.pathname, { locale: 'en' });
+      router.push({ pathname, query }, asPath, { locale: 'en' });
     else if (value === 'Español')
-      router.push(router.pathname, router.pathname, { locale: 'es' });
+      router.push({ pathname, query }, asPath, { locale: 'es' });
     else if (value === 'Français')
-      router.push(router.pathname, router.pathname, { locale: 'fr' });
+      router.push({ pathname, query }, asPath, { locale: 'fr' });
   }, [value]);
 
   return (
