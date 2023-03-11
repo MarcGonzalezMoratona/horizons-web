@@ -24,7 +24,7 @@ interface IProps {
 const SocialNetworks = ({ networks, className }: IProps) => {
   return (
     <div
-      className={`flex items-center gap-2 sm:gap-4 text-4xl sm:text-2xl ${className}`}
+      className={`flex items-center gap-2 sm:gap-4 text-3xl sm:text-2xl ${className}`}
     >
       {networks?.twitter && (
         <Link

@@ -11,7 +11,7 @@ const Footer = () => {
         <HorizonsWhite className="w-8 h-8" />
         {`Horizons Games © ${currentYear}`}
       </div>
-      <SocialNetworks networks={socialNetworks} />
+      <SocialNetworks networks={socialNetworks} className={'text-3xl'} />
     </footer>
   );
 };
