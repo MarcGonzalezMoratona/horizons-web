@@ -25,7 +25,7 @@ export default function Home() {
           mainText="Axolotl Engine 2.0.0"
           CTAText="Ver novedades"
           icon={
-            <GearIcon className="h-5 w-5 text-emerald-600 group-hover:animate-spin transition duration-200" />
+            <GearIcon className="h-5 w-5 text-emerald-600 animate-spin sm:animate-none sm:group-hover:animate-spin transition duration-200" />
           }
         />
       </Layout>
