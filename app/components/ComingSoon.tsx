@@ -5,7 +5,7 @@ const ComingSoon = () => {
   const { t } = useTranslation('common');
 
   return (
-    <div className="w-full flex flex-col items-center gap-4">
+    <div className="w-full flex flex-col items-center gap-4 mt-12">
       <Horizons className="h-32 w-32" />
       <h1 className="text-4xl sm:text-6xl font-semibold text-center mx-2">
         {t('COMING_SOON').toUpperCase()}

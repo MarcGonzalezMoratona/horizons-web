@@ -10,6 +10,7 @@ const LanguageSelector = () => {
   const [value, setValue] = useState(currentLanguage);
   const router = useRouter();
   const { pathname, asPath, query } = router;
+  const languages = ['Català', 'English', 'Español', 'Français'];
 
   useEffect(() => {
     if (value === 'Català')
@@ -32,37 +33,17 @@ const LanguageSelector = () => {
       </Select.Trigger>
       <Select.Content className="bg-black w-full my-12 z-10">
         <Select.Viewport className="flex flex-col">
-          {currentLanguage !== 'Català' && (
-            <Select.Item
-              value="Català"
-              className="hover:bg-white hover:text-black pl-2 pr-8 py-1"
-            >
-              <Select.ItemText>Català</Select.ItemText>
-            </Select.Item>
-          )}
-          {currentLanguage !== 'English' && (
-            <Select.Item
-              value="English"
-              className="hover:bg-white hover:text-black pl-2 pr-8 py-1"
-            >
-              <Select.ItemText>English</Select.ItemText>
-            </Select.Item>
-          )}
-          {currentLanguage !== 'Español' && (
-            <Select.Item
-              value="Español"
-              className="hover:bg-white hover:text-black pl-2 pr-8 py-1"
-            >
-              <Select.ItemText>Español</Select.ItemText>
-            </Select.Item>
-          )}
-          {currentLanguage !== 'Français' && (
-            <Select.Item
-              value="Français"
-              className="hover:bg-white hover:text-black pl-2 pr-8 py-1"
-            >
-              <Select.ItemText>Français</Select.ItemText>
-            </Select.Item>
+          {languages.map(
+            (language) =>
+              language !== currentLanguage && (
+                <Select.Item
+                  key={language}
+                  value={language}
+                  className="hover:bg-white hover:text-black pl-2 pr-8 py-1"
+                >
+                  <Select.ItemText>{language}</Select.ItemText>
+                </Select.Item>
+              )
           )}
         </Select.Viewport>
       </Select.Content>

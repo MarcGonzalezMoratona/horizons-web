@@ -9,7 +9,7 @@ interface IProps {
 
 export const GlowingButton = ({ mainText, CTAText, icon }: IProps) => {
   return (
-    <div className="flex flex-col gap-8 items-start justify-center m-4">
+    <div className="flex flex-col gap-8 items-start justify-center mx-4 my-8">
       <div className="relative group">
         <div
           className="absolute -inset-0.5 bg-gradient-to-r from-emerald-400 to-indigo-600 rounded-lg blur opacity-75 group-hover:opacity-100 

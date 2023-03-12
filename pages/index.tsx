@@ -1,5 +1,6 @@
 import { GearIcon } from '@radix-ui/react-icons';
 import Head from 'next/head';
+import { Carousel } from '../app/components/Carousel';
 import ComingSoon from '../app/components/ComingSoon';
 import { GlowingButton } from '../app/components/GlowingButton';
 import Layout from '../app/components/Layout';
@@ -7,6 +8,14 @@ import SocialNetworks from '../app/components/SocialNetworks';
 import { socialNetworks } from '../app/data/socialNetworks';
 
 export default function Home() {
+  const images = [
+    'legoStarWarsPlanet.jpg',
+    'darthVader.jpg',
+    'ahsokaTano.jpg',
+    'stormTroopers.jpg',
+    'battle.jpg',
+  ];
+
   return (
     <>
       <Head>
@@ -19,6 +28,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
+        <Carousel images={images} priority />
         <ComingSoon />
         <SocialNetworks networks={socialNetworks} className="my-4" />
         <GlowingButton
