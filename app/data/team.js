@@ -40,6 +40,8 @@ export const team = {
       role: 'Gameplay Programmer',
       networks: {
         github: 'https://github.com/MacXxs',
+        linkedin:
+          'https://www.linkedin.com/in/miquel-prieto-molin%C3%A9-a57a30ab',
       },
     },
     {
@@ -116,6 +118,8 @@ export const team = {
       role: 'Gameplay Programmer',
       networks: {
         github: 'https://github.com/UriMurcia',
+        linkedin: 'https://www.linkedin.com/in/oriol-murcia-catalan',
+        website: 'https://urimurcia.github.io',
       },
     },
     {
@@ -150,6 +154,7 @@ export const team = {
       role: 'Gameplay Programmer',
       networks: {
         github: 'https://github.com/totisama',
+        linkedin: 'https://www.linkedin.com/in/rodrigo-samayoa-526916196',
       },
     },
     {

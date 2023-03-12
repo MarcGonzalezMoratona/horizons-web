@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Layout from '../app/components/Layout';
-import ProfilePicture from '../app/components/ProfilePicture';
-import { team } from '../app/data/team';
+import Layout from '../../app/components/Layout';
+import ProfilePicture from '../../app/components/ProfilePicture';
+import { team } from '../../app/data/team';
 import useTranslation from 'next-translate/useTranslation';
 
 export default function Team() {
