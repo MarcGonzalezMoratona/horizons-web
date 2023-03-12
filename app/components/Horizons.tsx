@@ -3,9 +3,10 @@ import React from 'react';
 
 interface IProps {
   className?: string;
+  priority?: boolean;
 }
 
-export const Horizons = ({ className }: IProps) => {
+export const Horizons = ({ className, priority }: IProps) => {
   return (
     <Image
       className={className}
@@ -14,11 +15,12 @@ export const Horizons = ({ className }: IProps) => {
       height={48}
       width={48}
       sizes="(min-width: 320px) 320px"
+      priority={priority}
     />
   );
 };
 
-export const HorizonsWhite = ({ className }: IProps) => {
+export const HorizonsWhite = ({ className, priority }: IProps) => {
   return (
     <Image
       className={className}
@@ -27,11 +29,12 @@ export const HorizonsWhite = ({ className }: IProps) => {
       height={48}
       width={48}
       sizes="(min-width: 320px) 320px"
+      priority={priority}
     />
   );
 };
 
-export const HorizonsWithText = ({ className }: IProps) => {
+export const HorizonsWithText = ({ className, priority }: IProps) => {
   return (
     <Image
       className={className}
@@ -40,6 +43,7 @@ export const HorizonsWithText = ({ className }: IProps) => {
       height={48}
       width={48}
       sizes="(min-width: 320px) 320px"
+      priority={priority}
     />
   );
 };

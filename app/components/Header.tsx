@@ -16,14 +16,19 @@ const Header = () => {
     <header className="flex flex-col bg-black text-white text-lg p-6 sm:flex-row">
       <div className="flex items-center justify-between">
         <Link href="/">
-          <HorizonsWhite className="ml-4 h-12 w-12" />
+          <HorizonsWhite className="ml-4 h-12 w-12" priority />
         </Link>
         <nav className="hidden sm:block sm:mx-12">
           <ul className="flex">
             <Link href="/team">
               <li className="mx-4">{t('TEAM')}</li>
             </Link>
-            <Link href="/blog">
+            <Link
+              href={{
+                pathname: '/blog',
+                query: { page: 1 },
+              }}
+            >
               <li className="mx-4">{t('BLOG')}</li>
             </Link>
           </ul>

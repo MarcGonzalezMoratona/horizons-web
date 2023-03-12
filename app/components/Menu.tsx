@@ -20,7 +20,12 @@ const Menu = ({ isMenuOpen }: IProps) => {
                   {t('TEAM')}
                 </li>
               </Link>
-              <Link href="/blog">
+              <Link
+                href={{
+                  pathname: '/blog',
+                  query: { page: 1 },
+                }}
+              >
                 <li className="p-3 rounded bg-white text-black my-3 w-full">
                   {t('BLOG')}
                 </li>

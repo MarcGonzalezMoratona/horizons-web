@@ -8,6 +8,7 @@ import {
   faLinkedin,
   faGithub,
 } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 interface IProps {
   networks?: {
@@ -17,6 +18,7 @@ interface IProps {
     tiktok?: string;
     linkedin?: string | undefined;
     github?: string | undefined;
+    website?: string | undefined;
   };
   className?: string;
 }
@@ -84,6 +86,15 @@ const SocialNetworks = ({ networks, className }: IProps) => {
           aria-label="Take a look at our github account"
         >
           <FontAwesomeIcon icon={faGithub} className="hover:text-indigo-600" />
+        </Link>
+      )}
+      {networks?.website && (
+        <Link
+          href={networks.website}
+          target="_blank"
+          aria-label="Take a look at our github account"
+        >
+          <FontAwesomeIcon icon={faGlobe} className="hover:text-indigo-600" />
         </Link>
       )}
     </div>

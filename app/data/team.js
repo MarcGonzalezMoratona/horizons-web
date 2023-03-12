@@ -5,8 +5,7 @@ export const team = {
       image: 'DavidCastro.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/DADSILVER',
       },
     },
     {
@@ -14,8 +13,7 @@ export const team = {
       image: 'DavidGarcia.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/DGMC117',
       },
     },
     {
@@ -23,8 +21,7 @@ export const team = {
       image: 'DiegoMejia.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/diegusmejia117',
       },
     },
     {
@@ -32,8 +29,9 @@ export const team = {
       image: 'GerardQueralt.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/gerard-queralt',
+        linkedin:
+          'https://www.linkedin.com/in/gerard-queralt-ferr%C3%A9-071283266',
       },
     },
     {
@@ -41,8 +39,7 @@ export const team = {
       image: 'MiquelPrieto.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/MacXxs',
       },
     },
     {
@@ -50,8 +47,9 @@ export const team = {
       image: 'SantiagoCarbo.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/sncarbo',
+        linkedin: 'https://www.linkedin.com/in/santiago-carb%C3%B3-00805510b',
+        website: 'https://santiago-carbo.com',
       },
     },
     {
@@ -59,8 +57,7 @@ export const team = {
       image: 'PeterGonzalez.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/Piterga12',
       },
     },
     {
@@ -68,8 +65,8 @@ export const team = {
       image: 'AlexisDieu.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/AlexisDieu',
+        linkedin: 'https://www.linkedin.com/in/alexis-dieu-705ab81a3',
       },
     },
     {
@@ -77,8 +74,7 @@ export const team = {
       image: 'AndresMachado.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/AndresM2',
       },
     },
     {
@@ -86,8 +82,7 @@ export const team = {
       image: 'DavidMartin.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/Dedado3000',
       },
     },
     {
@@ -95,8 +90,8 @@ export const team = {
       image: 'SaraIzquierdo.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/AuxPort66',
+        linkedin: 'https://www.linkedin.com/in/sara-izquierdo-elfau-285109222',
       },
     },
     {
@@ -104,8 +99,7 @@ export const team = {
       image: 'ArnauPerez.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/Mondagh',
       },
     },
     {
@@ -113,8 +107,7 @@ export const team = {
       image: 'XavierLlubes.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/xavi1111',
       },
     },
     {
@@ -122,8 +115,7 @@ export const team = {
       image: 'OriolMurcia.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/UriMurcia',
       },
     },
     {
@@ -132,7 +124,7 @@ export const team = {
       role: 'Gameplay Programmer',
       networks: {
         github: 'https://www.github.com/MarcGonzalezMoratona',
-        linkedin: 'https://www.linkedin.com/in/marc-gonzalez-moratona/',
+        linkedin: 'https://www.linkedin.com/in/marc-gonzalez-moratona',
       },
     },
     {
@@ -140,8 +132,8 @@ export const team = {
       image: 'OriolSors.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/OriolSors',
+        linkedin: 'https://www.linkedin.com/in/oriol-sors-vidal-4361491b9',
       },
     },
     {
@@ -149,8 +141,7 @@ export const team = {
       image: 'SandraCampaña.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/csandra24',
       },
     },
     {
@@ -158,8 +149,7 @@ export const team = {
       image: 'RodrigoSamayoa.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/totisama',
       },
     },
     {
@@ -167,8 +157,7 @@ export const team = {
       image: 'PabloCebollada.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/PaablooCH',
       },
     },
     {
@@ -176,8 +165,7 @@ export const team = {
       image: 'AlejandroMatus.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/Vlukkee',
       },
     },
     {
@@ -185,8 +173,9 @@ export const team = {
       image: 'placeholder.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/markmeliaa',
+        linkedin: 'https://www.linkedin.com/in/markmeliaa',
+        website: 'https://markmeliaa.github.io',
       },
     },
     {
@@ -194,8 +183,7 @@ export const team = {
       image: 'JesusMiguelAdrian.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/elbuho12Jesus',
       },
     },
     {
@@ -203,8 +191,7 @@ export const team = {
       image: 'JanMarcCosta.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/TheGeminis',
       },
     },
     {
@@ -212,8 +199,8 @@ export const team = {
       image: 'EricDacal.jpg',
       role: 'Gameplay Programmer',
       networks: {
-        github: 'https://www.github.com',
-        linkedin: 'https://www.linkedin.com',
+        github: 'https://github.com/ericdacal',
+        linkedin: 'https://www.linkedin.com/in/erdasa',
       },
     },
   ],
