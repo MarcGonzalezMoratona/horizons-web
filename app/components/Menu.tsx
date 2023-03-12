@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Dispatch, SetStateAction } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import LanguageSelector from './LanguageSelector';
 
@@ -16,14 +15,14 @@ const Menu = ({ isMenuOpen }: IProps) => {
         <div className="sm:hidden">
           <nav className="bg-black text-white w-full py-3 flex flex-col">
             <ul>
-              <Link href="/">
+              <Link href="/team">
                 <li className="p-3 rounded bg-white text-black my-3 w-full">
-                  {t('HOME')}
+                  {t('TEAM')}
                 </li>
               </Link>
-              <Link href="/team">
-                <li className="p-3 rounded bg-white text-black  my-3 w-full">
-                  {t('TEAM')}
+              <Link href="/blog">
+                <li className="p-3 rounded bg-white text-black my-3 w-full">
+                  {t('BLOG')}
                 </li>
               </Link>
             </ul>

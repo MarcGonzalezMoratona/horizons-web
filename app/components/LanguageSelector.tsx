@@ -9,27 +9,28 @@ const LanguageSelector = () => {
   const currentLanguage = t('CURRENT_LANGUAGE');
   const [value, setValue] = useState(currentLanguage);
   const router = useRouter();
+  const { pathname, asPath, query } = router;
 
   useEffect(() => {
     if (value === 'Català')
-      router.push(router.pathname, router.pathname, { locale: 'ca' });
+      router.push({ pathname, query }, asPath, { locale: 'ca' });
     else if (value === 'English')
-      router.push(router.pathname, router.pathname, { locale: 'en' });
+      router.push({ pathname, query }, asPath, { locale: 'en' });
     else if (value === 'Español')
-      router.push(router.pathname, router.pathname, { locale: 'es' });
+      router.push({ pathname, query }, asPath, { locale: 'es' });
     else if (value === 'Français')
-      router.push(router.pathname, router.pathname, { locale: 'fr' });
+      router.push({ pathname, query }, asPath, { locale: 'fr' });
   }, [value]);
 
   return (
     <Select.Root value={value} onValueChange={setValue}>
-      <Select.Trigger className="flex items-center p-2">
+      <Select.Trigger className="flex items-center p-2 w-full">
         <Select.Value aria-label={value}>{value}</Select.Value>
         <Select.Icon className="mx-2">
-          <ChevronDownIcon className="h-4 w-4" />
+          <ChevronDownIcon className="h-6 w-6" />
         </Select.Icon>
       </Select.Trigger>
-      <Select.Content position="popper" className="bg-black">
+      <Select.Content className="bg-black w-full my-12 z-10">
         <Select.Viewport className="flex flex-col">
           {currentLanguage !== 'Català' && (
             <Select.Item
