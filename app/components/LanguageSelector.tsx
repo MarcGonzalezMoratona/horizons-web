@@ -1,5 +1,5 @@
 import * as Select from '@radix-ui/react-select';
-import { ChevronDownIcon } from '@radix-ui/react-icons';
+import { ChevronDownIcon, ChevronUpIcon } from '@radix-ui/react-icons';
 import { useEffect, useState } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
@@ -8,6 +8,7 @@ const LanguageSelector = () => {
   const { t } = useTranslation('common');
   const currentLanguage = t('CURRENT_LANGUAGE');
   const [value, setValue] = useState(currentLanguage);
+  const [isSelectorOpen, toggleSelector] = useState(false);
   const router = useRouter();
   const { pathname, asPath, query } = router;
   const languages = ['Català', 'English', 'Español', 'Français'];
@@ -24,11 +25,19 @@ const LanguageSelector = () => {
   }, [value]);
 
   return (
-    <Select.Root value={value} onValueChange={setValue}>
+    <Select.Root
+      value={value}
+      onValueChange={setValue}
+      onOpenChange={(open) => toggleSelector(open)}
+    >
       <Select.Trigger className="flex items-center p-2 w-full">
         <Select.Value aria-label={value}>{value}</Select.Value>
         <Select.Icon className="mx-2">
-          <ChevronDownIcon className="h-6 w-6" />
+          {isSelectorOpen ? (
+            <ChevronUpIcon className="h-6 w-6" />
+          ) : (
+            <ChevronDownIcon className="h-6 w-6" />
+          )}
         </Select.Icon>
       </Select.Trigger>
       <Select.Content className="bg-black w-full my-12 z-10">
