@@ -19,7 +19,7 @@ export const Carousel = ({ images, priority }: IProps) => {
   };
 
   useEffect(() => {
-    const interval = setInterval(() => nextSlide(), 2000);
+    const interval = setInterval(() => nextSlide(), 3000);
     return () => clearInterval(interval);
   });
 
