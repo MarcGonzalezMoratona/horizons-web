@@ -37,7 +37,7 @@ export default function Blog({ query }: { query: ParsedUrlQuery }) {
             );
           })}
         </section>
-        <Pagination pages={Math.round(posts.length / 4)} page={currentPage} />
+        <Pagination pages={Math.ceil(posts.length / 4)} page={currentPage} />
       </Layout>
     </>
   );
@@ -47,7 +47,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   {
     const { query } = context;
 
-    if (!query.page || Number(query.page) > Math.round(posts.length / 4))
+    if (!query.page || Number(query.page) > Math.ceil(posts.length / 4))
       return {
         notFound: true,
       };

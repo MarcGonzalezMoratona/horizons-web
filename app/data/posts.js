@@ -1,274 +1,56 @@
 export const posts = [
   {
     id: 1,
-    title: 'Post de prueba 1',
-    subtitle: 'Este es un subtítulo de prueba para el post 1',
+    title: 'Axolotl project: the development starts',
+    subtitle: `Horizons team started the development of their game's first delivery this March 14th`,
     profile: 'MarcGonzalez.jpg',
-    caption: 'smash.jpg',
-    alt: 'computer',
     author: 'Marc González',
-    date: '07/03/2023',
+    date: '14/03/2023',
     paragraphs: [
       {
-        heading: 'This is the first heading',
+        heading: 'The project comes up to life',
         content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis cursus erat, quis feugiat tellus tristique auctor. Proin quis condimentum purus. Fusce pulvinar, lorem nec facilisis facilisis, orci ligula sagittis nisl, ut rutrum lorem urna ut lectus. Sed diam metus, finibus pharetra volutpat vitae, vestibulum at odio. Sed urna tellus, elementum vitae ultricies nec, vestibulum ut justo. Aenean at orci id enim rutrum eleifend non in ligula. Vivamus hendrerit commodo mollis. Quisque finibus est nec lacus eleifend, in aliquam dui consectetur. Fusce porta quis massa vitae laoreet. Phasellus eleifend metus eget condimentum vehicula. Maecenas hendrerit vestibulum arcu non fringilla. Quisque a pretium lectus, a rutrum dolor. Morbi ornare arcu sed tortor pretium, quis pellentesque purus congue.',
-      },
-      {
-        heading: 'This is the second heading',
-        content:
-          'Nunc lacinia purus ut dictum fermentum. Nunc pharetra arcu quis facilisis eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed justo felis, mattis vitae tellus commodo, vehicula venenatis eros. Donec ac vulputate enim. Maecenas luctus et felis non bibendum. Fusce nec velit dignissim, facilisis est convallis, laoreet ex. Sed pharetra gravida nisi, et scelerisque magna convallis et. Phasellus dolor magna, facilisis quis turpis et, venenatis ultricies quam. Sed mollis odio sed facilisis facilisis.',
-      },
-      {
-        content:
-          'Praesent vitae malesuada lorem. Aliquam congue bibendum elit id pellentesque. Fusce et suscipit justo. Donec augue libero, sagittis ut nulla in, commodo viverra risus. In scelerisque sollicitudin elit, quis facilisis mauris volutpat id. Phasellus vitae elit vestibulum justo maximus maximus sed ut arcu. Mauris ut elementum sem. Vestibulum et dignissim nisl. Phasellus sapien dui, auctor a vestibulum sed, lobortis lacinia diam. Suspendisse potenti.',
-        image: 'smash.jpg',
+          `Everything started in October 2022, when a group of 24 students met each other at the UPC School 
+          in the first Master's Degree in Advanced Programming for AAA videogames class.
+          Since then, we have learned a lot about 3D modelling, C++ programming, texturing, game design
+          and we have acquired a lot of new skills. A lot of things have been going on and now it's time 
+          to start applying knowledge to the real project.`,
+        },
+        {
+          heading: 'The first vertical slice',
+          content:
+          `The first vertical slice is an exercise that will lay the foundations of the final project structure.
+          For the last weeks, the team has been working hard in the concept discovery milestone to define the concept art, 
+          the lore and the development of the core functionality of Axolotl Engine. The main goal of this delivery is to
+          have a playable prototype that presents the core gameplay and the skeleton of the application.`,
+          image: '../horizons.svg',
+        },
+        {
+          heading: 'Team methodology',
+          content:
+          `In order to achieve this and the following milestones, we have divided the group into several teams:
+          Art, Engine, Game Design, Level Design, User Interface, Public Relations, Graphics and Physics. Each team has a lead that coordinates
+          the tasks that have to be done for each milestone. Everyone in the group can change their roles from one milestone to another.
+          If you want to know more about us, you can follow us in our social networks.`,
       },
     ],
   },
   {
     id: 2,
-    title: 'Post de prueba 2',
-    subtitle: 'Este es un subtítulo de prueba para el post 2',
+    title: 'The GVD is ready!',
+    subtitle: 'Horizons team publishes the game vision document of their game',
     profile: 'MarcGonzalez.jpg',
-    caption: 'setup.png',
     alt: 'computer',
     author: 'Marc González',
-    date: '08/03/2023',
+    date: '14/03/2023',
     paragraphs: [
       {
-        heading: 'This is the first heading',
+        heading: '',
         content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis cursus erat, quis feugiat tellus tristique auctor. Proin quis condimentum purus. Fusce pulvinar, lorem nec facilisis facilisis, orci ligula sagittis nisl, ut rutrum lorem urna ut lectus. Sed diam metus, finibus pharetra volutpat vitae, vestibulum at odio. Sed urna tellus, elementum vitae ultricies nec, vestibulum ut justo. Aenean at orci id enim rutrum eleifend non in ligula. Vivamus hendrerit commodo mollis. Quisque finibus est nec lacus eleifend, in aliquam dui consectetur. Fusce porta quis massa vitae laoreet. Phasellus eleifend metus eget condimentum vehicula. Maecenas hendrerit vestibulum arcu non fringilla. Quisque a pretium lectus, a rutrum dolor. Morbi ornare arcu sed tortor pretium, quis pellentesque purus congue.',
-      },
-      {
-        heading: 'This is the second heading',
-        content:
-          'Nunc lacinia purus ut dictum fermentum. Nunc pharetra arcu quis facilisis eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed justo felis, mattis vitae tellus commodo, vehicula venenatis eros. Donec ac vulputate enim. Maecenas luctus et felis non bibendum. Fusce nec velit dignissim, facilisis est convallis, laoreet ex. Sed pharetra gravida nisi, et scelerisque magna convallis et. Phasellus dolor magna, facilisis quis turpis et, venenatis ultricies quam. Sed mollis odio sed facilisis facilisis.',
-      },
-      {
-        heading: 'This is the third heading',
-        content:
-          'Praesent vitae malesuada lorem. Aliquam congue bibendum elit id pellentesque. Fusce et suscipit justo. Donec augue libero, sagittis ut nulla in, commodo viverra risus. In scelerisque sollicitudin elit, quis facilisis mauris volutpat id. Phasellus vitae elit vestibulum justo maximus maximus sed ut arcu. Mauris ut elementum sem. Vestibulum et dignissim nisl. Phasellus sapien dui, auctor a vestibulum sed, lobortis lacinia diam. Suspendisse potenti.',
-        image: 'setup.png',
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: 'Post de prueba 3',
-    subtitle: 'Este es un subtítulo de prueba para el post 3',
-    profile: 'MarcGonzalez.jpg',
-    caption: 'switch.jpg',
-    alt: 'computer',
-    author: 'Marc González',
-    date: '08/03/2023',
-    paragraphs: [
-      {
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis cursus erat, quis feugiat tellus tristique auctor. Proin quis condimentum purus. Fusce pulvinar, lorem nec facilisis facilisis, orci ligula sagittis nisl, ut rutrum lorem urna ut lectus. Sed diam metus, finibus pharetra volutpat vitae, vestibulum at odio. Sed urna tellus, elementum vitae ultricies nec, vestibulum ut justo. Aenean at orci id enim rutrum eleifend non in ligula. Vivamus hendrerit commodo mollis. Quisque finibus est nec lacus eleifend, in aliquam dui consectetur. Fusce porta quis massa vitae laoreet. Phasellus eleifend metus eget condimentum vehicula. Maecenas hendrerit vestibulum arcu non fringilla. Quisque a pretium lectus, a rutrum dolor. Morbi ornare arcu sed tortor pretium, quis pellentesque purus congue.',
-      },
-      {
-        heading: 'This is the first heading',
-        content:
-          'Nunc lacinia purus ut dictum fermentum. Nunc pharetra arcu quis facilisis eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed justo felis, mattis vitae tellus commodo, vehicula venenatis eros. Donec ac vulputate enim. Maecenas luctus et felis non bibendum. Fusce nec velit dignissim, facilisis est convallis, laoreet ex. Sed pharetra gravida nisi, et scelerisque magna convallis et. Phasellus dolor magna, facilisis quis turpis et, venenatis ultricies quam. Sed mollis odio sed facilisis facilisis.',
-      },
-      {
-        heading: 'This is the second heading',
-        content:
-          'Praesent vitae malesuada lorem. Aliquam congue bibendum elit id pellentesque. Fusce et suscipit justo. Donec augue libero, sagittis ut nulla in, commodo viverra risus. In scelerisque sollicitudin elit, quis facilisis mauris volutpat id. Phasellus vitae elit vestibulum justo maximus maximus sed ut arcu. Mauris ut elementum sem. Vestibulum et dignissim nisl. Phasellus sapien dui, auctor a vestibulum sed, lobortis lacinia diam. Suspendisse potenti.',
-        image: 'switch.jpg',
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: 'Post de prueba 4',
-    subtitle: 'Este es un subtítulo de prueba para el post 4',
-    profile: 'MarcGonzalez.jpg',
-    caption: 'pokemon.jpeg',
-    alt: 'computer',
-    author: 'Marc González',
-    date: '08/03/2023',
-    paragraphs: [
-      {
-        heading: 'This is the first heading',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis cursus erat, quis feugiat tellus tristique auctor. Proin quis condimentum purus. Fusce pulvinar, lorem nec facilisis facilisis, orci ligula sagittis nisl, ut rutrum lorem urna ut lectus. Sed diam metus, finibus pharetra volutpat vitae, vestibulum at odio. Sed urna tellus, elementum vitae ultricies nec, vestibulum ut justo. Aenean at orci id enim rutrum eleifend non in ligula. Vivamus hendrerit commodo mollis. Quisque finibus est nec lacus eleifend, in aliquam dui consectetur. Fusce porta quis massa vitae laoreet. Phasellus eleifend metus eget condimentum vehicula. Maecenas hendrerit vestibulum arcu non fringilla. Quisque a pretium lectus, a rutrum dolor. Morbi ornare arcu sed tortor pretium, quis pellentesque purus congue.',
-      },
-      {
-        content:
-          'Nunc lacinia purus ut dictum fermentum. Nunc pharetra arcu quis facilisis eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed justo felis, mattis vitae tellus commodo, vehicula venenatis eros. Donec ac vulputate enim. Maecenas luctus et felis non bibendum. Fusce nec velit dignissim, facilisis est convallis, laoreet ex. Sed pharetra gravida nisi, et scelerisque magna convallis et. Phasellus dolor magna, facilisis quis turpis et, venenatis ultricies quam. Sed mollis odio sed facilisis facilisis.',
-        image: 'pokemon.jpeg',
-      },
-      {
-        heading: 'This is the second heading',
-        content:
-          'Praesent vitae malesuada lorem. Aliquam congue bibendum elit id pellentesque. Fusce et suscipit justo. Donec augue libero, sagittis ut nulla in, commodo viverra risus. In scelerisque sollicitudin elit, quis facilisis mauris volutpat id. Phasellus vitae elit vestibulum justo maximus maximus sed ut arcu. Mauris ut elementum sem. Vestibulum et dignissim nisl. Phasellus sapien dui, auctor a vestibulum sed, lobortis lacinia diam. Suspendisse potenti.',
-      },
-    ],
-  },
-  {
-    id: 5,
-    title: 'Post de prueba 5',
-    subtitle: 'Este es un subtítulo de prueba para el post 5',
-    profile: 'MarcGonzalez.jpg',
-    caption: 'smash.jpg',
-    alt: 'computer',
-    author: 'Marc González',
-    date: '07/03/2023',
-    paragraphs: [
-      {
-        heading: 'This is the first heading',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis cursus erat, quis feugiat tellus tristique auctor. Proin quis condimentum purus. Fusce pulvinar, lorem nec facilisis facilisis, orci ligula sagittis nisl, ut rutrum lorem urna ut lectus. Sed diam metus, finibus pharetra volutpat vitae, vestibulum at odio. Sed urna tellus, elementum vitae ultricies nec, vestibulum ut justo. Aenean at orci id enim rutrum eleifend non in ligula. Vivamus hendrerit commodo mollis. Quisque finibus est nec lacus eleifend, in aliquam dui consectetur. Fusce porta quis massa vitae laoreet. Phasellus eleifend metus eget condimentum vehicula. Maecenas hendrerit vestibulum arcu non fringilla. Quisque a pretium lectus, a rutrum dolor. Morbi ornare arcu sed tortor pretium, quis pellentesque purus congue.',
-      },
-      {
-        heading: 'This is the second heading',
-        content:
-          'Nunc lacinia purus ut dictum fermentum. Nunc pharetra arcu quis facilisis eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed justo felis, mattis vitae tellus commodo, vehicula venenatis eros. Donec ac vulputate enim. Maecenas luctus et felis non bibendum. Fusce nec velit dignissim, facilisis est convallis, laoreet ex. Sed pharetra gravida nisi, et scelerisque magna convallis et. Phasellus dolor magna, facilisis quis turpis et, venenatis ultricies quam. Sed mollis odio sed facilisis facilisis.',
-      },
-      {
-        content:
-          'Praesent vitae malesuada lorem. Aliquam congue bibendum elit id pellentesque. Fusce et suscipit justo. Donec augue libero, sagittis ut nulla in, commodo viverra risus. In scelerisque sollicitudin elit, quis facilisis mauris volutpat id. Phasellus vitae elit vestibulum justo maximus maximus sed ut arcu. Mauris ut elementum sem. Vestibulum et dignissim nisl. Phasellus sapien dui, auctor a vestibulum sed, lobortis lacinia diam. Suspendisse potenti.',
-        image: 'smash.jpg',
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: 'Post de prueba 6',
-    subtitle: 'Este es un subtítulo de prueba para el post 6',
-    profile: 'MarcGonzalez.jpg',
-    caption: 'setup.png',
-    alt: 'computer',
-    author: 'Marc González',
-    date: '08/03/2023',
-    paragraphs: [
-      {
-        heading: 'This is the first heading',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis cursus erat, quis feugiat tellus tristique auctor. Proin quis condimentum purus. Fusce pulvinar, lorem nec facilisis facilisis, orci ligula sagittis nisl, ut rutrum lorem urna ut lectus. Sed diam metus, finibus pharetra volutpat vitae, vestibulum at odio. Sed urna tellus, elementum vitae ultricies nec, vestibulum ut justo. Aenean at orci id enim rutrum eleifend non in ligula. Vivamus hendrerit commodo mollis. Quisque finibus est nec lacus eleifend, in aliquam dui consectetur. Fusce porta quis massa vitae laoreet. Phasellus eleifend metus eget condimentum vehicula. Maecenas hendrerit vestibulum arcu non fringilla. Quisque a pretium lectus, a rutrum dolor. Morbi ornare arcu sed tortor pretium, quis pellentesque purus congue.',
-      },
-      {
-        heading: 'This is the second heading',
-        content:
-          'Nunc lacinia purus ut dictum fermentum. Nunc pharetra arcu quis facilisis eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed justo felis, mattis vitae tellus commodo, vehicula venenatis eros. Donec ac vulputate enim. Maecenas luctus et felis non bibendum. Fusce nec velit dignissim, facilisis est convallis, laoreet ex. Sed pharetra gravida nisi, et scelerisque magna convallis et. Phasellus dolor magna, facilisis quis turpis et, venenatis ultricies quam. Sed mollis odio sed facilisis facilisis.',
-      },
-      {
-        heading: 'This is the third heading',
-        content:
-          'Praesent vitae malesuada lorem. Aliquam congue bibendum elit id pellentesque. Fusce et suscipit justo. Donec augue libero, sagittis ut nulla in, commodo viverra risus. In scelerisque sollicitudin elit, quis facilisis mauris volutpat id. Phasellus vitae elit vestibulum justo maximus maximus sed ut arcu. Mauris ut elementum sem. Vestibulum et dignissim nisl. Phasellus sapien dui, auctor a vestibulum sed, lobortis lacinia diam. Suspendisse potenti.',
-        image: 'setup.png',
-      },
-    ],
-  },
-  {
-    id: 7,
-    title: 'Post de prueba 7',
-    subtitle: 'Este es un subtítulo de prueba para el post 7',
-    profile: 'MarcGonzalez.jpg',
-    caption: 'switch.jpg',
-    alt: 'computer',
-    author: 'Marc González',
-    date: '08/03/2023',
-    paragraphs: [
-      {
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis cursus erat, quis feugiat tellus tristique auctor. Proin quis condimentum purus. Fusce pulvinar, lorem nec facilisis facilisis, orci ligula sagittis nisl, ut rutrum lorem urna ut lectus. Sed diam metus, finibus pharetra volutpat vitae, vestibulum at odio. Sed urna tellus, elementum vitae ultricies nec, vestibulum ut justo. Aenean at orci id enim rutrum eleifend non in ligula. Vivamus hendrerit commodo mollis. Quisque finibus est nec lacus eleifend, in aliquam dui consectetur. Fusce porta quis massa vitae laoreet. Phasellus eleifend metus eget condimentum vehicula. Maecenas hendrerit vestibulum arcu non fringilla. Quisque a pretium lectus, a rutrum dolor. Morbi ornare arcu sed tortor pretium, quis pellentesque purus congue.',
-      },
-      {
-        heading: 'This is the first heading',
-        content:
-          'Nunc lacinia purus ut dictum fermentum. Nunc pharetra arcu quis facilisis eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed justo felis, mattis vitae tellus commodo, vehicula venenatis eros. Donec ac vulputate enim. Maecenas luctus et felis non bibendum. Fusce nec velit dignissim, facilisis est convallis, laoreet ex. Sed pharetra gravida nisi, et scelerisque magna convallis et. Phasellus dolor magna, facilisis quis turpis et, venenatis ultricies quam. Sed mollis odio sed facilisis facilisis.',
-      },
-      {
-        heading: 'This is the second heading',
-        content:
-          'Praesent vitae malesuada lorem. Aliquam congue bibendum elit id pellentesque. Fusce et suscipit justo. Donec augue libero, sagittis ut nulla in, commodo viverra risus. In scelerisque sollicitudin elit, quis facilisis mauris volutpat id. Phasellus vitae elit vestibulum justo maximus maximus sed ut arcu. Mauris ut elementum sem. Vestibulum et dignissim nisl. Phasellus sapien dui, auctor a vestibulum sed, lobortis lacinia diam. Suspendisse potenti.',
-        image: 'switch.jpg',
-      },
-    ],
-  },
-  {
-    id: 8,
-    title: 'Post de prueba 8',
-    subtitle: 'Este es un subtítulo de prueba para el post 8',
-    profile: 'MarcGonzalez.jpg',
-    caption: 'pokemon.jpeg',
-    alt: 'computer',
-    author: 'Marc González',
-    date: '08/03/2023',
-    paragraphs: [
-      {
-        heading: 'This is the first heading',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis cursus erat, quis feugiat tellus tristique auctor. Proin quis condimentum purus. Fusce pulvinar, lorem nec facilisis facilisis, orci ligula sagittis nisl, ut rutrum lorem urna ut lectus. Sed diam metus, finibus pharetra volutpat vitae, vestibulum at odio. Sed urna tellus, elementum vitae ultricies nec, vestibulum ut justo. Aenean at orci id enim rutrum eleifend non in ligula. Vivamus hendrerit commodo mollis. Quisque finibus est nec lacus eleifend, in aliquam dui consectetur. Fusce porta quis massa vitae laoreet. Phasellus eleifend metus eget condimentum vehicula. Maecenas hendrerit vestibulum arcu non fringilla. Quisque a pretium lectus, a rutrum dolor. Morbi ornare arcu sed tortor pretium, quis pellentesque purus congue.',
-      },
-      {
-        content:
-          'Nunc lacinia purus ut dictum fermentum. Nunc pharetra arcu quis facilisis eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed justo felis, mattis vitae tellus commodo, vehicula venenatis eros. Donec ac vulputate enim. Maecenas luctus et felis non bibendum. Fusce nec velit dignissim, facilisis est convallis, laoreet ex. Sed pharetra gravida nisi, et scelerisque magna convallis et. Phasellus dolor magna, facilisis quis turpis et, venenatis ultricies quam. Sed mollis odio sed facilisis facilisis.',
-        image: 'pokemon.jpeg',
-      },
-      {
-        heading: 'This is the second heading',
-        content:
-          'Praesent vitae malesuada lorem. Aliquam congue bibendum elit id pellentesque. Fusce et suscipit justo. Donec augue libero, sagittis ut nulla in, commodo viverra risus. In scelerisque sollicitudin elit, quis facilisis mauris volutpat id. Phasellus vitae elit vestibulum justo maximus maximus sed ut arcu. Mauris ut elementum sem. Vestibulum et dignissim nisl. Phasellus sapien dui, auctor a vestibulum sed, lobortis lacinia diam. Suspendisse potenti.',
-      },
-    ],
-  },
-  {
-    id: 9,
-    title: 'Post de prueba 9',
-    subtitle: 'Este es un subtítulo de prueba para el post 9',
-    profile: 'MarcGonzalez.jpg',
-    caption: 'pokemon.jpeg',
-    alt: 'computer',
-    author: 'Marc González',
-    date: '08/03/2023',
-    paragraphs: [
-      {
-        heading: 'This is the first heading',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis cursus erat, quis feugiat tellus tristique auctor. Proin quis condimentum purus. Fusce pulvinar, lorem nec facilisis facilisis, orci ligula sagittis nisl, ut rutrum lorem urna ut lectus. Sed diam metus, finibus pharetra volutpat vitae, vestibulum at odio. Sed urna tellus, elementum vitae ultricies nec, vestibulum ut justo. Aenean at orci id enim rutrum eleifend non in ligula. Vivamus hendrerit commodo mollis. Quisque finibus est nec lacus eleifend, in aliquam dui consectetur. Fusce porta quis massa vitae laoreet. Phasellus eleifend metus eget condimentum vehicula. Maecenas hendrerit vestibulum arcu non fringilla. Quisque a pretium lectus, a rutrum dolor. Morbi ornare arcu sed tortor pretium, quis pellentesque purus congue.',
-      },
-      {
-        content:
-          'Nunc lacinia purus ut dictum fermentum. Nunc pharetra arcu quis facilisis eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed justo felis, mattis vitae tellus commodo, vehicula venenatis eros. Donec ac vulputate enim. Maecenas luctus et felis non bibendum. Fusce nec velit dignissim, facilisis est convallis, laoreet ex. Sed pharetra gravida nisi, et scelerisque magna convallis et. Phasellus dolor magna, facilisis quis turpis et, venenatis ultricies quam. Sed mollis odio sed facilisis facilisis.',
-        image: 'pokemon.jpeg',
-      },
-      {
-        heading: 'This is the second heading',
-        content:
-          'Praesent vitae malesuada lorem. Aliquam congue bibendum elit id pellentesque. Fusce et suscipit justo. Donec augue libero, sagittis ut nulla in, commodo viverra risus. In scelerisque sollicitudin elit, quis facilisis mauris volutpat id. Phasellus vitae elit vestibulum justo maximus maximus sed ut arcu. Mauris ut elementum sem. Vestibulum et dignissim nisl. Phasellus sapien dui, auctor a vestibulum sed, lobortis lacinia diam. Suspendisse potenti.',
-      },
-    ],
-  },
-  {
-    id: 10,
-    title: 'Post de prueba 10',
-    subtitle: 'Este es un subtítulo de prueba para el post 10',
-    profile: 'MarcGonzalez.jpg',
-    caption: 'pokemon.jpeg',
-    alt: 'computer',
-    author: 'Marc González',
-    date: '08/03/2023',
-    paragraphs: [
-      {
-        heading: 'This is the first heading',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis cursus erat, quis feugiat tellus tristique auctor. Proin quis condimentum purus. Fusce pulvinar, lorem nec facilisis facilisis, orci ligula sagittis nisl, ut rutrum lorem urna ut lectus. Sed diam metus, finibus pharetra volutpat vitae, vestibulum at odio. Sed urna tellus, elementum vitae ultricies nec, vestibulum ut justo. Aenean at orci id enim rutrum eleifend non in ligula. Vivamus hendrerit commodo mollis. Quisque finibus est nec lacus eleifend, in aliquam dui consectetur. Fusce porta quis massa vitae laoreet. Phasellus eleifend metus eget condimentum vehicula. Maecenas hendrerit vestibulum arcu non fringilla. Quisque a pretium lectus, a rutrum dolor. Morbi ornare arcu sed tortor pretium, quis pellentesque purus congue.',
-      },
-      {
-        content:
-          'Nunc lacinia purus ut dictum fermentum. Nunc pharetra arcu quis facilisis eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed justo felis, mattis vitae tellus commodo, vehicula venenatis eros. Donec ac vulputate enim. Maecenas luctus et felis non bibendum. Fusce nec velit dignissim, facilisis est convallis, laoreet ex. Sed pharetra gravida nisi, et scelerisque magna convallis et. Phasellus dolor magna, facilisis quis turpis et, venenatis ultricies quam. Sed mollis odio sed facilisis facilisis.',
-        image: 'pokemon.jpeg',
-      },
-      {
-        heading: 'This is the second heading',
-        content:
-          'Praesent vitae malesuada lorem. Aliquam congue bibendum elit id pellentesque. Fusce et suscipit justo. Donec augue libero, sagittis ut nulla in, commodo viverra risus. In scelerisque sollicitudin elit, quis facilisis mauris volutpat id. Phasellus vitae elit vestibulum justo maximus maximus sed ut arcu. Mauris ut elementum sem. Vestibulum et dignissim nisl. Phasellus sapien dui, auctor a vestibulum sed, lobortis lacinia diam. Suspendisse potenti.',
-      },
+          ``,
+          document: "VS1.pdf",
+          documentCTA: "Download GVD"
+    },
     ],
   },
 ];

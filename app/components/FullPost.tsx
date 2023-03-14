@@ -1,7 +1,8 @@
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import React from 'react';
-import RelatedPost from './RelatedPost';
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React from "react";
+import RelatedPost from "./RelatedPost";
 
 interface IProps {
   data: {
@@ -9,14 +10,16 @@ interface IProps {
     title: string;
     subtitle: string;
     profile: string;
-    caption: string;
-    alt: string;
+    caption?: string;
+    alt?: string;
     date: string;
     author: string;
     paragraphs: {
       heading?: string;
       content: string;
       image?: string;
+      document?: string;
+      documentCTA?: string;
     }[];
   }[];
 }
@@ -58,12 +61,32 @@ const FullPost = ({ data }: IProps) => {
                 <div className="flex justify-center relative h-96 lg:my-8">
                   <Image
                     src={`/blog/${paragraph.image}`}
-                    alt={data[id].alt}
+                    alt={data[id].alt || "horizons logo"}
                     fill
                     className="object-contain"
                     sizes="(min-width: 320px) 640px, (min-width: 640px) 720px (min-width: 768px) 1080px"
                   />
                 </div>
+              )}
+              {paragraph.document && (
+                <>
+                  <div className="h-screen hidden sm:block">
+                    <embed
+                      className="h-full w-full"
+                      src={`/documents/${paragraph.document}`}
+                      type="application/pdf"
+                    />
+                  </div>
+                  <div className="flex justify-center my-4 bg-black text-white rounded-sm py-3 lg:mx-40  sm:hidden">
+                    <Link
+                      href={`/documents/${paragraph.document}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button>{paragraph.documentCTA}</button>
+                    </Link>
+                  </div>
+                </>
               )}
             </React.Fragment>
           );
@@ -80,7 +103,9 @@ const FullPost = ({ data }: IProps) => {
           />
         </div>
         <p className="my-2 font-medium text-lg">{data[id].author}</p>
-        <h3 className="font-medium mt-8 mb-2">MORE POSTS</h3>
+        {data.length > 1 && (
+          <h3 className="font-medium mt-8 mb-2">MORE POSTS</h3>
+        )}
         {data[id + 1] ? (
           <RelatedPost data={data[id + 1]} />
         ) : (
