@@ -1,15 +1,15 @@
-import useTranslation from 'next-translate/useTranslation';
-import Head from 'next/head';
-import Layout from '../../app/components/Layout';
-import Pagination from '../../app/components/Pagination';
-import Post from '../../app/components/Post';
-import { posts } from '../../app/data/posts';
-import React from 'react';
-import { GetServerSideProps } from 'next/types';
-import { ParsedUrlQuery } from 'querystring';
+import useTranslation from "next-translate/useTranslation";
+import Head from "next/head";
+import Layout from "../../app/components/Layout";
+import Pagination from "../../app/components/Pagination";
+import Post from "../../app/components/Post";
+import { posts } from "../../app/data/posts";
+import React from "react";
+import { GetServerSideProps } from "next/types";
+import { ParsedUrlQuery } from "querystring";
 
 export default function Blog({ query }: { query: ParsedUrlQuery }) {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
   const { page } = query;
   const currentPage = Number(page);
 
@@ -25,7 +25,7 @@ export default function Blog({ query }: { query: ParsedUrlQuery }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <h1 className="text-xl sm:text-2xl mt-4">{t('BLOG').toUpperCase()}</h1>
+        <h1 className="text-xl sm:text-2xl mt-4">{t("BLOG").toUpperCase()}</h1>
         <hr className="bg-black w-9/12 lg:w-7/12 h-0.5 my-4" />
         <section className="flex flex-col sm:grid sm:grid-cols-2 lg:w-2/3 gap-8">
           {posts.map((post) => {

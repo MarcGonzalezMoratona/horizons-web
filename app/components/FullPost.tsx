@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import React from 'react';
-import RelatedPost from './RelatedPost';
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React from "react";
+import RelatedPost from "./RelatedPost";
 
 interface IProps {
   data: {
@@ -62,7 +62,7 @@ const FullPost = ({ data }: IProps) => {
                 <div className="flex justify-center relative h-96 lg:my-8">
                   <Image
                     src={`/blog/${paragraph.image}`}
-                    alt={data[id].alt || 'horizons logo'}
+                    alt={data[id].alt || "horizons logo"}
                     fill
                     className="object-contain"
                     sizes="(min-width: 320px) 640px, (min-width: 640px) 720px (min-width: 768px) 1080px"

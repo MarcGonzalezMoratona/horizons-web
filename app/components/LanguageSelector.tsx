@@ -1,27 +1,27 @@
-import * as Select from '@radix-ui/react-select';
-import { ChevronDownIcon, ChevronUpIcon } from '@radix-ui/react-icons';
-import { useEffect, useState } from 'react';
-import useTranslation from 'next-translate/useTranslation';
-import { useRouter } from 'next/router';
+import * as Select from "@radix-ui/react-select";
+import { ChevronDownIcon, ChevronUpIcon } from "@radix-ui/react-icons";
+import { useEffect, useState } from "react";
+import useTranslation from "next-translate/useTranslation";
+import { useRouter } from "next/router";
 
 const LanguageSelector = () => {
-  const { t } = useTranslation('common');
-  const currentLanguage = t('CURRENT_LANGUAGE');
+  const { t } = useTranslation("common");
+  const currentLanguage = t("CURRENT_LANGUAGE");
   const [value, setValue] = useState(currentLanguage);
   const [isSelectorOpen, toggleSelector] = useState(false);
   const router = useRouter();
   const { pathname, asPath, query } = router;
-  const languages = ['Català', 'English', 'Español', 'Français'];
+  const languages = ["Català", "English", "Español", "Français"];
 
   useEffect(() => {
-    if (value === 'Català')
-      router.push({ pathname, query }, asPath, { locale: 'ca' });
-    else if (value === 'English')
-      router.push({ pathname, query }, asPath, { locale: 'en' });
-    else if (value === 'Español')
-      router.push({ pathname, query }, asPath, { locale: 'es' });
-    else if (value === 'Français')
-      router.push({ pathname, query }, asPath, { locale: 'fr' });
+    if (value === "Català")
+      router.push({ pathname, query }, asPath, { locale: "ca" });
+    else if (value === "English")
+      router.push({ pathname, query }, asPath, { locale: "en" });
+    else if (value === "Español")
+      router.push({ pathname, query }, asPath, { locale: "es" });
+    else if (value === "Français")
+      router.push({ pathname, query }, asPath, { locale: "fr" });
   }, [value]);
 
   return (

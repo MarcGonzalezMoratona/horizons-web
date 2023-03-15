@@ -1,6 +1,6 @@
-import SocialNetworks from './SocialNetworks';
-import { socialNetworks } from '../data/socialNetworks';
-import { HorizonsWhite } from './Horizons';
+import SocialNetworks from "./SocialNetworks";
+import { socialNetworks } from "../data/socialNetworks";
+import { HorizonsWhite } from "./Horizons";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +11,7 @@ const Footer = () => {
         <HorizonsWhite className="w-8 h-8" priority />
         {`Horizons Games © ${currentYear}`}
       </div>
-      <SocialNetworks networks={socialNetworks} className={'text-3xl'} />
+      <SocialNetworks networks={socialNetworks} className={"text-3xl"} />
     </footer>
   );
 };
