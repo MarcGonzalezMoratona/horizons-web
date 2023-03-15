@@ -1,6 +1,6 @@
-import SocialNetworks from './SocialNetworks';
-import { socialNetworks } from '../data/socialNetworks';
-import { HorizonsWhite } from './Horizons';
+import SocialNetworks from "./SocialNetworks";
+import { socialNetworks } from "../data/socialNetworks";
+import { HorizonsWhite } from "./Horizons";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,10 +8,10 @@ const Footer = () => {
   return (
     <footer className="flex flex-col items-center justify-between bg-black text-white text-lg p-6 sm:flex-row gap-2">
       <div className="flex items-center gap-2 sm:gap-4">
-        <HorizonsWhite className="w-8 h-8" />
+        <HorizonsWhite className="w-8 h-8" priority />
         {`Horizons Games © ${currentYear}`}
       </div>
-      <SocialNetworks networks={socialNetworks} className={'text-3xl'} />
+      <SocialNetworks networks={socialNetworks} className={"text-3xl"} />
     </footer>
   );
 };

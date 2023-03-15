@@ -1,13 +1,13 @@
-import Link from 'next/link';
-import useTranslation from 'next-translate/useTranslation';
-import LanguageSelector from './LanguageSelector';
+import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
+import LanguageSelector from "./LanguageSelector";
 
 interface IProps {
   isMenuOpen: boolean;
 }
 
 const Menu = ({ isMenuOpen }: IProps) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
 
   return (
     <>
@@ -17,12 +17,17 @@ const Menu = ({ isMenuOpen }: IProps) => {
             <ul>
               <Link href="/team">
                 <li className="p-3 rounded bg-white text-black my-3 w-full">
-                  {t('TEAM')}
+                  {t("TEAM")}
                 </li>
               </Link>
-              <Link href="/blog">
+              <Link
+                href={{
+                  pathname: "/blog",
+                  query: { page: 1 },
+                }}
+              >
                 <li className="p-3 rounded bg-white text-black my-3 w-full">
-                  {t('BLOG')}
+                  {t("BLOG")}
                 </li>
               </Link>
             </ul>

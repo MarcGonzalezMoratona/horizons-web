@@ -1,13 +1,13 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 interface IProps {
   data: {
     id: number;
     title: string;
     profile: string;
-    caption: string;
-    alt: string;
+    caption?: string;
+    alt?: string;
     author: string;
   };
 }
@@ -32,8 +32,10 @@ const RelatedPost = ({ data }: IProps) => {
             </div>
             <div className="relative row-span-2 ">
               <Image
-                src={`/blog/${data.caption}`}
-                alt={data.alt}
+                src={`${
+                  data.caption ? `/blog/${data.caption}` : `/horizons.svg`
+                }`}
+                alt={data.alt || "horizons logo"}
                 fill
                 className="object-contain"
                 sizes="(min-width: 320px) 320px"
