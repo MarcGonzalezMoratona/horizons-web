@@ -9,7 +9,7 @@ const Layout = (props: IProps) => {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center justify-center min-h-screen">
+      <main className="flex flex-col items-center justify-center">
         {props.children}
       </main>
       <Footer />

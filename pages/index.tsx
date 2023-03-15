@@ -1,6 +1,6 @@
 import { GearIcon } from '@radix-ui/react-icons';
 import Head from 'next/head';
-import { Carousel } from '../app/components/Carousel';
+import Carousel from '../app/components/Carousel';
 import ComingSoon from '../app/components/ComingSoon';
 import { GlowingButton } from '../app/components/GlowingButton';
 import Layout from '../app/components/Layout';
@@ -28,7 +28,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        {/* <Carousel images={images} priority /> */}
+        <Carousel images={images} priority />
         <ComingSoon />
         <SocialNetworks networks={socialNetworks} className="my-4" />
         <GlowingButton

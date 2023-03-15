@@ -1,6 +1,6 @@
-import { GetStaticProps } from "next";
-import Image from "next/image";
-import Link from "next/link";
+import { GetStaticProps } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface IProps {
   data: {
@@ -26,13 +26,13 @@ export default function Post({ data, locale }: IProps) {
         <div className="relative w-full h-48 sm:h-64">
           <Image
             src={`${data.caption ? `/blog/${data.caption}` : `/horizons.svg`}`}
-            alt={data.alt || "horizons logo"}
+            alt={data.alt || 'horizons logo'}
             fill
             className="object-contain"
             sizes="(min-width: 320px) 720px"
           />
         </div>
-        <section className="m-4 flex flex-col justify-between sm:h-[400px]">
+        <section className="m-4 flex flex-col justify-between sm:h-[500px]">
           <div>
             <span className="flex justify-between my-1">
               <h2>{data.date}</h2>
