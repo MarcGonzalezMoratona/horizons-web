@@ -31,7 +31,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <Carousel images={images} priority />
+        {/* <Carousel images={images} priority /> */}
         <ComingSoon />
         <SocialNetworks networks={socialNetworks} className="my-4" />
         <GlowingButton
