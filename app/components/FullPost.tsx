@@ -48,7 +48,7 @@ const FullPost = ({ data }: IProps) => {
           <p>{data[id].date}</p>
         </div>
         <h1 className="text-2xl font-medium mt-4 mb-2">{data[id].title}</h1>
-        <h2 className="text-xl">{data[id].subtitle}</h2>
+        <h2>{data[id].subtitle}</h2>
         {data[id].paragraphs.map((paragraph, index) => {
           return (
             <React.Fragment key={`paragraph ${index}`}>
