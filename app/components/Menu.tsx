@@ -20,7 +20,7 @@ const Menu = ({ isMenuOpen }: IProps) => {
                   {t("TEAM")}
                 </li>
               </Link>
-              <Link
+              {/* <Link
                 href={{
                   pathname: "/blog",
                   query: { page: 1 },
@@ -29,7 +29,7 @@ const Menu = ({ isMenuOpen }: IProps) => {
                 <li className="p-3 rounded bg-white text-black my-3 w-full">
                   {t("BLOG")}
                 </li>
-              </Link>
+              </Link> */}
             </ul>
           </nav>
           <LanguageSelector />

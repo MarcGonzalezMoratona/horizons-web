@@ -22,13 +22,13 @@ const Header = () => {
             <Link href="/team">
               <li className="mx-4">{t("TEAM")}</li>
             </Link>
-            <Link
+            {/* <Link
               href={{
                 pathname: "/blog",
               }}
             >
               <li className="mx-4">{t("BLOG")}</li>
-            </Link>
+            </Link> */}
           </ul>
         </nav>
         <div className="hidden sm:block absolute right-4">
