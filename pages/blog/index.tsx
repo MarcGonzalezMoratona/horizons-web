@@ -26,7 +26,7 @@ export default function Blog({ query }: { query: ParsedUrlQuery }) {
       </Head>
       <Layout>
         <h1 className="text-xl sm:text-2xl mt-4">{t('BLOG').toUpperCase()}</h1>
-        <hr className="bg-black w-9/12 lg:w-7/12 h-0.5 my-4" />
+        <hr className="bg-neutral-900 w-9/12 lg:w-7/12 h-0.5 my-4" />
         <section className="flex flex-col sm:grid sm:grid-cols-2 lg:w-2/3 gap-8">
           {posts.map((post) => {
             return (

@@ -34,7 +34,7 @@ const SocialNetworks = ({ networks, className }: IProps) => {
           target="_blank"
           aria-label="Take a look at our twitter account"
         >
-          <FontAwesomeIcon icon={faTwitter} className="hover:text-indigo-600" />
+          <FontAwesomeIcon icon={faTwitter} className="hover:text-primary-500" />
         </Link>
       )}
       {networks?.instagram && (
@@ -45,7 +45,7 @@ const SocialNetworks = ({ networks, className }: IProps) => {
         >
           <FontAwesomeIcon
             icon={faInstagram}
-            className="hover:text-indigo-600"
+            className="hover:text-primary-500"
           />
         </Link>
       )}
@@ -55,7 +55,7 @@ const SocialNetworks = ({ networks, className }: IProps) => {
           target="_blank"
           aria-label="Take a look at our youtube channel"
         >
-          <FontAwesomeIcon icon={faYoutube} className="hover:text-indigo-600" />
+          <FontAwesomeIcon icon={faYoutube} className="hover:text-primary-500" />
         </Link>
       )}
       {networks?.tiktok && (
@@ -64,7 +64,7 @@ const SocialNetworks = ({ networks, className }: IProps) => {
           target="_blank"
           aria-label="Take a look at our tiktok account"
         >
-          <FontAwesomeIcon icon={faTiktok} className="hover:text-indigo-600" />
+          <FontAwesomeIcon icon={faTiktok} className="hover:text-primary-500" />
         </Link>
       )}
       {networks?.linkedin && (
@@ -75,7 +75,7 @@ const SocialNetworks = ({ networks, className }: IProps) => {
         >
           <FontAwesomeIcon
             icon={faLinkedin}
-            className="hover:text-indigo-600"
+            className="hover:text-primary-500"
           />
         </Link>
       )}
@@ -85,7 +85,7 @@ const SocialNetworks = ({ networks, className }: IProps) => {
           target="_blank"
           aria-label="Take a look at our github account"
         >
-          <FontAwesomeIcon icon={faGithub} className="hover:text-indigo-600" />
+          <FontAwesomeIcon icon={faGithub} className="hover:text-primary-500" />
         </Link>
       )}
       {networks?.website && (
@@ -94,7 +94,7 @@ const SocialNetworks = ({ networks, className }: IProps) => {
           target="_blank"
           aria-label="Take a look at our github account"
         >
-          <FontAwesomeIcon icon={faGlobe} className="hover:text-indigo-600" />
+          <FontAwesomeIcon icon={faGlobe} className="hover:text-primary-500" />
         </Link>
       )}
     </div>

@@ -43,7 +43,7 @@ export default function Post({ data, locale }: IProps) {
               <p>{data.paragraphs[0].content}</p>
             </div>
           </div>
-          <button className="py-3 my-1 rounded-sm bg-black text-white">
+          <button className="py-3 my-1 rounded-sm bg-neutral-900 text-neutral-100">
             READ MORE
           </button>
         </section>

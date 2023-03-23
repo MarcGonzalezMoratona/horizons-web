@@ -13,7 +13,7 @@ const Header = () => {
   const { t } = useTranslation('common');
 
   return (
-    <header className="flex flex-col bg-black text-white text-lg p-6 sm:flex-row">
+    <header className="flex flex-col bg-neutral-900 text-neutral-100 text-lg p-6 sm:flex-row">
       <div className="flex items-center justify-between">
         <Link href="/">
           <HorizonsWhite className="ml-4 h-12 w-12" priority />

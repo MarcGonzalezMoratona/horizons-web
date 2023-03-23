@@ -22,7 +22,7 @@ export default function Team() {
         <h1 className="text-xl sm:text-2xl mt-4">
           {t('THE_TEAM').toUpperCase()}
         </h1>
-        <hr className="bg-black w-9/12 lg:w-7/12 h-0.5 my-4" />
+        <hr className="bg-neutral-900 w-9/12 lg:w-7/12 h-0.5 my-4" />
         <ul className="grid grid-cols-2 mx-2 sm:mx-8 sm:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-8 md:gap-12 my-8">
           {team.partners.map((partner, index) => {
             return (

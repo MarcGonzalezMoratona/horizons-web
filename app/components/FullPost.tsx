@@ -87,7 +87,7 @@ const FullPost = ({ data }: IProps) => {
                       type="application/pdf"
                     />
                   </div>
-                  <div className="flex justify-center my-4 bg-black text-white rounded-sm py-3 lg:mx-40  sm:hidden">
+                  <div className="flex justify-center my-4 bg-neutral-900 text-neutral-100 rounded-sm py-3 lg:mx-40  sm:hidden">
                     <Link
                       href={`/documents/${paragraph.document}`}
                       target="_blank"

@@ -17,10 +17,10 @@ const Pagination = ({ pages, page }: IProps) => {
             query: { page: i },
           }}
           className={`flex items-center justify-center my-4 border border-r-0 text-lg
-          border-gray-300 w-10 h-10 hover:bg-gray-100 cursor-pointer ${
-            Number(page) === i &&
-            `text-indigo-600 bg-indigo-50 hover:bg-indigo-100 hover:text-indigo-700`
-          } ${pages === i && `border-r`}`}
+          border-gray-300 w-10 h-10  cursor-pointer ${
+            Number(page) === i ?
+            `text-primary-600 bg-primary-100 hover:bg-primary-100 hover:text-primary-600`
+         : `hover:bg-neutral-100` } ${pages === i && `border-r`}`}
           key={`page ${i}`}
         >
           {i}
