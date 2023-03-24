@@ -1,27 +1,51 @@
 import Link from 'next/link';
-
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import Menu from './Menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faLightbulb } from '@fortawesome/free-solid-svg-icons';
 import LanguageSelector from './LanguageSelector';
 import useTranslation from 'next-translate/useTranslation';
-import { HorizonsWhite } from './Horizons';
+import { Horizons, HorizonsWhite } from './Horizons';
+import ThemeContext from '../../store/ThemeContext';
+import PageContext from '../../store/PageContext';
 
-const Header = () => {
+interface HeaderProps {
+  className: string;
+}
+
+const Header = ({ className }: HeaderProps) => {
   const [isMenuOpen, toggleMenu] = useState(false);
+  const { isDarkMode, toggleThemeHandler } = useContext(ThemeContext);
   const { t } = useTranslation('common');
+  const { pageType } = useContext(PageContext);
 
   return (
-    <header className="flex flex-col bg-neutral-900 text-neutral-100 text-lg p-6 sm:flex-row">
+    <header
+      className={`flex flex-col text-lg p-6 sm:flex-row text-neutral-800 bg-neutral-100
+       dark:text-neutral-100 dark:bg-neutral-800 ${
+         pageType != 'landing' &&
+         'border-b-primary-500 dark:border-b-primary-300 border-b-4'
+       } ${className}`}
+    >
       <div className="flex items-center justify-between">
         <Link href="/">
-          <HorizonsWhite className="ml-4 h-12 w-12" priority />
+          {isDarkMode ? (
+            <HorizonsWhite className="ml-4 h-12 w-12" priority />
+          ) : (
+            <Horizons className="ml-4 h-12 w-12" priority />
+          )}
         </Link>
         <nav className="hidden sm:block sm:mx-12">
           <ul className="flex">
             <Link href="/team">
-              <li className="mx-4">{t('TEAM')}</li>
+              <li
+                className={`mx-4 hover:text-primary-500 dark:hover:text-primary-300 ${
+                  pageType === 'team' &&
+                  'text-primary-500 dark:text-primary-300'
+                }`}
+              >
+                {t('TEAM')}
+              </li>
             </Link>
             <Link
               href={{
@@ -29,10 +53,27 @@ const Header = () => {
                 query: { page: 1 },
               }}
             >
-              <li className="mx-4">{t('BLOG')}</li>
+              <li
+                className={`mx-4 hover:text-primary-500 dark:hover:text-primary-300
+                ${
+                  pageType === 'blog' &&
+                  'text-primary-500 dark:text-primary-300'
+                }`}
+              >
+                {t('BLOG')}
+              </li>
             </Link>
           </ul>
         </nav>
+        <div
+          onClick={toggleThemeHandler}
+          className="absolute right-20 sm:right-40 cursor-pointer"
+        >
+          <FontAwesomeIcon
+            icon={faLightbulb}
+            className="text-xl text-primary-500 dark:text-neutral-100"
+          />
+        </div>
         <div className="hidden sm:block absolute right-4">
           <LanguageSelector />
         </div>

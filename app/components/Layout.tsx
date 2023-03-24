@@ -8,8 +8,8 @@ type IProps = {
 const Layout = (props: IProps) => {
   return (
     <>
-      <Header />
-      <main className="flex flex-col items-center justify-center">
+      <Header className="font-montserrat" />
+      <main className="flex flex-col font-montserrat items-center justify-center text-neutral-800 bg-neutral-100 dark:text-neutral-100 dark:bg-neutral-900">
         {props.children}
       </main>
       <Footer />

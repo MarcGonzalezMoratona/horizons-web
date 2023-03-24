@@ -1,12 +1,19 @@
 import useTranslation from 'next-translate/useTranslation';
-import { Horizons } from './Horizons';
+import { useContext } from 'react';
+import ThemeContext from '../../store/ThemeContext';
+import { Horizons, HorizonsWhite } from './Horizons';
 
 const ComingSoon = () => {
   const { t } = useTranslation('common');
+  const { isDarkMode } = useContext(ThemeContext);
 
   return (
     <div className="w-full flex flex-col items-center gap-4 mt-12">
-      <Horizons className="h-32 w-32" />
+      {isDarkMode ? (
+        <HorizonsWhite className="h-32 w-32" />
+      ) : (
+        <Horizons className="h-32 w-32" />
+      )}
       <h1 className="text-4xl sm:text-6xl font-semibold text-center mx-2">
         {t('COMING_SOON').toUpperCase()}
       </h1>

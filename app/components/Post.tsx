@@ -1,3 +1,5 @@
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { GetStaticProps } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -22,7 +24,7 @@ interface IProps {
 export default function Post({ data, locale }: IProps) {
   return (
     <Link href={`/blog/${data.id}`} locale={locale}>
-      <article className="flex flex-col mx-4 my-4 shadow-md overflow-hidden hover:shadow-lg rounded-md ">
+      <article className="flex flex-col mx-4 my-4 pt-4 shadow-md overflow-hidden hover:shadow-lg rounded-md dark:bg-neutral-800">
         <div className="relative w-full h-48 sm:h-64">
           <Image
             src={`${data.caption ? `/blog/${data.caption}` : `/horizons.svg`}`}
@@ -32,19 +34,27 @@ export default function Post({ data, locale }: IProps) {
             sizes="(min-width: 320px) 720px"
           />
         </div>
-        <section className="m-4 flex flex-col justify-between sm:h-[500px]">
+        <section
+          className="m-8 pt-4 flex flex-col justify-between 
+        sm:h-[700px] md:h-[800px] xl:h-[600px] 
+        border-t-4 border-primary-400 dark:border-primary-300"
+        >
           <div>
             <span className="flex justify-between my-1">
               <h2>{data.date}</h2>
               <h2>{data.author}</h2>
             </span>
-            <h1 className="text-xl font-medium">{data.title}</h1>
+            <h1 className="my-6 text-xl font-semibold">{data.title}</h1>
             <div className="my-4">
               <p>{data.paragraphs[0].content}</p>
             </div>
           </div>
-          <button className="py-3 my-1 rounded-sm bg-neutral-900 text-neutral-100">
+          <button
+            className=" font-bold tracking-wider py-3 sm:w-1/2 md:w-full mx-2 my-4 rounded-md bg-primary-500 text-neutral-100 
+          dark:bg-primary-500 dark:text-neutral-100 border-t-2 border-b-4 border-t-primary-300 border-b-primary-800"
+          >
             READ MORE
+            <FontAwesomeIcon icon={faArrowRight} className="mx-3" />
           </button>
         </section>
       </article>

@@ -53,7 +53,7 @@ const Carousel = ({ images, priority }: IProps) => {
   };
 
   return (
-    <div className="bg-neutral-900 w-full h-[30vh] sm:h-[50vh] relative select-none">
+    <div className="w-full h-[30vh] sm:h-[50vh] relative select-none">
       {renderImages()}
       <ChevronLeftIcon
         className="w-12 h-12 text-neutral-100 absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 cursor-pointer"

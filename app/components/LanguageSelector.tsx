@@ -40,15 +40,15 @@ const LanguageSelector = () => {
           )}
         </Select.Icon>
       </Select.Trigger>
-      <Select.Content className="bg-neutral-900 w-full my-12 z-10">
-        <Select.Viewport className="flex flex-col">
+      <Select.Content className="bg-neutral-100 dark:bg-neutral-700 w-full my-12 z-10">
+        <Select.Viewport className="flex flex-col border border-primary-200 dark:border-none">
           {languages.map(
             (language) =>
               language !== currentLanguage && (
                 <Select.Item
                   key={language}
                   value={language}
-                  className="hover:bg-neutral-100 hover:text-neutral-900 pl-2 pr-8 py-1"
+                  className="pl-2 pr-8 py-2 hover:text-primary-500 outline-none hover:outline-none dark:hover:text-primary-300"
                 >
                   <Select.ItemText>{language}</Select.ItemText>
                 </Select.Item>
