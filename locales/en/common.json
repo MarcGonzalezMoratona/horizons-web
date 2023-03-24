@@ -6,5 +6,8 @@
   "THE_TEAM": "The team",
   "BLOG": "Blog",
   "BACK_TO_BLOG": "Back to blog",
-  "SEE_NEWS": "What's new"
+  "SEE_NEWS": "What's new",
+  "NOT_FOUND": "Oops! page not found.",
+  "404_MESSAGE": "This is a 404 page. Looks like you're aiming to join the dark side.",
+  "GO_HOME": "Go home"
 }

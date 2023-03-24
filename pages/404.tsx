@@ -37,19 +37,17 @@ export default function Home() {
           </div>
           <div className="flex flex-col justify-center items-center lg:items-start text-center sm:text-left mx-8 h-64 sm:h-96 lg:w-1/2">
             <h1 className="font-bold text-2xl sm:text-4xl lg:text-6xl">
-              OOPS! PAGE NOT FOUND.
+              {t("NOT_FOUND").toUpperCase()}
             </h1>
             <h2 className="text-lg lg:text-2xl my-8">
-              {
-                "This is a 404 page. Looks like you're aiming to join on the dark side."
-              }
+              {t("404_MESSAGE").toUpperCase()}
             </h2>
             <Link href="/">
               <button
                 className="bg-red-700 font-semibold p-4 w-48 sm:w-96 text-neutral-100 rounded-md 
               border-b-4 border-t-2 border-t-red-500 border-b-red-900"
               >
-                GO HOME
+                {t("GO_HOME").toUpperCase()}
               </button>
             </Link>
           </div>
