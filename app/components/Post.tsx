@@ -34,7 +34,11 @@ export default function Post({ data, locale }: IProps) {
             sizes="(min-width: 320px) 720px"
           />
         </div>
-        <section className="m-8 flex flex-col justify-between sm:h-[500px] ">
+        <section
+          className="m-8 pt-4 flex flex-col justify-between 
+        sm:h-[700px] md:h-[800px] xl:h-[600px] 
+        border-t-4 border-primary-400 dark:border-primary-300"
+        >
           <div>
             <span className="flex justify-between my-1">
               <h2>{data.date}</h2>
@@ -45,7 +49,10 @@ export default function Post({ data, locale }: IProps) {
               <p>{data.paragraphs[0].content}</p>
             </div>
           </div>
-          <button className="text-lg font-bold tracking-wider py-4 mx-2 my-4 rounded-md bg-primary-500 text-neutral-100 dark:bg-primary-500 dark:text-neutral-100 border-t-2 border-b-4 border-t-primary-300 border-b-primary-800">
+          <button
+            className=" font-bold tracking-wider py-3 sm:w-1/2 md:w-full mx-2 my-4 rounded-md bg-primary-500 text-neutral-100 
+          dark:bg-primary-500 dark:text-neutral-100 border-t-2 border-b-4 border-t-primary-300 border-b-primary-800"
+          >
             READ MORE
             <FontAwesomeIcon icon={faArrowRight} className="mx-3" />
           </button>
