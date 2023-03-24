@@ -1,13 +1,13 @@
-import Link from 'next/link';
-import { useContext, useState } from 'react';
-import Menu from './Menu';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faLightbulb } from '@fortawesome/free-solid-svg-icons';
-import LanguageSelector from './LanguageSelector';
-import useTranslation from 'next-translate/useTranslation';
-import { Horizons, HorizonsWhite } from './Horizons';
-import ThemeContext from '../../store/ThemeContext';
-import PageContext from '../../store/PageContext';
+import Link from "next/link";
+import { useContext, useState } from "react";
+import Menu from "./Menu";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faLightbulb } from "@fortawesome/free-solid-svg-icons";
+import LanguageSelector from "./LanguageSelector";
+import useTranslation from "next-translate/useTranslation";
+import { Horizons, HorizonsWhite } from "./Horizons";
+import ThemeContext from "../../store/ThemeContext";
+import PageContext from "../../store/PageContext";
 
 interface HeaderProps {
   className: string;
@@ -16,15 +16,15 @@ interface HeaderProps {
 const Header = ({ className }: HeaderProps) => {
   const [isMenuOpen, toggleMenu] = useState(false);
   const { isDarkMode, toggleThemeHandler } = useContext(ThemeContext);
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
   const { pageType } = useContext(PageContext);
 
   return (
     <header
       className={`flex flex-col text-lg p-6 sm:flex-row text-neutral-800 bg-neutral-100
        dark:text-neutral-100 dark:bg-neutral-800 ${
-         pageType != 'landing' &&
-         'border-b-primary-500 dark:border-b-primary-300 border-b-4'
+         pageType != "landing" &&
+         "border-b-primary-500 dark:border-b-primary-300 border-b-4"
        } ${className}`}
     >
       <div className="flex items-center justify-between">
@@ -40,27 +40,27 @@ const Header = ({ className }: HeaderProps) => {
             <Link href="/team">
               <li
                 className={`mx-4 hover:text-primary-500 dark:hover:text-primary-300 ${
-                  pageType === 'team' &&
-                  'text-primary-500 dark:text-primary-300'
+                  pageType === "team" &&
+                  "text-primary-500 dark:text-primary-300"
                 }`}
               >
-                {t('TEAM')}
+                {t("TEAM")}
               </li>
             </Link>
             <Link
               href={{
-                pathname: '/blog',
+                pathname: "/blog",
                 query: { page: 1 },
               }}
             >
               <li
                 className={`mx-4 hover:text-primary-500 dark:hover:text-primary-300
                 ${
-                  pageType === 'blog' &&
-                  'text-primary-500 dark:text-primary-300'
+                  pageType === "blog" &&
+                  "text-primary-500 dark:text-primary-300"
                 }`}
               >
-                {t('BLOG')}
+                {t("BLOG")}
               </li>
             </Link>
           </ul>
