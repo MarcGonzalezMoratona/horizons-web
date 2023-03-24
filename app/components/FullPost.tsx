@@ -47,7 +47,7 @@ const FullPost = ({ data }: IProps) => {
           </p>
           <p>{data[id].date}</p>
         </div>
-        <h1 className="text-2xl font-medium my-4">{data[id].title}</h1>
+        <h1 className="text-2xl font-semibold my-4">{data[id].title}</h1>
         <h2 className="text-xl">{data[id].subtitle}</h2>
         {data[id].paragraphs.map((paragraph, index) => {
           return (

@@ -1,4 +1,4 @@
-import { createContext, ReactElement, useEffect, useState } from "react";
+import { createContext, ReactElement, useEffect, useState } from 'react';
 
 const ThemeContext = createContext({
   isDarkMode: true,
@@ -14,19 +14,19 @@ export function ThemeContextProvider(props: ThemePropsInterface): ReactElement {
   useEffect(() => initialThemeHandler());
 
   function isLocalStorageEmpty(): boolean {
-    return !localStorage.getItem("isDarkMode");
+    return !localStorage.getItem('isDarkMode');
   }
 
   function initialThemeHandler(): void {
     if (isLocalStorageEmpty()) {
-      localStorage.setItem("isDarkMode", `true`);
-      document!.querySelector("body")!.classList.add("dark");
+      localStorage.setItem('isDarkMode', `true`);
+      document!.querySelector('body')!.classList.add('dark');
       setIsDarkMode(true);
     } else {
       const isDarkMode: boolean = JSON.parse(
-        localStorage.getItem("isDarkMode")!
+        localStorage.getItem('isDarkMode')!
       );
-      isDarkMode && document!.querySelector("body")!.classList.add("dark");
+      isDarkMode && document!.querySelector('body')!.classList.add('dark');
       setIsDarkMode(() => {
         return isDarkMode;
       });
@@ -34,26 +34,22 @@ export function ThemeContextProvider(props: ThemePropsInterface): ReactElement {
   }
 
   function toggleThemeHandler(): void {
-    const isDarkMode: boolean = JSON.parse(
-      localStorage.getItem("isDarkMode")!
-    );
+    const isDarkMode: boolean = JSON.parse(localStorage.getItem('isDarkMode')!);
     setIsDarkMode(!isDarkMode);
     toggleDarkClassToBody();
     setValueToLocalStorage();
   }
 
   function toggleDarkClassToBody(): void {
-    document!.querySelector("body")!.classList.toggle("dark");
+    document!.querySelector('body')!.classList.toggle('dark');
   }
 
   function setValueToLocalStorage(): void {
-    localStorage.setItem("isDarkMode", `${!isDarkMode}`);
+    localStorage.setItem('isDarkMode', `${!isDarkMode}`);
   }
 
   return (
-    <ThemeContext.Provider
-      value={{ isDarkMode: true, toggleThemeHandler }}
-    >
+    <ThemeContext.Provider value={{ isDarkMode, toggleThemeHandler }}>
       {props.children}
     </ThemeContext.Provider>
   );

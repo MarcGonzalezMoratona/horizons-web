@@ -3,9 +3,16 @@ import Layout from '../../app/components/Layout';
 import ProfilePicture from '../../app/components/ProfilePicture';
 import { team } from '../../app/data/team';
 import useTranslation from 'next-translate/useTranslation';
+import { useContext, useEffect } from 'react';
+import PageContext from '../../store/PageContext';
 
 export default function Team() {
   const { t } = useTranslation('common');
+  const { PageHandler } = useContext(PageContext);
+
+  useEffect(() => {
+    PageHandler('team');
+  });
 
   return (
     <>
@@ -19,10 +26,9 @@ export default function Team() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <h1 className="text-xl sm:text-2xl mt-4">
+        <h1 className="text-xl tracking-wider font-semibold sm:text-2xl my-8">
           {t('THE_TEAM').toUpperCase()}
         </h1>
-        <hr className="bg-neutral-900 w-9/12 lg:w-7/12 h-0.5 my-4" />
         <ul className="grid grid-cols-2 mx-2 sm:mx-8 sm:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-8 md:gap-12 my-8">
           {team.partners.map((partner, index) => {
             return (

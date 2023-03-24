@@ -4,14 +4,20 @@ import Layout from '../../app/components/Layout';
 import Pagination from '../../app/components/Pagination';
 import Post from '../../app/components/Post';
 import { posts } from '../../app/data/posts';
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { GetServerSideProps } from 'next/types';
 import { ParsedUrlQuery } from 'querystring';
+import PageContext from '../../store/PageContext';
 
 export default function Blog({ query }: { query: ParsedUrlQuery }) {
   const { t } = useTranslation('common');
   const { page } = query;
   const currentPage = Number(page);
+  const { PageHandler } = useContext(PageContext);
+
+  useEffect(() => {
+    PageHandler('blog');
+  });
 
   return (
     <>
@@ -25,8 +31,9 @@ export default function Blog({ query }: { query: ParsedUrlQuery }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <h1 className="text-xl sm:text-2xl mt-4">{t('BLOG').toUpperCase()}</h1>
-        <hr className="bg-neutral-900 w-9/12 lg:w-7/12 h-0.5 my-4" />
+        <h1 className="text-xl tracking-wider font-semibold sm:text-2xl my-8">
+          {t('BLOG').toUpperCase()}
+        </h1>
         <section className="flex flex-col sm:grid sm:grid-cols-2 lg:w-2/3 gap-8">
           {posts.map((post) => {
             return (
