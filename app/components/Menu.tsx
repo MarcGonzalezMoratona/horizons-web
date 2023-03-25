@@ -1,16 +1,14 @@
 import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
 import LanguageSelector from './LanguageSelector';
-import PageContext from '../../store/PageContext';
-import { useContext } from 'react';
+import { usePageType } from '../hooks/usePageInfo';
 
-interface IProps {
+interface MenuProps {
   isMenuOpen: boolean;
 }
 
-const Menu = ({ isMenuOpen }: IProps) => {
+const Menu = ({ isMenuOpen }: MenuProps) => {
   const { t } = useTranslation('common');
-  const { pageType } = useContext(PageContext);
 
   return (
     <>

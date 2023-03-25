@@ -7,7 +7,7 @@ import React from 'react';
 import Button from './Button';
 import RelatedPost from './RelatedPost';
 
-interface IProps {
+interface FullPostProps {
   data: {
     id: number;
     title: string;
@@ -28,7 +28,7 @@ interface IProps {
   }[];
 }
 
-const FullPost = ({ data }: IProps) => {
+const FullPost = ({ data }: FullPostProps) => {
   const router = useRouter();
   const id = Number(router.query.post) - 1;
 

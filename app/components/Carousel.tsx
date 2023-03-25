@@ -1,15 +1,18 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
+import { useDevice } from '../hooks/useDevice';
 
-interface IProps {
+interface CarouselProps {
   images: string[];
   priority: boolean;
 }
 
-const Carousel = ({ images, priority }: IProps) => {
+const Carousel = ({ images, priority }: CarouselProps) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const device = useDevice();
 
   const previousImage = () => {
     setIsAnimating(true);
@@ -25,10 +28,18 @@ const Carousel = ({ images, priority }: IProps) => {
     setIsAnimating(true);
     setCurrentImage(index % images.length);
   };
-
   useEffect(() => {
-    const interval = setInterval(() => nextImage(), 3000);
-    return () => clearInterval(interval);
+    if (device === 'desktop') {
+      const interval = setInterval(() => nextImage(), 3000);
+      return () => clearInterval(interval);
+    }
+  });
+
+  const handlers = useSwipeable({
+    onSwiped: (eventData) => {
+      if (eventData.dir === 'Left') nextImage();
+      else if (eventData.dir === 'Right') previousImage();
+    },
   });
 
   const renderImages = () => {
@@ -53,7 +64,10 @@ const Carousel = ({ images, priority }: IProps) => {
   };
 
   return (
-    <div className="w-full h-[30vh] sm:h-[50vh] relative select-none">
+    <div
+      className="w-full h-[30vh] sm:h-[50vh] relative select-none"
+      {...handlers}
+    >
       {renderImages()}
       <ChevronLeftIcon
         className="w-12 h-12 text-neutral-100 absolute left-4 sm:left-16 top-1/2 -translate-y-1/2 cursor-pointer p-2 

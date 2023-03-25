@@ -1,11 +1,10 @@
 import useTranslation from 'next-translate/useTranslation';
-import { useContext } from 'react';
-import ThemeContext from '../../store/ThemeContext';
+import { useIsDarkMode } from '../hooks/useTheme';
 import { Horizons, HorizonsWhite } from './Horizons';
 
 const ComingSoon = () => {
   const { t } = useTranslation('common');
-  const { isDarkMode } = useContext(ThemeContext);
+  const isDarkMode = useIsDarkMode();
 
   return (
     <div className="w-full flex flex-col items-center gap-4 mt-12">

@@ -1,14 +1,14 @@
 import Link from 'next/link';
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import Menu from './Menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import LanguageSelector from './LanguageSelector';
 import useTranslation from 'next-translate/useTranslation';
 import { Horizons, HorizonsWhite } from './Horizons';
-import ThemeContext from '../../store/ThemeContext';
-import PageContext from '../../store/PageContext';
 import { SunIcon, MoonIcon } from '@radix-ui/react-icons';
+import { usePageType } from '../hooks/usePageInfo';
+import { useIsDarkMode, useToggleThemeHandler } from '../hooks/useTheme';
 
 interface HeaderProps {
   className: string;
@@ -16,9 +16,11 @@ interface HeaderProps {
 
 const Header = ({ className }: HeaderProps) => {
   const [isMenuOpen, toggleMenu] = useState(false);
-  const { isDarkMode, toggleThemeHandler } = useContext(ThemeContext);
+  const toggleThemeHandler = useToggleThemeHandler();
+  const isDarkMode = useIsDarkMode();
+
   const { t } = useTranslation('common');
-  const { pageType } = useContext(PageContext);
+  const pageType = usePageType();
 
   return (
     <header

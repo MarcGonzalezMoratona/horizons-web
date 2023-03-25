@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import React from 'react';
 
-interface IProps {
+interface ImageProps {
   className?: string;
   priority?: boolean;
 }
 
-export const Horizons = ({ className, priority }: IProps) => {
+export const Horizons = ({ className, priority }: ImageProps) => {
   return (
     <Image
       className={className}
@@ -20,7 +20,7 @@ export const Horizons = ({ className, priority }: IProps) => {
   );
 };
 
-export const HorizonsWhite = ({ className, priority }: IProps) => {
+export const HorizonsWhite = ({ className, priority }: ImageProps) => {
   return (
     <Image
       className={className}
@@ -34,7 +34,7 @@ export const HorizonsWhite = ({ className, priority }: IProps) => {
   );
 };
 
-export const HorizonsWithText = ({ className, priority }: IProps) => {
+export const HorizonsWithText = ({ className, priority }: ImageProps) => {
   return (
     <Image
       className={className}

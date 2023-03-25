@@ -4,16 +4,16 @@ import Layout from '../../app/components/Layout';
 import Pagination from '../../app/components/Pagination';
 import Post from '../../app/components/Post';
 import { posts } from '../../app/data/posts';
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { GetServerSideProps } from 'next/types';
 import { ParsedUrlQuery } from 'querystring';
-import PageContext from '../../store/PageContext';
+import { usePageHandler } from '../../app/hooks/usePageInfo';
 
 export default function Blog({ query }: { query: ParsedUrlQuery }) {
   const { t } = useTranslation('common');
+  const PageHandler = usePageHandler();
   const { page } = query;
   const currentPage = Number(page);
-  const { PageHandler } = useContext(PageContext);
 
   useEffect(() => {
     PageHandler('blog');

@@ -1,11 +1,11 @@
 import Footer from './Footer';
 import Header from './Header';
 
-type IProps = {
+type LayoutProps = {
   children: React.ReactNode;
 };
 
-const Layout = (props: IProps) => {
+const Layout = (props: LayoutProps) => {
   return (
     <>
       <Header className="font-montserrat" />

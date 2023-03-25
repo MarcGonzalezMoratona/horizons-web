@@ -1,13 +1,13 @@
 import { ArrowRightIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 
-interface IProps {
+interface ButtonProps {
   mainText: string;
   CTAText: string;
   icon: JSX.Element;
 }
 
-export const GlowingButton = ({ mainText, CTAText, icon }: IProps) => {
+export const GlowingButton = ({ mainText, CTAText, icon }: ButtonProps) => {
   return (
     <div className="flex flex-col gap-8 items-start justify-center mx-4 my-8">
       <div className="relative group">

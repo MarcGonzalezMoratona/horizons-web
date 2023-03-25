@@ -5,7 +5,7 @@ import Button from './Button';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useTranslation from 'next-translate/useTranslation';
-interface IProps {
+interface PostProps {
   data: {
     id: number;
     title: string;
@@ -22,7 +22,7 @@ interface IProps {
   locale?: string;
 }
 
-export default function Post({ data, locale }: IProps) {
+export default function Post({ data, locale }: PostProps) {
   const { t } = useTranslation('common');
 
   return (

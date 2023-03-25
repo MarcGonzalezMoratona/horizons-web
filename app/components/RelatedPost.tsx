@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-interface IProps {
+interface RelatedPostProps {
   data: {
     id: number;
     title: string;
@@ -12,7 +12,7 @@ interface IProps {
   };
 }
 
-const RelatedPost = ({ data }: IProps) => {
+const RelatedPost = ({ data }: RelatedPostProps) => {
   return (
     <div className="w-full">
       <Link href={`/blog/${data.id}`}>

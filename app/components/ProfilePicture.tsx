@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import SocialNetworks from './SocialNetworks';
 
-interface IProps {
+interface ProfilePictureProps {
   partner: {
     name: string;
     image: string;
@@ -13,7 +13,7 @@ interface IProps {
   index: number;
 }
 
-const ProfilePicture = ({ partner, index }: IProps) => {
+const ProfilePicture = ({ partner, index }: ProfilePictureProps) => {
   return (
     <li className="flex flex-col items-center">
       <div className="rounded-full relative w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60">

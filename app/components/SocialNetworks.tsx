@@ -10,7 +10,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
-interface IProps {
+interface SocialNetworksProps {
   networks?: {
     twitter?: string;
     instagram?: string;
@@ -23,7 +23,7 @@ interface IProps {
   className?: string;
 }
 
-const SocialNetworks = ({ networks, className }: IProps) => {
+const SocialNetworks = ({ networks, className }: SocialNetworksProps) => {
   return (
     <div
       className={`flex items-center gap-2 sm:gap-4 text-3xl sm:text-2xl ${className}`}

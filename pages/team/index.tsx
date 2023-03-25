@@ -3,12 +3,12 @@ import Layout from '../../app/components/Layout';
 import ProfilePicture from '../../app/components/ProfilePicture';
 import { team } from '../../app/data/team';
 import useTranslation from 'next-translate/useTranslation';
-import { useContext, useEffect } from 'react';
-import PageContext from '../../store/PageContext';
+import { useEffect } from 'react';
+import { usePageHandler } from '../../app/hooks/usePageInfo';
 
 export default function Team() {
   const { t } = useTranslation('common');
-  const { PageHandler } = useContext(PageContext);
+  const PageHandler = usePageHandler();
 
   useEffect(() => {
     PageHandler('team');

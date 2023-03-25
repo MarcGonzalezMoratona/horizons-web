@@ -1,12 +1,11 @@
 import SocialNetworks from './SocialNetworks';
 import { socialNetworks } from '../data/socialNetworks';
 import { Horizons, HorizonsWhite } from './Horizons';
-import { useContext } from 'react';
-import ThemeContext from '../../store/ThemeContext';
+import { useIsDarkMode } from '../hooks/useTheme';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const { isDarkMode } = useContext(ThemeContext);
+  const isDarkMode = useIsDarkMode();
 
   return (
     <footer className="flex flex-col items-center justify-between bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 text-lg p-6 sm:flex-row gap-2 border-t-2 dark:border-neutral-100 border-neutral-200">

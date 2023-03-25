@@ -1,15 +1,15 @@
-import { createContext, ReactElement, useEffect, useState } from 'react';
+import { createContext, ReactElement, useState } from 'react';
 
 const PageContext = createContext({
   pageType: 'landing',
   PageHandler: (pageType: string) => {},
 });
 
-interface PagePropsInterface {
+interface PageProps {
   children?: JSX.Element | Array<JSX.Element>;
 }
 
-export function PageContextProvider(props: PagePropsInterface): ReactElement {
+export function PageContextProvider(props: PageProps): ReactElement {
   const [pageType, setPageType] = useState('landing');
 
   function PageHandler(pageType: string): void {

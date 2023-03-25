@@ -1,17 +1,17 @@
-import useTranslation from "next-translate/useTranslation";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import { useContext, useEffect } from "react";
-import Layout from "../app/components/Layout";
-import PageContext from "../store/PageContext";
+import useTranslation from 'next-translate/useTranslation';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect } from 'react';
+import Layout from '../app/components/Layout';
+import { usePageHandler } from '../app/hooks/usePageInfo';
 
 export default function Home() {
-  const { t } = useTranslation("common");
-  const { PageHandler } = useContext(PageContext);
+  const { t } = useTranslation('common');
+  const PageHandler = usePageHandler();
 
   useEffect(() => {
-    PageHandler("404");
+    PageHandler('404');
   });
 
   return (
@@ -37,17 +37,17 @@ export default function Home() {
           </div>
           <div className="flex flex-col justify-center items-center lg:items-start text-center sm:text-left mx-8 h-64 sm:h-96 lg:w-1/2">
             <h1 className="font-bold text-2xl sm:text-4xl lg:text-6xl">
-              {t("NOT_FOUND").toUpperCase()}
+              {t('NOT_FOUND').toUpperCase()}
             </h1>
             <h2 className="text-lg lg:text-2xl my-8">
-              {t("404_MESSAGE").toUpperCase()}
+              {t('404_MESSAGE').toUpperCase()}
             </h2>
             <Link href="/">
               <button
                 className="bg-red-700 font-semibold p-4 w-48 sm:w-96 text-neutral-100 rounded-md 
               border-b-4 border-t-2 border-t-red-500 border-b-red-900"
               >
-                {t("GO_HOME").toUpperCase()}
+                {t('GO_HOME').toUpperCase()}
               </button>
             </Link>
           </div>

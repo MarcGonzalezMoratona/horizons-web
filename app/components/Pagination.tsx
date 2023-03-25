@@ -1,12 +1,12 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 
-interface IProps {
+interface PaginationProps {
   pages: number;
   page: number;
 }
 
-const Pagination = ({ pages, page }: IProps) => {
+const Pagination = ({ pages, page }: PaginationProps) => {
   const renderItems = () => {
     let items = [];
     for (let i = 1; i <= pages; ++i) {

@@ -1,18 +1,18 @@
 import { GearIcon } from '@radix-ui/react-icons';
 import useTranslation from 'next-translate/useTranslation';
 import Head from 'next/head';
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import Carousel from '../app/components/Carousel';
 import ComingSoon from '../app/components/ComingSoon';
 import { GlowingButton } from '../app/components/GlowingButton';
 import Layout from '../app/components/Layout';
 import SocialNetworks from '../app/components/SocialNetworks';
 import { socialNetworks } from '../app/data/socialNetworks';
-import PageContext from '../store/PageContext';
+import { usePageHandler } from '../app/hooks/usePageInfo';
 
 export default function Home() {
   const { t } = useTranslation('common');
-  const { PageHandler } = useContext(PageContext);
+  const PageHandler = usePageHandler();
 
   useEffect(() => {
     PageHandler('landing');
