@@ -6,5 +6,9 @@
   "THE_TEAM": "L'équipe",
   "BLOG": "Blog",
   "BACK_TO_BLOG": "Retour au blog",
-  "SEE_NEWS": "Voir les nouvelles"
+  "READ MORE": "Lire plus",
+  "SEE_NEWS": "Voir les nouvelles",
+  "NOT_FOUND": "Oups! page introuvable.",
+  "404_MESSAGE": "Ceci est une page 404. On dirait que vous visez à rejoindre le côté obscur.",
+  "GO_HOME": "Retour à la page d'acceuil"
 }

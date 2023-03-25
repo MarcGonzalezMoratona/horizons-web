@@ -6,5 +6,9 @@
   "THE_TEAM": "L'equip",
   "BLOG": "Bloc",
   "BACK_TO_BLOG": "Torna al bloc",
-  "SEE_NEWS": "Veure les novetats"
+  "READ MORE": "Llegir més",
+  "SEE_NEWS": "Veure les novetats",
+  "NOT_FOUND": "Vaja! No s'ha trobat la pàgina.",
+  "404_MESSAGE": "Aquesta és una pàgina de 404. Sembla que vols unir-te al costat fosc.",
+  "GO_HOME": "Torna a l'inici"
 }

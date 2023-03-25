@@ -53,14 +53,18 @@ const Carousel = ({ images, priority }: IProps) => {
   };
 
   return (
-    <div className="bg-black w-full h-[30vh] sm:h-[50vh] relative select-none">
+    <div className="w-full h-[30vh] sm:h-[50vh] relative select-none">
       {renderImages()}
       <ChevronLeftIcon
-        className="w-12 h-12 text-white absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 cursor-pointer"
+        className="w-12 h-12 text-neutral-100 absolute left-4 sm:left-16 top-1/2 -translate-y-1/2 cursor-pointer p-2 
+        bg-primary-500 dark:bg-neutral-600 rounded-full border-b-4 border-b-primary-700 
+        dark:border-b-neutral-700 hover:translate-y-[calc(-50%+4px)] transition-transform duration-300"
         onClick={() => previousImage()}
       />
       <ChevronRightIcon
-        className="w-12 h-12 text-white absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 cursor-pointer"
+        className="w-12 h-12 text-neutral-100 absolute right-4 sm:right-16 top-1/2 -translate-y-1/2 cursor-pointer p-2 
+        bg-primary-500 dark:bg-neutral-600 rounded-full border-b-4 border-b-primary-700 
+        dark:border-b-neutral-700 hover:translate-y-[calc(-50%+4px)] transition-transform duration-300"
         onClick={() => nextImage()}
       />
       <ul className="flex absolute bottom-4 left-1/2 -translate-x-1/2 gap-2">
@@ -68,7 +72,7 @@ const Carousel = ({ images, priority }: IProps) => {
           <li
             onClick={() => goToSlide(index)}
             key={`image ${index}`}
-            className={`h-3 w-3 rounded-full cursor-pointer bg-white ${
+            className={`h-3 w-3 rounded-full cursor-pointer bg-neutral-100 ${
               currentImage !== index && 'opacity-30'
             } hover:opacity-70`}
           />

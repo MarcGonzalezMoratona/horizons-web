@@ -1,8 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import React from "react";
-import RelatedPost from "./RelatedPost";
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React from 'react';
+import Button from './Button';
+import RelatedPost from './RelatedPost';
 
 interface IProps {
   data: {
@@ -47,22 +50,22 @@ const FullPost = ({ data }: IProps) => {
           </p>
           <p>{data[id].date}</p>
         </div>
-        <h1 className="text-2xl font-medium mt-4 mb-2">{data[id].title}</h1>
-        <h2>{data[id].subtitle}</h2>
+        <h1 className="text-2xl font-semibold my-4">{data[id].title}</h1>
+        <h2 className="text-xl">{data[id].subtitle}</h2>
         {data[id].paragraphs.map((paragraph, index) => {
           return (
             <React.Fragment key={`paragraph ${index}`}>
               {paragraph.heading && (
-                <div className="mt-6 text-lg font-medium">
+                <div className="my-4 text-lg font-medium">
                   {paragraph.heading}
                 </div>
               )}
-              <p className="mt-2 mb-6">{paragraph.content}</p>
+              <p className="my-4">{paragraph.content}</p>
               {paragraph.image && (
                 <div className="flex justify-center relative h-96 lg:my-8">
                   <Image
                     src={`/blog/${paragraph.image}`}
-                    alt={data[id].alt || "horizons logo"}
+                    alt={data[id].alt || 'horizons logo'}
                     fill
                     className="object-contain"
                     sizes="(min-width: 320px) 640px, (min-width: 640px) 720px (min-width: 768px) 1080px"
@@ -87,13 +90,22 @@ const FullPost = ({ data }: IProps) => {
                       type="application/pdf"
                     />
                   </div>
-                  <div className="flex justify-center my-4 bg-black text-white rounded-sm py-3 lg:mx-40  sm:hidden">
+                  <div className="flex justify-center my-4 bg-neutral-900 text-neutral-100 rounded-sm py-3 lg:mx-40  sm:hidden">
                     <Link
                       href={`/documents/${paragraph.document}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <button>{paragraph.documentCTA}</button>
+                      <Button
+                        icon={
+                          <FontAwesomeIcon
+                            icon={faArrowDown}
+                            className="ml-3"
+                          />
+                        }
+                      >
+                        {paragraph.documentCTA}
+                      </Button>
                     </Link>
                   </div>
                 </>

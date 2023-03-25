@@ -1,27 +1,27 @@
-import * as Select from "@radix-ui/react-select";
-import { ChevronDownIcon, ChevronUpIcon } from "@radix-ui/react-icons";
-import { useEffect, useState } from "react";
-import useTranslation from "next-translate/useTranslation";
-import { useRouter } from "next/router";
+import * as Select from '@radix-ui/react-select';
+import { ChevronDownIcon, ChevronUpIcon } from '@radix-ui/react-icons';
+import { useEffect, useState } from 'react';
+import useTranslation from 'next-translate/useTranslation';
+import { useRouter } from 'next/router';
 
 const LanguageSelector = () => {
-  const { t } = useTranslation("common");
-  const currentLanguage = t("CURRENT_LANGUAGE");
+  const { t } = useTranslation('common');
+  const currentLanguage = t('CURRENT_LANGUAGE');
   const [value, setValue] = useState(currentLanguage);
   const [isSelectorOpen, toggleSelector] = useState(false);
   const router = useRouter();
   const { pathname, asPath, query } = router;
-  const languages = ["Català", "English", "Español", "Français"];
+  const languages = ['Català', 'English', 'Español', 'Français'];
 
   useEffect(() => {
-    if (value === "Català")
-      router.push({ pathname, query }, asPath, { locale: "ca" });
-    else if (value === "English")
-      router.push({ pathname, query }, asPath, { locale: "en" });
-    else if (value === "Español")
-      router.push({ pathname, query }, asPath, { locale: "es" });
-    else if (value === "Français")
-      router.push({ pathname, query }, asPath, { locale: "fr" });
+    if (value === 'Català')
+      router.push({ pathname, query }, asPath, { locale: 'ca' });
+    else if (value === 'English')
+      router.push({ pathname, query }, asPath, { locale: 'en' });
+    else if (value === 'Español')
+      router.push({ pathname, query }, asPath, { locale: 'es' });
+    else if (value === 'Français')
+      router.push({ pathname, query }, asPath, { locale: 'fr' });
   }, [value]);
 
   return (
@@ -40,15 +40,15 @@ const LanguageSelector = () => {
           )}
         </Select.Icon>
       </Select.Trigger>
-      <Select.Content className="bg-black w-full my-12 z-10">
-        <Select.Viewport className="flex flex-col">
+      <Select.Content className="bg-neutral-100 dark:bg-neutral-700 w-full my-12 z-10">
+        <Select.Viewport className="flex flex-col border border-primary-200 dark:border-none">
           {languages.map(
             (language) =>
               language !== currentLanguage && (
                 <Select.Item
                   key={language}
                   value={language}
-                  className="hover:bg-white hover:text-black pl-2 pr-8 py-1"
+                  className="pl-2 pr-8 py-2 hover:text-primary-500 outline-none hover:outline-none dark:hover:text-primary-300"
                 >
                   <Select.ItemText>{language}</Select.ItemText>
                 </Select.Item>

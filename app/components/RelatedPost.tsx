@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface IProps {
   data: {
@@ -35,7 +35,7 @@ const RelatedPost = ({ data }: IProps) => {
                 src={`${
                   data.caption ? `/blog/${data.caption}` : `/horizons.svg`
                 }`}
-                alt={data.alt || "horizons logo"}
+                alt={data.alt || 'horizons logo'}
                 fill
                 className="object-contain"
                 sizes="(min-width: 320px) 320px"
