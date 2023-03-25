@@ -1,9 +1,10 @@
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { GetStaticProps } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import Button from './Button';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import useTranslation from 'next-translate/useTranslation';
 interface IProps {
   data: {
     id: number;
@@ -22,6 +23,8 @@ interface IProps {
 }
 
 export default function Post({ data, locale }: IProps) {
+  const { t } = useTranslation('common');
+
   return (
     <Link href={`/blog/${data.id}`} locale={locale}>
       <article className="flex flex-col mx-4 my-4 pt-4 shadow-md overflow-hidden hover:shadow-lg rounded-md dark:bg-neutral-800">
@@ -49,13 +52,11 @@ export default function Post({ data, locale }: IProps) {
               <p>{data.paragraphs[0].content}</p>
             </div>
           </div>
-          <button
-            className=" font-bold tracking-wider py-3 sm:w-1/2 md:w-full mx-2 my-4 rounded-md bg-primary-500 text-neutral-100 
-          dark:bg-primary-500 dark:text-neutral-100 border-t-2 border-b-4 border-t-primary-300 border-b-primary-800"
+          <Button
+            icon={<FontAwesomeIcon icon={faArrowRight} className="ml-3" />}
           >
-            READ MORE
-            <FontAwesomeIcon icon={faArrowRight} className="mx-3" />
-          </button>
+            {t('READ MORE').toUpperCase()}
+          </Button>
         </section>
       </article>
     </Link>

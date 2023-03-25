@@ -1,7 +1,10 @@
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
+import Button from './Button';
 import RelatedPost from './RelatedPost';
 
 interface IProps {
@@ -93,7 +96,16 @@ const FullPost = ({ data }: IProps) => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <button>{paragraph.documentCTA}</button>
+                      <Button
+                        icon={
+                          <FontAwesomeIcon
+                            icon={faArrowDown}
+                            className="ml-3"
+                          />
+                        }
+                      >
+                        {paragraph.documentCTA}
+                      </Button>
                     </Link>
                   </div>
                 </>

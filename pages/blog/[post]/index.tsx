@@ -4,6 +4,7 @@ import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
 import Link from 'next/link';
+import Button from '../../../app/components/Button';
 import FullPost from '../../../app/components/FullPost';
 import Layout from '../../../app/components/Layout';
 import { posts } from '../../../app/data/posts';
@@ -32,10 +33,12 @@ export default function Post() {
               query: { page: 1 },
             }}
           >
-            <div className="flex gap-2 my-4">
-              <ChevronLeftIcon className="h-6 w-6" />
+            <Button
+              className="flex gap-2 my-8 flex-row-reverse"
+              icon={<ChevronLeftIcon className="h-6 w-6" />}
+            >
               {t('BACK_TO_BLOG').toUpperCase()}
-            </div>
+            </Button>
           </Link>
           <FullPost data={posts} />
         </div>
