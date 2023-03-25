@@ -58,13 +58,13 @@ const Carousel = ({ images, priority }: IProps) => {
       <ChevronLeftIcon
         className="w-12 h-12 text-neutral-100 absolute left-4 sm:left-16 top-1/2 -translate-y-1/2 cursor-pointer p-2 
         bg-primary-500 dark:bg-neutral-600 rounded-full border-b-4 border-b-primary-700 
-        dark:border-b-neutral-700 hover:translate-y-[calc(-50%+4px)] transition-transform duration-300"
+        dark:border-b-neutral-700 sm:hover:translate-y-[calc(-50%+4px)] sm:transition-transform sm:duration-300"
         onClick={() => previousImage()}
       />
       <ChevronRightIcon
         className="w-12 h-12 text-neutral-100 absolute right-4 sm:right-16 top-1/2 -translate-y-1/2 cursor-pointer p-2 
         bg-primary-500 dark:bg-neutral-600 rounded-full border-b-4 border-b-primary-700 
-        dark:border-b-neutral-700 hover:translate-y-[calc(-50%+4px)] transition-transform duration-300"
+        dark:border-b-neutral-700 sm:hover:translate-y-[calc(-50%+4px)] sm:transition-transform sm:duration-300"
         onClick={() => nextImage()}
       />
       <ul className="flex absolute bottom-4 left-1/2 -translate-x-1/2 gap-2">
