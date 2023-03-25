@@ -31,7 +31,6 @@ export const posts = [
         Team members are encouraged to change roles between milestones to gain experience in different areas of the game development process.
         If you're interested in following along with the team's progress, you can check out our social media channels.
         Stay tuned for more exciting news!`,
-        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
       },
     ],
   },
