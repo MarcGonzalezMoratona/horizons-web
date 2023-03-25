@@ -19,7 +19,7 @@ export const GlowingButton = ({ mainText, CTAText, icon }: ButtonProps) => {
           href="https://github.com/Horizons-Games/Axolotl-Engine/releases"
           className="relative px-4 py-4 bg-neutral-900 rounded-lg flex items-center gap-4 sm:gap-8"
         >
-          <span className="text-gray-100 flex items-center gap-2 sm:gap-4">
+          <span className="text-neutral-100 flex items-center gap-2 sm:gap-4">
             {icon}
             {mainText}
           </span>

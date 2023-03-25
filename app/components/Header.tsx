@@ -42,9 +42,9 @@ const Header = ({ className }: HeaderProps) => {
           <ul className="flex">
             <Link href="/team">
               <li
-                className={`mx-4 hover:text-primary-500 dark:hover:text-primary-300 ${
+                className={`mx-4 hover:text-primary-500 dark:hover:text-primary-300 py-0.5 ${
                   pageType === 'team' &&
-                  'text-primary-500 dark:text-primary-300'
+                  'text-primary-500 dark:text-primary-300 border-b-primary-300 border-b-2'
                 }`}
               >
                 {t('TEAM')}
@@ -57,10 +57,10 @@ const Header = ({ className }: HeaderProps) => {
               }}
             >
               <li
-                className={`mx-4 hover:text-primary-500 dark:hover:text-primary-300
+                className={`mx-4 hover:text-primary-500 dark:hover:text-primary-300 py-0.5
                 ${
                   pageType === 'blog' &&
-                  'text-primary-500 dark:text-primary-300'
+                  'text-primary-500 dark:text-primary-300 border-b-primary-300 border-b-2'
                 }`}
               >
                 {t('BLOG')}

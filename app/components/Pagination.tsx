@@ -17,7 +17,7 @@ const Pagination = ({ pages, page }: PaginationProps) => {
             query: { page: i },
           }}
           className={`flex items-center justify-center my-4 border border-r-0 text-lg
-          border-gray-300 w-10 h-10 cursor-pointer ${
+          border-neutral-300 w-10 h-10 cursor-pointer ${
             Number(page) === i
               ? `text-primary-600 bg-primary-100 hover:bg-primary-100 hover:text-primary-600`
               : `hover:bg-neutral-100 dark:hover:bg-primary-100 dark:hover:text-primary-600`
@@ -40,7 +40,7 @@ const Pagination = ({ pages, page }: PaginationProps) => {
             query: { page: page - 1 },
           }}
         >
-          <div className="flex items-center justify-center my-4 border border-r-0 rounded-l-lg border-gray-300 w-12 h-10 hover:bg-gray-100 dark:hover:bg-primary-100 dark:hover:text-primary-600 cursor-pointer">
+          <div className="flex items-center justify-center my-4 border border-r-0 rounded-l-lg border-neutral-300 w-12 h-10 hover:bg-neutral-100 dark:hover:bg-primary-100 dark:hover:text-primary-600 cursor-pointer">
             <ChevronLeftIcon className="h-5 w-5" />
           </div>
         </Link>
@@ -53,7 +53,7 @@ const Pagination = ({ pages, page }: PaginationProps) => {
             query: { page: page + 1 },
           }}
         >
-          <div className="flex items-center justify-center my-4 border border-l-0 rounded-r-lg border-gray-300 w-12 h-10 hover:bg-gray-100 dark:hover:bg-primary-100 dark:hover:text-primary-600 cursor-pointer">
+          <div className="flex items-center justify-center my-4 border border-l-0 rounded-r-lg border-neutral-300 w-12 h-10 hover:bg-neutral-100 dark:hover:bg-primary-100 dark:hover:text-primary-600 cursor-pointer">
             <ChevronRightIcon className="h-5 w-5" />
           </div>
         </Link>

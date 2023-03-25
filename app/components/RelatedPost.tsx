@@ -16,7 +16,7 @@ const RelatedPost = ({ data }: RelatedPostProps) => {
   return (
     <div className="w-full">
       <Link href={`/blog/${data.id}`}>
-        <article className="my-2 border-b border-gray-200">
+        <article className="pb-4 my-2 border-b border-neutral-200 dark:border-neutral-100">
           <div className="grid grid-cols-3 grid-rows-2 gap-2 ">
             <div className="flex items-center gap-2 col-span-2 my-2">
               <div className="rounded-full relative w-8 h-8">
@@ -41,7 +41,7 @@ const RelatedPost = ({ data }: RelatedPostProps) => {
                 sizes="(min-width: 320px) 320px"
               />
             </div>
-            <p className="font-medium col-span-2">{data.title}</p>
+            <p className="font-medium col-span-2 text-lg">{data.title}</p>
           </div>
         </article>
       </Link>

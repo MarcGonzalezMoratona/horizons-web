@@ -1,5 +1,6 @@
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -31,11 +32,15 @@ interface FullPostProps {
 const FullPost = ({ data }: FullPostProps) => {
   const router = useRouter();
   const id = Number(router.query.post) - 1;
+  const { t } = useTranslation('common');
 
   return (
     <section className="flex flex-col xl:grid xl:grid-cols-3 xl:gap-8 my-8">
       <article className="col-span-2">
-        <div className="grid grid-rows-2 grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 p-4 border-b border-gray-200 items-center justify-center">
+        <div
+          className="grid grid-rows-2 grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 
+        p-4 border-b border-neutral-200 dark:border-neutral-100  items-center justify-center"
+        >
           <div className="rounded-full relative w-16 h-16 row-span-2">
             <Image
               src={`/team/${data[id].profile}`}
@@ -90,7 +95,7 @@ const FullPost = ({ data }: FullPostProps) => {
                       type="application/pdf"
                     />
                   </div>
-                  <div className="flex justify-center my-4 bg-neutral-900 text-neutral-100 rounded-sm py-3 lg:mx-40  sm:hidden">
+                  <div className="flex justify-center my-4 dark:bg-neutral-900 text-neutral-100 rounded-sm py-3 lg:mx-40 sm:hidden">
                     <Link
                       href={`/documents/${paragraph.document}`}
                       target="_blank"
@@ -114,19 +119,21 @@ const FullPost = ({ data }: FullPostProps) => {
           );
         })}
       </article>
-      <aside className="flex flex-col items-center xl:items-start xl:border-l border-gray-200 p-2 xl:p-8">
-        <div className="rounded-full relative w-28 h-28">
-          <Image
-            src={`/team/${data[id].profile}`}
-            alt={data[id].author}
-            fill
-            className="object-cover rounded-full"
-            sizes="(min-width: 320px) 320px"
-          />
+      <aside className="flex flex-col items-center xl:items-start xl:border-l border-neutral-200 dark:border-neutral-100  p-2 xl:p-8">
+        <div className="flex flex-col items-center xl:items-start my-4">
+          <div className="rounded-full relative w-28 h-28">
+            <Image
+              src={`/team/${data[id].profile}`}
+              alt={data[id].author}
+              fill
+              className="object-cover rounded-full"
+              sizes="(min-width: 320px) 320px"
+            />
+          </div>
+          <p className="my-2 font-medium text-lg">{data[id].author}</p>
         </div>
-        <p className="my-2 font-medium text-lg">{data[id].author}</p>
         {data.length > 1 && (
-          <h3 className="font-medium mt-8 mb-2">MORE POSTS</h3>
+          <h3 className="font-medium mt-4">{t('MORE_POSTS').toUpperCase()}</h3>
         )}
         {data[id + 1] ? (
           <RelatedPost data={data[id + 1]} />
