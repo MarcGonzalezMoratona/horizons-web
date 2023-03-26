@@ -5,4 +5,4 @@ const nextConfig = nextTranslate({
   reactStrictMode: true,
 });
 
-module.exports = nextConfig
+module.exports = nextConfig;
