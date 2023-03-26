@@ -1,13 +1,14 @@
-import { Suspense, useState } from 'react';
+import { KeyboardEvent, Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Environment, OrbitControls } from '@react-three/drei';
 import Lego from './Lego';
 import Cube from './Cube';
+import { Vector3 } from 'three';
 
 export default function Scene() {
   const [position, setPosition] = useState([0, 0, 0]);
 
-  const handleInput = (event) => {
+  const handleInput = (event: KeyboardEvent<HTMLDivElement>) => {
     if (event.key === 'a')
       setPosition([position[0] + 0.01, position[1], position[2]]);
     if (event.key === 'd')
@@ -18,10 +19,11 @@ export default function Scene() {
       setPosition([position[0], position[1], position[2] - 0.01]);
   };
 
+  const floorPosition = new Vector3(0, 0, 0);
+
   return (
     <div
       className="flex h-screen w-full items-center"
-      onClick={handleInput}
       onKeyDown={handleInput}
       tabIndex={0}
     >
@@ -44,7 +46,7 @@ export default function Scene() {
         />
         <Suspense fallback={null}>
           <Lego position={position} />
-          <Cube position={[0, 0, 0]} />
+          <Cube position={floorPosition} />
           <Environment preset="city" />
         </Suspense>
         <OrbitControls />
