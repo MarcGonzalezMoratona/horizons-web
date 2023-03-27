@@ -6,6 +6,7 @@ import FPV from './FPV';
 import Ground from './Ground';
 import Player from './Player';
 import Cube from './Cube';
+import Lego from './Lego';
 
 export default function Scene() {
   const [position, setPosition] = useState([0, 0, 0]);
@@ -32,6 +33,7 @@ export default function Scene() {
         <ambientLight intensity={0.7} />
         <FPV />
         <Physics>
+          <Lego position={[-2, -0.5, -4]}></Lego>
           <Player />
           <Cube position={[-5, 0, 0]} size={[0.1, 6, 10]} color="turquoise" />
           <Cube position={[0, 0, 5]} size={[10, 6, 0.1]} color="pink" />
