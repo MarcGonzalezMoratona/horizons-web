@@ -1,9 +1,11 @@
-import { KeyboardEvent, Suspense, useState } from 'react';
+import { KeyboardEvent, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Environment, OrbitControls } from '@react-three/drei';
-import Lego from './Lego';
+import { Sky } from '@react-three/drei';
+import { Physics } from '@react-three/cannon';
+import FPV from './FPV';
+import Ground from './Ground';
+import Player from './Player';
 import Cube from './Cube';
-import { Vector3 } from 'three';
 
 export default function Scene() {
   const [position, setPosition] = useState([0, 0, 0]);
@@ -19,37 +21,27 @@ export default function Scene() {
       setPosition([position[0], position[1], position[2] - 0.01]);
   };
 
-  const floorPosition = new Vector3(0, 0, 0);
-
   return (
     <div
       className="flex h-screen w-full items-center"
       onKeyDown={handleInput}
       tabIndex={0}
     >
-      <Canvas
-        className="min-w-screen min-h-screen"
-        shadows
-        dpr={[1, 2]}
-        camera={{
-          position: [position[0], position[1] + 2, position[2] - 3],
-          fov: 60,
-        }}
-      >
+      <Canvas className="min-w-screen min-h-screen">
+        <Sky />
         <ambientLight intensity={0.7} />
-        <spotLight
-          intensity={0.5}
-          angle={0.1}
-          penumbra={1}
-          position={[10, 15, 10]}
-          castShadow
-        />
-        <Suspense fallback={null}>
-          <Lego position={position} />
-          <Cube position={floorPosition} />
-          <Environment preset="city" />
-        </Suspense>
-        <OrbitControls />
+        <FPV />
+        <Physics>
+          <Player />
+          <Cube position={[-5, 0, 0]} size={[0.1, 6, 10]} color="turquoise" />
+          <Cube position={[0, 0, 5]} size={[10, 6, 0.1]} color="pink" />
+          <Cube position={[5, 0, 0]} size={[0.1, 6, 10]} color="turquoise" />
+          <Cube position={[-3.15, 0, -5]} size={[3.75, 3, 0.1]} color="pink" />
+          <Cube position={[3.15, 0, -5]} size={[3.75, 3, 0.1]} color="pink" />
+          <Cube position={[0, 2.25, -5]} size={[10, 1.5, 0.1]} color="pink" />
+          <Cube position={[0, 3, 0]} size={[10, 0.1, 10]} />
+          <Ground />
+        </Physics>
       </Canvas>
     </div>
   );

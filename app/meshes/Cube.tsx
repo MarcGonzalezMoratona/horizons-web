@@ -1,17 +1,26 @@
-import React, { useRef } from 'react';
-import { BufferGeometry, Material, Mesh, Vector3 } from 'three';
-
+import { BufferGeometry, Material, Mesh, Euler } from 'three';
+import { useBox, Triplet } from '@react-three/cannon';
 interface CubeProps {
-  position: Vector3 | undefined;
+  position?: Triplet;
+  size?: Triplet;
+  color?: string;
 }
 
-export default function Cube(props: CubeProps) {
-  const mesh = useRef<Mesh<BufferGeometry, Material | Material[]>>(null);
+export default function Cube({
+  position = [0, 0, 0],
+  size = [1, 1, 1],
+  color = 'white',
+}: CubeProps) {
+  const [ref] = useBox<Mesh<BufferGeometry, Material | Material[]>>(() => ({
+    type: 'Static',
+    position,
+    args: size,
+  }));
 
   return (
-    <mesh {...props} ref={mesh}>
-      <boxGeometry args={[50, 0.01, 50]} />
-      <meshStandardMaterial color={'green'} />
+    <mesh ref={ref}>
+      <boxBufferGeometry attach="geometry" args={size} />
+      <meshStandardMaterial color={color} attach="material" />
     </mesh>
   );
 }

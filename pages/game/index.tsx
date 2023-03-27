@@ -28,6 +28,16 @@ export default function Home() {
       </Head>
       <Layout>
         <Scene />
+        <div className="absolute bottom-8 right-8 bg-black p-8 opacity-80">
+          <ul className=" hidden flex-col gap-4 lg:flex">
+            Controls:
+            <li>- W: Move forward </li>
+            <li>- S: Move backward </li>
+            <li>- A: Move left</li>
+            <li>- D: Move right</li>
+            <li>- SHIFT: Run</li>
+          </ul>
+        </div>
       </Layout>
     </>
   );
