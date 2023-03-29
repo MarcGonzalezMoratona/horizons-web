@@ -19,7 +19,7 @@ export default function Home() {
   });
 
   const images = [
-    'bix.png',
+    'blog/bix.png',
     'drones.png',
     'hangar.png',
     'skybox.png',
