@@ -52,8 +52,8 @@ const Carousel = ({ images, priority }: CarouselProps) => {
             alt={'Lego Star Wars'}
             className={`object-contain transition-opacity duration-[2000ms] ${
               isAnimating
-                ? 'opacity-0 ease-in-out duration-500'
-                : 'opacity-100 ease-in-out duration-[2000ms]'
+                ? 'opacity-0 duration-500 ease-in-out'
+                : 'opacity-100 duration-[2000ms] ease-in-out'
             }`}
             fill
             priority={priority}
@@ -65,28 +65,28 @@ const Carousel = ({ images, priority }: CarouselProps) => {
 
   return (
     <div
-      className="w-full h-[30vh] sm:h-[50vh] relative select-none"
+      className="relative h-[30vh] w-full select-none sm:h-[50vh]"
       {...handlers}
     >
       {renderImages()}
       <ChevronLeftIcon
-        className="w-12 h-12 text-neutral-100 absolute left-4 sm:left-16 top-1/2 -translate-y-1/2 cursor-pointer p-2 
-        bg-primary-500 dark:bg-neutral-600 rounded-full border-b-4 border-b-primary-700 
-        dark:border-b-neutral-700 sm:hover:translate-y-[calc(-50%+4px)] sm:transition-transform sm:duration-300"
+        className="absolute left-4 top-1/2 h-12 w-12 -translate-y-1/2 cursor-pointer rounded-full border-b-4 border-b-primary-700 
+        bg-primary-500 p-2 text-neutral-100 dark:border-b-neutral-700 dark:bg-neutral-600 
+        sm:left-16 sm:transition-transform sm:duration-300 sm:hover:translate-y-[calc(-50%+4px)]"
         onClick={() => previousImage()}
       />
       <ChevronRightIcon
-        className="w-12 h-12 text-neutral-100 absolute right-4 sm:right-16 top-1/2 -translate-y-1/2 cursor-pointer p-2 
-        bg-primary-500 dark:bg-neutral-600 rounded-full border-b-4 border-b-primary-700 
-        dark:border-b-neutral-700 sm:hover:translate-y-[calc(-50%+4px)] sm:transition-transform sm:duration-300"
+        className="absolute right-4 top-1/2 h-12 w-12 -translate-y-1/2 cursor-pointer rounded-full border-b-4 border-b-primary-700 
+        bg-primary-500 p-2 text-neutral-100 dark:border-b-neutral-700 dark:bg-neutral-600 
+        sm:right-16 sm:transition-transform sm:duration-300 sm:hover:translate-y-[calc(-50%+4px)]"
         onClick={() => nextImage()}
       />
-      <ul className="flex absolute bottom-4 left-1/2 -translate-x-1/2 gap-2">
+      <ul className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
         {images.map((image, index) => (
           <li
             onClick={() => goToSlide(index)}
             key={`image ${index}`}
-            className={`h-3 w-3 rounded-full cursor-pointer bg-neutral-100 ${
+            className={`h-3 w-3 cursor-pointer rounded-full bg-neutral-100 ${
               currentImage !== index && 'opacity-30'
             } hover:opacity-70`}
           />
