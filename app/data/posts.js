@@ -39,7 +39,7 @@ export const posts = [
     title: 'The GVD is ready!',
     subtitle: 'Horizons team publishes the game vision document of their game',
     profile: 'MarcGonzalez.jpg',
-    caption: '../bix.png',
+    caption: 'bix.png',
     author: 'Marc González',
     date: '25/03/2023',
     paragraphs: [
@@ -60,7 +60,7 @@ export const posts = [
         In the coming weeks, the team plans to share more updates on the development of Axolotl, including progress on the game's 
         vertical slices. We invite everyone to follow our social media channels to stay up-to-date on the latest news and announcements. 
         The Horizons team is thrilled to share their journey with the community and can't wait to bring Axolotl project to life!`,
-        image: '../bix.png',
+        image: 'bix.png',
       },
       {
         heading: '',
