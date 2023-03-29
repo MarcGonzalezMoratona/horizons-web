@@ -1,29 +1,29 @@
-import { GearIcon } from "@radix-ui/react-icons";
-import useTranslation from "next-translate/useTranslation";
-import Head from "next/head";
-import { useEffect } from "react";
-import Carousel from "../app/components/Carousel";
-import ComingSoon from "../app/components/ComingSoon";
-import { GlowingButton } from "../app/components/GlowingButton";
-import Layout from "../app/components/Layout";
-import SocialNetworks from "../app/components/SocialNetworks";
-import { socialNetworks } from "../app/data/socialNetworks";
-import { usePageHandler } from "../app/hooks/usePageInfo";
+import { GearIcon } from '@radix-ui/react-icons';
+import useTranslation from 'next-translate/useTranslation';
+import Head from 'next/head';
+import { useEffect } from 'react';
+import Carousel from '../app/components/Carousel';
+import ComingSoon from '../app/components/ComingSoon';
+import { GlowingButton } from '../app/components/GlowingButton';
+import Layout from '../app/components/Layout';
+import SocialNetworks from '../app/components/SocialNetworks';
+import { socialNetworks } from '../app/data/socialNetworks';
+import { usePageHandler } from '../app/hooks/usePageInfo';
 
 export default function Home() {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation('common');
   const PageHandler = usePageHandler();
 
   useEffect(() => {
-    PageHandler("landing");
+    PageHandler('landing');
   });
 
   const images = [
-    "legoStarWarsPlanet.jpg",
-    "darthVader.jpg",
-    "ahsokaTano.jpg",
-    "stormTroopers.jpg",
-    "battle.jpg",
+    'bix.png',
+    'drones.png',
+    'hangar.png',
+    'skybox.png',
+    'turret.png',
   ];
 
   return (
@@ -43,7 +43,7 @@ export default function Home() {
         <SocialNetworks networks={socialNetworks} className="my-4" />
         <GlowingButton
           mainText="Axolotl Engine 3.0.0"
-          CTAText={t("SEE_NEWS")}
+          CTAText={t('SEE_NEWS')}
           icon={
             <GearIcon className="h-5 w-5 animate-spin text-secondary-600 transition duration-200 sm:animate-none sm:group-hover:animate-spin" />
           }
