@@ -42,7 +42,7 @@ export default function Home() {
         <ComingSoon />
         <SocialNetworks networks={socialNetworks} className="my-4" />
         <GlowingButton
-          mainText="Axolotl Engine 3.0.0"
+          mainText="Axolotl Engine 0.3.0"
           CTAText={t('SEE_NEWS')}
           icon={
             <GearIcon className="h-5 w-5 animate-spin text-secondary-600 transition duration-200 sm:animate-none sm:group-hover:animate-spin" />
