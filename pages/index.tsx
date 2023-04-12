@@ -30,15 +30,21 @@ export default function Home() {
     <>
       <Head>
         <title>Horizons Games</title>
+        <meta charSet="utf-8" />
         <meta
           name="description"
           content="Welcome to the official website of Horizons Games! We are an AAA video games studio based in Barcelona."
+        />
+        <meta name="author" content="Horizons Games" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="keywords"
+          content="video games, game engine, Horizons Games, Axolotl Engine, lego"
         />
         <meta
           name="google-site-verification"
           content="rXKwXvp4XkJ34NRVZ0HkNfRoylLC7zR_IyROC-FhIPg"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
