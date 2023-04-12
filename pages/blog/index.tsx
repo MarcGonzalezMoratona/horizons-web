@@ -22,7 +22,7 @@ export default function Blog({ query }: { query: ParsedUrlQuery }) {
   return (
     <>
       <Head>
-        <title>Horizons Games | Blog</title>
+        <title>Horizons Games - Blog</title>
         <meta
           name="description"
           content="Welcome to the official website of Horizons Games! We are an AAA video games studio based in Barcelona."
@@ -31,10 +31,10 @@ export default function Blog({ query }: { query: ParsedUrlQuery }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <h1 className="text-xl tracking-wider font-semibold sm:text-2xl my-8">
+        <h1 className="my-8 text-xl font-semibold tracking-wide sm:text-4xl">
           {t('BLOG').toUpperCase()}
         </h1>
-        <section className="flex flex-col sm:grid sm:grid-cols-2 lg:w-2/3 gap-8">
+        <section className="flex flex-col gap-8 sm:grid sm:grid-cols-2 lg:w-2/3">
           {posts.map((post) => {
             return (
               <React.Fragment key={post.id}>

@@ -17,7 +17,7 @@ export default function Post() {
   return (
     <>
       <Head>
-        <title>{`Horizons Games | ${posts[id].title}`}</title>
+        <title>{`Horizons Games - ${posts[id].title}`}</title>
         <meta
           name="description"
           content="Welcome to the official website of Horizons Games! We are an AAA video games studio based in Barcelona."
@@ -34,7 +34,7 @@ export default function Post() {
             }}
           >
             <Button
-              className="flex gap-2 my-8 flex-row-reverse"
+              className="my-8 flex flex-row-reverse gap-2"
               icon={<ChevronLeftIcon className="h-6 w-6" />}
             >
               {t('BACK_TO_BLOG').toUpperCase()}

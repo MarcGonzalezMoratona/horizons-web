@@ -24,10 +24,10 @@ const Header = ({ className }: HeaderProps) => {
 
   return (
     <header
-      className={`flex flex-col text-lg p-6 sm:flex-row text-neutral-800 bg-neutral-100
-       dark:text-neutral-100 dark:bg-neutral-800 ${
+      className={`flex flex-col bg-neutral-100 p-6 text-lg text-neutral-800 dark:bg-neutral-800
+       dark:text-neutral-100 sm:flex-row ${
          pageType != 'landing' &&
-         'border-b-primary-500 dark:border-b-primary-300 border-b-4'
+         'border-b-4 border-b-primary-500 dark:border-b-primary-300'
        } ${className}`}
     >
       <div className="flex items-center justify-between">
@@ -38,13 +38,13 @@ const Header = ({ className }: HeaderProps) => {
             <Horizons className="ml-4 h-12 w-12" priority />
           )}
         </Link>
-        <nav className="hidden sm:block sm:mx-12">
+        <nav className="hidden sm:mx-12 sm:block">
           <ul className="flex">
             <Link href="/team">
               <li
-                className={`mx-4 hover:text-primary-500 dark:hover:text-primary-300 py-0.5 ${
+                className={`mx-4 py-0.5 hover:text-primary-500 dark:hover:text-primary-300 ${
                   pageType === 'team' &&
-                  'text-primary-500 dark:text-primary-300 border-b-primary-300 border-b-2'
+                  'border-b-2 border-b-primary-300 text-primary-500 dark:text-primary-300'
                 }`}
               >
                 {t('TEAM')}
@@ -57,27 +57,30 @@ const Header = ({ className }: HeaderProps) => {
               }}
             >
               <li
-                className={`mx-4 hover:text-primary-500 dark:hover:text-primary-300 py-0.5
+                className={`mx-4 py-0.5 hover:text-primary-500 dark:hover:text-primary-300
                 ${
                   pageType === 'blog' &&
-                  'text-primary-500 dark:text-primary-300 border-b-primary-300 border-b-2'
+                  'border-b-2 border-b-primary-300 text-primary-500 dark:text-primary-300'
                 }`}
               >
                 {t('BLOG')}
               </li>
             </Link>
-            {/* <Link
-              href={{
-                pathname: "/blog",
-              }}
-            >
-              <li className="mx-4">{t("BLOG")}</li>
-            </Link> */}
+            <Link href="/engine">
+              <li
+                className={`mx-4 py-0.5 hover:text-primary-500 dark:hover:text-primary-300 ${
+                  pageType === 'engine' &&
+                  'border-b-2 border-b-primary-300 text-primary-500 dark:text-primary-300'
+                }`}
+              >
+                Axolotl Engine
+              </li>
+            </Link>
           </ul>
         </nav>
         <div
           onClick={toggleThemeHandler}
-          className="absolute right-20 sm:right-40 cursor-pointer"
+          className="absolute right-20 cursor-pointer sm:right-40"
         >
           {isDarkMode ? (
             <SunIcon className="h-5 w-5 text-xl text-neutral-100" />
@@ -85,11 +88,11 @@ const Header = ({ className }: HeaderProps) => {
             <MoonIcon className="h-5 w-5 text-xl text-primary-500" />
           )}
         </div>
-        <div className="hidden sm:block absolute right-4">
+        <div className="absolute right-4 hidden sm:block">
           <LanguageSelector />
         </div>
         <div
-          className="flex sm:hidden absolute right-8"
+          className="absolute right-8 flex sm:hidden"
           onClick={() => toggleMenu(!isMenuOpen)}
         >
           <FontAwesomeIcon icon={faBars} className="text-xl" />

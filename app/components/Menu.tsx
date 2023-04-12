@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
 import LanguageSelector from './LanguageSelector';
-import { usePageType } from '../hooks/usePageInfo';
 
 interface MenuProps {
   isMenuOpen: boolean;
@@ -14,10 +13,10 @@ const Menu = ({ isMenuOpen }: MenuProps) => {
     <>
       {isMenuOpen && (
         <div className="sm:hidden">
-          <nav className="bg-neutral-100 dark:bg-neutral-800 text-neutral-100 w-full py-3 flex flex-col">
+          <nav className="flex w-full flex-col bg-neutral-100 py-3 text-neutral-100 dark:bg-neutral-800">
             <ul>
               <Link href="/team">
-                <li className="p-3 rounded  text-neutral-100 bg-primary-500 dark:bg-primary-400 dark:text-neutral-100 my-3 w-full">
+                <li className="my-3 w-full  rounded bg-primary-500 p-3 text-neutral-100 dark:bg-primary-400 dark:text-neutral-100">
                   {t('TEAM')}
                 </li>
               </Link>
@@ -27,20 +26,15 @@ const Menu = ({ isMenuOpen }: MenuProps) => {
                   query: { page: 1 },
                 }}
               >
-                <li className="p-3 rounded text-neutral-100 bg-primary-500 dark:bg-primary-400 dark:text-neutral-100 my-3 w-full">
+                <li className="my-3 w-full rounded bg-primary-500 p-3 text-neutral-100 dark:bg-primary-400 dark:text-neutral-100">
                   {t('BLOG')}
                 </li>
               </Link>
-              {/* <Link
-                href={{
-                  pathname: "/blog",
-                  query: { page: 1 },
-                }}
-              >
-                <li className="p-3 rounded bg-white text-black my-3 w-full">
-                  {t("BLOG")}
+              <Link href="/engine">
+                <li className="my-3 w-full rounded bg-primary-500 p-3 text-neutral-100 dark:bg-primary-400 dark:text-neutral-100">
+                  Axolotl Engine
                 </li>
-              </Link> */}
+              </Link>
             </ul>
           </nav>
           <LanguageSelector />

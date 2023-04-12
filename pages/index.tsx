@@ -9,6 +9,7 @@ import Layout from '../app/components/Layout';
 import SocialNetworks from '../app/components/SocialNetworks';
 import { socialNetworks } from '../app/data/socialNetworks';
 import { usePageHandler } from '../app/hooks/usePageInfo';
+import EngineDescription from '../app/components/EngineDescription';
 
 export default function Home() {
   const { t } = useTranslation('common');
@@ -49,8 +50,7 @@ export default function Home() {
       </Head>
       <Layout>
         <Carousel images={images} priority />
-        <ComingSoon />
-        <SocialNetworks networks={socialNetworks} className="my-4" />
+        <EngineDescription />
         <GlowingButton
           mainText="Axolotl Engine 0.3.0"
           CTAText={t('SEE_NEWS')}

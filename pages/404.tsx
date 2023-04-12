@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Horizons Games | 404 Not Found</title>
+        <title>Horizons Games - 404 Not Found</title>
         <meta
           name="description"
           content="Welcome to the official website of Horizons Games! We are an AAA video games studio based in Barcelona."

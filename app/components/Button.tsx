@@ -13,11 +13,11 @@ export default function Button({
 }: ButtonProps) {
   return (
     <button
-      className={`font-bold tracking-wider px-6 py-3 mx-2 my-4 rounded-md  text-neutral-100 
-       dark:text-neutral-100 border-t-2 border-b-4 sm:hover:translate-y-0.5 sm:transition-transform sm:duration-300 
+      className={`mx-2 my-4 rounded-md border-t-2 border-b-4 px-6 py-3 font-bold 
+       tracking-wide text-neutral-100 dark:text-neutral-100 sm:transition-transform sm:duration-300 sm:hover:translate-y-0.5 
        ${
          variant === 'primary' &&
-         'bg-primary-500 border-t-primary-300 border-b-primary-800 dark:bg-primary-500'
+         'border-t-primary-300 border-b-primary-800 bg-primary-500 dark:bg-primary-500'
        } ${className}`}
     >
       {children}
