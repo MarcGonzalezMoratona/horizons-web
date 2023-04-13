@@ -35,6 +35,11 @@ const Menu = ({ isMenuOpen }: MenuProps) => {
                   Axolotl Engine
                 </li>
               </Link>
+              <Link href="/media">
+                <li className="my-3 w-full rounded bg-primary-500 p-3 text-neutral-100 dark:bg-primary-400 dark:text-neutral-100">
+                  Media
+                </li>
+              </Link>
             </ul>
           </nav>
           <LanguageSelector />

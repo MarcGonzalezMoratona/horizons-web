@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { usePageHandler } from '../../app/hooks/usePageInfo';
 import Feature from '../../app/components/Feature';
 
-export default function Team() {
+export default function Engine() {
   const { t } = useTranslation('common');
   const PageHandler = usePageHandler();
 
@@ -31,7 +31,7 @@ export default function Team() {
         <h2 className="my-4 text-xl tracking-wide sm:text-3xl">
           Características
         </h2>
-        <p className="w-1/3 text-center text-lg leading-8">
+        <p className="sm:w-1/3 text-center text-sm sm:text-lg leading-8 m-4">
           Axolotl Engine ofrece una amplia gama de funcionalidades para
           potenciar la creatividad y la eficiencia en la creación de
           videojuegos. El motor posee un conjunto de herramientas fáciles de
@@ -39,31 +39,31 @@ export default function Team() {
           personajes, objetos y más, de forma rápida y eficiente.
         </p>
         <Feature
-          title="placeholder"
+          title="Animación"
           description="esta es una descripcion de prueba"
         />
         <Feature
-          title="placeholder"
+          title="Scripting"
           description="esta es una descripcion de prueba"
         />
         <Feature
-          title="placeholder"
+          title="Iluminación"
           description="esta es una descripcion de prueba"
         />
         <Feature
-          title="placeholder"
+          title="Materiales"
           description="esta es una descripcion de prueba"
         />
         <Feature
-          title="placeholder"
+          title="Trazado de rayos"
           description="esta es una descripcion de prueba"
         />
         <Feature
-          title="placeholder"
+          title="Sistemas de partículas"
           description="esta es una descripcion de prueba"
         />
         <Feature
-          title="placeholder"
+          title="Física"
           description="esta es una descripcion de prueba"
         />
       </Layout>
