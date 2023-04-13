@@ -3,13 +3,12 @@ import useTranslation from 'next-translate/useTranslation';
 import Head from 'next/head';
 import { useEffect } from 'react';
 import Carousel from '../app/components/Carousel';
-import ComingSoon from '../app/components/ComingSoon';
 import { GlowingButton } from '../app/components/GlowingButton';
 import Layout from '../app/components/Layout';
-import SocialNetworks from '../app/components/SocialNetworks';
-import { socialNetworks } from '../app/data/socialNetworks';
 import { usePageHandler } from '../app/hooks/usePageInfo';
 import EngineDescription from '../app/components/EngineDescription';
+import FAQs from '../app/components/FAQs';
+import { FAQsContent } from '../app/data/FAQs';
 
 export default function Home() {
   const { t } = useTranslation('common');
@@ -58,6 +57,7 @@ export default function Home() {
             <GearIcon className="h-5 w-5 animate-spin text-secondary-600 transition duration-200 sm:animate-none sm:group-hover:animate-spin" />
           }
         />
+        <FAQs content={FAQsContent} />
       </Layout>
     </>
   );
