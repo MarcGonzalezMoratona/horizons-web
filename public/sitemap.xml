@@ -3,22 +3,10 @@
   <url>
     <loc>https://horizons-games.vercel.app</loc>
     <lastmod>2023-04-13</lastmod>
-    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://horizons-games.vercel.app/team</loc>
     <lastmod>2023-04-13</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://horizons-games.vercel.app/blog/1</loc>
-    <lastmod>2023-03-14</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://horizons-games.vercel.app/blog/2</loc>
-    <lastmod>2023-03-25</lastmod>
-    <priority>0.8</priority>
   </url>
 </urlset>
 </xml>
