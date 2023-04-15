@@ -9,6 +9,8 @@ import { usePageHandler } from '../app/hooks/usePageInfo';
 import EngineDescription from '../app/components/EngineDescription';
 import FAQs from '../app/components/FAQs';
 import { FAQsContent } from '../app/data/FAQs';
+import { BannerLayer } from 'react-scroll-parallax/dist/components/ParallaxBanner/types';
+import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
 
 export default function Home() {
   const { t } = useTranslation('common');
@@ -25,6 +27,33 @@ export default function Home() {
     'skybox.png',
     'turret.png',
   ];
+
+  const text: BannerLayer = {
+    scale: [0.01, 1, 'easeInOutCirc'],
+    opacity: [0.01, 1, 'easeInOutCirc'],
+    children: (
+      <div className="flex h-screen w-screen items-center justify-center">
+        <h1 className=" select-none text-4xl font-bold sm:text-8xl">
+          HORIZONS GAMES
+        </h1>
+      </div>
+    ),
+    expanded: false,
+  };
+
+  const video: BannerLayer = {
+    children: (
+      <video
+        className="min-h-full w-auto min-w-full max-w-none"
+        autoPlay
+        muted
+        loop
+      >
+        <source src="/cosmos.mp4" type="video/mp4" />
+      </video>
+    ),
+    expanded: false,
+  };
 
   return (
     <>
@@ -48,6 +77,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
+        <ParallaxProvider>
+          <ParallaxBanner
+            layers={[video, text]}
+            className="min-w-screen min-h-screen w-auto max-w-none"
+          />
+        </ParallaxProvider>
         <Carousel images={images} priority />
         <EngineDescription />
         <GlowingButton

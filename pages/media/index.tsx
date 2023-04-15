@@ -15,7 +15,7 @@ export default function Media() {
   return (
     <>
       <Head>
-        <title>{`Horizons Games - Media`}</title>
+        <title>Horizons Games - Media</title>
         <meta
           name="description"
           content="Welcome to the official website of Horizons Games! We are an AAA video games studio based in Barcelona."

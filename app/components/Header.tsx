@@ -21,18 +21,19 @@ const Header = ({ className }: HeaderProps) => {
 
   const { t } = useTranslation('common');
   const pageType = usePageType();
+  const isLanding = pageType === 'landing';
 
   return (
     <header
-      className={`flex flex-col bg-neutral-100 p-6 text-lg text-neutral-800 dark:bg-neutral-800
-       dark:text-neutral-100 sm:flex-row ${
-         pageType != 'landing' &&
-         'border-b-4 border-b-primary-500 dark:border-b-primary-300'
-       } ${className}`}
+      className={`flex flex-col p-6 text-lg sm:flex-row ${
+        isLanding
+          ? 'absolute z-10 w-full bg-transparent text-neutral-100'
+          : 'border-b-4 border-b-primary-500 bg-neutral-100 text-neutral-800 dark:border-b-primary-300 dark:bg-neutral-800 dark:text-neutral-100'
+      } ${className}`}
     >
       <div className="flex items-center justify-between">
         <Link href="/">
-          {isDarkMode ? (
+          {isDarkMode || isLanding ? (
             <HorizonsWhite className="ml-4 h-12 w-12" priority />
           ) : (
             <Horizons className="ml-4 h-12 w-12" priority />
@@ -42,7 +43,10 @@ const Header = ({ className }: HeaderProps) => {
           <ul className="flex">
             <Link href="/team">
               <li
-                className={`mx-4 py-0.5 hover:text-primary-500 dark:hover:text-primary-300 ${
+                className={`mx-4 py-0.5 ${
+                  !isLanding &&
+                  'hover:text-primary-500 dark:hover:text-primary-300'
+                } ${
                   pageType === 'team' &&
                   'border-b-2 border-b-primary-300 text-primary-500 dark:text-primary-300'
                 }`}
@@ -57,7 +61,10 @@ const Header = ({ className }: HeaderProps) => {
               }}
             >
               <li
-                className={`mx-4 py-0.5 hover:text-primary-500 dark:hover:text-primary-300
+                className={`mx-4 py-0.5 ${
+                  !isLanding &&
+                  'hover:text-primary-500 dark:hover:text-primary-300'
+                }
                 ${
                   pageType === 'blog' &&
                   'border-b-2 border-b-primary-300 text-primary-500 dark:text-primary-300'
@@ -68,7 +75,10 @@ const Header = ({ className }: HeaderProps) => {
             </Link>
             <Link href="/engine">
               <li
-                className={`mx-4 py-0.5 hover:text-primary-500 dark:hover:text-primary-300 ${
+                className={`mx-4 py-0.5 ${
+                  !isLanding &&
+                  'hover:text-primary-500 dark:hover:text-primary-300'
+                } ${
                   pageType === 'engine' &&
                   'border-b-2 border-b-primary-300 text-primary-500 dark:text-primary-300'
                 }`}
@@ -78,7 +88,10 @@ const Header = ({ className }: HeaderProps) => {
             </Link>
             <Link href="/media">
               <li
-                className={`mx-4 py-0.5 hover:text-primary-500 dark:hover:text-primary-300 ${
+                className={`mx-4 py-0.5 ${
+                  !isLanding &&
+                  'hover:text-primary-500 dark:hover:text-primary-300'
+                } ${
                   pageType === 'media' &&
                   'border-b-2 border-b-primary-300 text-primary-500 dark:text-primary-300'
                 }`}
@@ -88,18 +101,20 @@ const Header = ({ className }: HeaderProps) => {
             </Link>
           </ul>
         </nav>
-        <div
-          onClick={toggleThemeHandler}
-          className="absolute right-20 cursor-pointer sm:right-40"
-        >
-          {isDarkMode ? (
-            <SunIcon className="h-5 w-5 text-xl text-neutral-100" />
-          ) : (
-            <MoonIcon className="h-5 w-5 text-xl text-primary-500" />
-          )}
-        </div>
+        {!isLanding && (
+          <div
+            onClick={toggleThemeHandler}
+            className="absolute right-20 cursor-pointer sm:right-40"
+          >
+            {isDarkMode ? (
+              <SunIcon className="h-5 w-5 text-xl text-neutral-100" />
+            ) : (
+              <MoonIcon className="h-5 w-5 text-xl text-primary-500" />
+            )}
+          </div>
+        )}
         <div className="absolute right-4 hidden sm:block">
-          <LanguageSelector />
+          <LanguageSelector isLanding={isLanding} />
         </div>
         <div
           className="absolute right-8 flex sm:hidden"
@@ -108,7 +123,7 @@ const Header = ({ className }: HeaderProps) => {
           <FontAwesomeIcon icon={faBars} className="text-xl" />
         </div>
       </div>
-      <Menu isMenuOpen={isMenuOpen} />
+      <Menu isMenuOpen={isMenuOpen} isLanding={isLanding} />
     </header>
   );
 };

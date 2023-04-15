@@ -55,6 +55,32 @@ module.exports = {
           900: '#1D1D20',
         },
       },
+      keyframes: {
+        slideDown: {
+          from: {
+            height: 0,
+            opacity: 0,
+          },
+          to: {
+            height: 'var(--radix-accordion-content-height)',
+            opacity: 1,
+          },
+        },
+        slideUp: {
+          from: {
+            height: 'var(--radix-accordion-content-height)',
+            opacity: 1,
+          },
+          to: {
+            height: 0,
+            opacity: 0,
+          },
+        },
+      },
+      animation: {
+        slideDown: 'slideDown 300ms ease-in',
+        slideUp: 'slideUp 300ms ease-out',
+      },
     },
   },
   plugins: [],
