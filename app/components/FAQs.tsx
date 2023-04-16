@@ -35,7 +35,9 @@ const FAQ = ({ question, answer }: FAQContent) => {
 export default function FAQs({ content }: FAQsContent) {
   return (
     <>
-      <h3 className="w-full p-4 text-2xl sm:w-2/3">Preguntas frecuentes</h3>
+      <h2 className="my-8 text-center text-2xl sm:text-4xl">
+        Preguntas frecuentes
+      </h2>
       <Accordion.Root
         type="multiple"
         className="mx-2 my-4 flex flex-col items-center justify-center gap-4 sm:w-2/3 sm:px-4"

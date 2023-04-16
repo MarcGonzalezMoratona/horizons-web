@@ -11,10 +11,15 @@ import FAQs from '../app/components/FAQs';
 import { FAQsContent } from '../app/data/FAQs';
 import { BannerLayer } from 'react-scroll-parallax/dist/components/ParallaxBanner/types';
 import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
+import Connection from '../app/components/Connection';
+import { useDevice } from '../app/hooks/useDevice';
+import Image from 'next/image';
 
 export default function Home() {
   const { t } = useTranslation('common');
   const PageHandler = usePageHandler();
+  const device = useDevice();
+  const isMobile = device === 'mobile';
 
   useEffect(() => {
     PageHandler('landing');
@@ -28,12 +33,36 @@ export default function Home() {
     'turret.png',
   ];
 
+  const tools = [
+    'C++.png',
+    'discord.png',
+    'maya.png',
+    'renderDoc.png',
+    'blender.png',
+    'substancePainter.png',
+    'visualStudio.png',
+    'C++.png',
+    'discord.png',
+    'maya.png',
+    'renderDoc.png',
+    'blender.png',
+    'substancePainter.png',
+    'visualStudio.png',
+    'C++.png',
+    'discord.png',
+    'maya.png',
+    'renderDoc.png',
+    'blender.png',
+    'substancePainter.png',
+    'visualStudio.png',
+  ];
+
   const text: BannerLayer = {
     scale: [0.01, 1, 'easeInOutCirc'],
     opacity: [0.01, 1, 'easeInOutCirc'],
     children: (
       <div className="flex h-screen w-screen items-center justify-center">
-        <h1 className=" select-none text-4xl font-bold sm:text-8xl">
+        <h1 className=" select-none text-4xl font-bold text-neutral-100 sm:text-8xl">
           HORIZONS GAMES
         </h1>
       </div>
@@ -83,8 +112,36 @@ export default function Home() {
             className="min-w-screen min-h-screen w-auto max-w-none"
           />
         </ParallaxProvider>
-        <Carousel images={images} priority />
-        <EngineDescription />
+        <section className="flex h-screen w-full flex-col justify-center">
+          <h2 className="my-8 text-center text-2xl sm:text-4xl">
+            Our game development journey
+          </h2>
+          <div className="items flex w-full justify-center gap-8">
+            {!isMobile && (
+              <div>
+                <Connection />
+                <Connection animateSlide />
+                <Connection animatePing />
+                <Connection />
+                <Connection />
+                <Connection />
+              </div>
+            )}
+            <ol className="flex flex-col justify-center">
+              <li className="mt-[92px] h-28 text-xl">Concept Discovery</li>
+              <li className="h-28 text-xl">Vertical Slice 1</li>
+              <li className="h-28 text-xl font-bold">Vertical Slice 2</li>
+              <li className="h-28 text-xl">Alpha</li>
+              <li className="h-28 text-xl">Beta</li>
+              <li className="h-28 text-xl">Gold Master</li>
+            </ol>
+            {!isMobile && (
+              <div className="ml-20 h-3/4 w-2/3 self-center rounded-xl bg-neutral-900 dark:bg-neutral-800" />
+            )}
+          </div>
+        </section>
+        {/* <Carousel images={images} priority /> */}
+        {/* <EngineDescription /> */}
         <GlowingButton
           mainText="Axolotl Engine 0.3.0"
           CTAText={t('SEE_NEWS')}
@@ -92,6 +149,36 @@ export default function Home() {
             <GearIcon className="h-5 w-5 animate-spin text-secondary-600 transition duration-200 sm:animate-none sm:group-hover:animate-spin" />
           }
         />
+        <h2 className="my-8 text-center text-2xl sm:text-4xl">
+          Tools and technologies used
+        </h2>
+        <div
+          className="relative z-0 my-4 h-32 w-2/3 overflow-hidden 
+          before:absolute before:left-0 before:z-10 before:h-full before:w-52 before:justify-self-start before:bg-gradient-to-r before:from-neutral-100 before:to-transparent 
+          after:absolute after:right-0 after:z-10 after:h-full after:w-52 after:bg-gradient-to-l after:from-neutral-100 after:to-transparent
+          dark:bg-neutral-900 dark:before:from-neutral-900 dark:after:from-neutral-900"
+        >
+          <ul
+            className={`absolute top-0 left-0 flex w-[3528px] animate-slideLeft gap-10`}
+          >
+            {tools.map((tool, index) => {
+              return (
+                <li
+                  className="flex h-32 w-32 items-center justify-center rounded-2xl bg-white"
+                  key={index}
+                >
+                  <Image
+                    className="rounded"
+                    src={`/tools/${tool}`}
+                    width={100}
+                    height={100}
+                    alt={'C++ logo'}
+                  />
+                </li>
+              );
+            })}
+          </ul>
+        </div>
         <FAQs content={FAQsContent} />
       </Layout>
     </>

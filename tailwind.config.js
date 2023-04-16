@@ -56,30 +56,60 @@ module.exports = {
         },
       },
       keyframes: {
+        slideLeft: {
+          '100%': {
+            transform: 'translateX(-66.6666%)',
+          },
+        },
         slideDown: {
-          from: {
+          '0%': {
             height: 0,
             opacity: 0,
           },
-          to: {
+          '50%': {
+            opacity: 0,
+          },
+          '100%': {
             height: 'var(--radix-accordion-content-height)',
             opacity: 1,
           },
         },
         slideUp: {
-          from: {
+          '0%': {
             height: 'var(--radix-accordion-content-height)',
             opacity: 1,
           },
-          to: {
+          '25%': {
+            opacity: 1,
+          },
+          '100%': {
             height: 0,
             opacity: 0,
           },
         },
+        dotPing: {
+          '75%, 100%': {
+            opacity: 0,
+          },
+        },
+        dotSlideDown: {
+          '0%': {
+            opacity: 0,
+          },
+          '25%': {
+            opacity: 1,
+          },
+          '100%': {
+            transform: 'translateY(112px)',
+          },
+        },
       },
       animation: {
+        slideLeft: 'slideLeft 15s linear infinite',
         slideDown: 'slideDown 300ms ease-in',
         slideUp: 'slideUp 300ms ease-out',
+        dotPing: 'dotPing 2s cubic-bezier(0, 0, 0.2, 1) infinite',
+        dotSlideDown: 'dotSlideDown 2s cubic-bezier(0, 0, 0.2, 1) infinite',
       },
     },
   },
