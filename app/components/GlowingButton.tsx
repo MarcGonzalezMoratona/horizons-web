@@ -9,7 +9,7 @@ interface ButtonProps {
 
 export const GlowingButton = ({ mainText, CTAText, icon }: ButtonProps) => {
   return (
-    <div className="mx-4 mb-8 flex flex-col items-start justify-center gap-8">
+    <div className="m-6 flex flex-col items-start justify-center gap-8">
       <div className="group relative">
         <div
           className="absolute -inset-0.5 animate-pulse rounded-lg bg-gradient-to-r from-secondary-600 to-primary-600 opacity-75 blur 

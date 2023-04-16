@@ -35,26 +35,26 @@ export default function Home() {
 
   const tools = [
     'C++.png',
-    'discord.png',
-    'maya.png',
     'renderDoc.png',
+    'maya.png',
     'blender.png',
     'substancePainter.png',
     'visualStudio.png',
+    'discord.png',
     'C++.png',
-    'discord.png',
-    'maya.png',
     'renderDoc.png',
+    'maya.png',
     'blender.png',
     'substancePainter.png',
     'visualStudio.png',
+    'discord.png',
     'C++.png',
-    'discord.png',
-    'maya.png',
     'renderDoc.png',
+    'maya.png',
     'blender.png',
     'substancePainter.png',
     'visualStudio.png',
+    'discord.png',
   ];
 
   const text: BannerLayer = {
@@ -62,7 +62,7 @@ export default function Home() {
     opacity: [0.01, 1, 'easeInOutCirc'],
     children: (
       <div className="flex h-screen w-screen items-center justify-center">
-        <h1 className=" select-none text-4xl font-bold text-neutral-100 sm:text-8xl">
+        <h1 className=" select-none text-3xl font-bold text-neutral-100 sm:text-6xl lg:text-8xl">
           HORIZONS GAMES
         </h1>
       </div>
@@ -112,7 +112,7 @@ export default function Home() {
             className="min-w-screen min-h-screen w-auto max-w-none"
           />
         </ParallaxProvider>
-        <section className="flex h-screen w-full flex-col justify-center">
+        {/* <section className="flex h-screen w-full flex-col justify-center">
           <h2 className="my-8 text-center text-2xl sm:text-4xl">
             Our game development journey
           </h2>
@@ -139,9 +139,8 @@ export default function Home() {
               <div className="ml-20 h-3/4 w-2/3 self-center rounded-xl bg-neutral-900 dark:bg-neutral-800" />
             )}
           </div>
-        </section>
-        {/* <Carousel images={images} priority /> */}
-        {/* <EngineDescription /> */}
+        </section> */}
+        <Carousel images={images} priority />
         <GlowingButton
           mainText="Axolotl Engine 0.3.0"
           CTAText={t('SEE_NEWS')}
@@ -149,29 +148,31 @@ export default function Home() {
             <GearIcon className="h-5 w-5 animate-spin text-secondary-600 transition duration-200 sm:animate-none sm:group-hover:animate-spin" />
           }
         />
-        <h2 className="my-8 text-center text-2xl sm:text-4xl">
-          Tools and technologies used
+        <EngineDescription />
+        <h2 className="my-8 text-center text-2xl sm:w-2/3 sm:text-4xl">
+          Herramientas y tecnologías utilizadas
         </h2>
         <div
-          className="relative z-0 my-4 h-32 w-2/3 overflow-hidden 
-          before:absolute before:left-0 before:z-10 before:h-full before:w-52 before:justify-self-start before:bg-gradient-to-r before:from-neutral-100 before:to-transparent 
-          after:absolute after:right-0 after:z-10 after:h-full after:w-52 after:bg-gradient-to-l after:from-neutral-100 after:to-transparent
-          dark:bg-neutral-900 dark:before:from-neutral-900 dark:after:from-neutral-900"
+          className="relative z-0 my-4 h-20 w-5/6 overflow-hidden before:absolute 
+          before:left-0 before:z-10 before:h-full before:w-10 before:justify-self-start before:bg-gradient-to-r before:from-neutral-100 before:to-transparent after:absolute 
+          after:right-0 after:z-10 after:h-full after:w-10 after:bg-gradient-to-l after:from-neutral-100 after:to-transparent dark:bg-neutral-900 
+          dark:before:from-neutral-900 dark:after:from-neutral-900 sm:h-32 
+          sm:w-2/3 before:md:w-52 after:md:w-52"
         >
           <ul
-            className={`absolute top-0 left-0 flex w-[3528px] animate-slideLeft gap-10`}
+            className={`absolute top-0 left-0 flex w-[2184px] animate-slideLeft gap-6 sm:w-[3528px] sm:gap-10`}
           >
             {tools.map((tool, index) => {
               return (
                 <li
-                  className="flex h-32 w-32 items-center justify-center rounded-2xl bg-white"
+                  className="flex h-20 w-20 items-center justify-center rounded-2xl bg-white sm:h-32 sm:w-32"
                   key={index}
                 >
                   <Image
                     className="rounded"
                     src={`/tools/${tool}`}
-                    width={100}
-                    height={100}
+                    width={`${isMobile ? 64 : 100}`}
+                    height={`${isMobile ? 64 : 100}`}
                     alt={'C++ logo'}
                   />
                 </li>

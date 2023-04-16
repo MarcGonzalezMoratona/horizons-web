@@ -65,7 +65,7 @@ const Carousel = ({ images, priority }: CarouselProps) => {
 
   return (
     <div
-      className="relative my-20 h-[30vh] w-full select-none sm:h-[50vh]"
+      className="relative my-8 h-[30vh] w-full select-none sm:h-[50vh]"
       {...handlers}
     >
       {renderImages()}
