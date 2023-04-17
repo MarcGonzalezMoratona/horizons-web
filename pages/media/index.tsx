@@ -5,6 +5,8 @@ import { useEffect } from 'react';
 import { usePageHandler } from '../../app/hooks/usePageInfo';
 import SocialNetworks from '../../app/components/SocialNetworks';
 import { socialNetworks } from '../../app/data/socialNetworks';
+import Image from 'next/image';
+import { conceptArt } from '../../app/data/conceptArt';
 
 export default function Media() {
   const { t } = useTranslation('common');
@@ -17,7 +19,7 @@ export default function Media() {
   return (
     <>
       <Head>
-        <title>Horizons Games - Media</title>
+        <title>{`Horizons Games - ${t('MEDIA')}`}</title>
         <meta
           name="description"
           content="Welcome to the official website of Horizons Games! We are an AAA video games studio based in Barcelona."
@@ -27,27 +29,47 @@ export default function Media() {
       </Head>
       <Layout>
         <h1 className="mt-8 mb-4 text-xl font-semibold tracking-wide sm:text-4xl">
-          MEDIA
+          {t('MEDIA').toUpperCase()}
         </h1>
-        <section>
-            <h2 className="my-8 text-center text-2xl sm:w-2/3 sm:text-4xl">
-                Trailers
-            </h2>
+        <section className="flex w-full justify-center">
+          <h2 className="my-4 text-center text-2xl sm:w-2/3 sm:text-4xl">
+            {t('TRAILERS')}
+          </h2>
         </section>
-        <section>
-            <h2 className="my-8 text-center text-2xl sm:w-2/3 sm:text-4xl">
-                Screenshots
-            </h2>
+        <section className="flex w-full justify-center">
+          <h2 className="my-4 text-center text-2xl sm:w-2/3 sm:text-4xl">
+            {t('SCREENSHOTS')}
+          </h2>
         </section>
-        <section>
-            <h2 className="my-8 text-center text-2xl sm:w-2/3 sm:text-4xl">
-                Artwork
-            </h2>
+        <section className="flex w-full justify-center">
+          <h2 className="my-4 text-center text-2xl sm:w-2/3 sm:text-4xl">
+            {t('WALLPAPERS')}
+          </h2>
         </section>
-        <section className='flex flex-col items-center gap-2'>
-            <h3 className='text-lg'>Follow Horizons Games to stay tuned!</h3>
-            <SocialNetworks networks={socialNetworks}/>
+        <section className="flex w-full flex-col items-center justify-center">
+          <h2 className="my-4 text-center text-2xl sm:w-2/3 sm:text-4xl">
+            {t('CONCEPT_ART')}
+          </h2>
+          <div className="my-8 mx-8 flex flex-col items-center justify-center gap-4 sm:grid sm:grid-cols-2 md:w-2/3 xl:grid-cols-3">
+            {conceptArt.map((image) => (
+              <span key={image.url.split('.')[0]}>
+                <div className="my-4">
+                  <Image
+                    src={`/art${image.url}`}
+                    width={1920}
+                    height={1080}
+                    alt={image.description}
+                  />
+                </div>
+                <p className="text-center">{image.description}</p>
+              </span>
+            ))}
+          </div>
         </section>
+        {/* <section className="my-4 flex flex-col items-center gap-2">
+          <h3 className="text-lg">Follow Horizons Games to stay tuned!</h3>
+          <SocialNetworks networks={socialNetworks} />
+        </section> */}
       </Layout>
     </>
   );

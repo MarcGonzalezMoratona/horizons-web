@@ -29,9 +29,9 @@ export default function Engine() {
           AXOLOTL ENGINE
         </h1>
         <h2 className="my-4 text-xl tracking-wide sm:text-3xl">
-          Características
+          {t('FEATURES')}
         </h2>
-        <p className="sm:w-1/3 text-center text-sm sm:text-lg leading-8 m-4">
+        <p className="m-4 text-center text-sm leading-8 sm:w-1/3 sm:text-lg">
           Axolotl Engine ofrece una amplia gama de funcionalidades para
           potenciar la creatividad y la eficiencia en la creación de
           videojuegos. El motor posee un conjunto de herramientas fáciles de
