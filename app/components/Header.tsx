@@ -86,6 +86,19 @@ const Header = ({ className }: HeaderProps) => {
                 Axolotl Engine
               </li>
             </Link>
+            <Link href="/media">
+              <li
+                className={`mx-4 py-0.5 ${
+                  !isLanding &&
+                  'hover:text-primary-500 dark:hover:text-primary-300'
+                } ${
+                  pageType === 'media' &&
+                  'border-b-2 border-b-primary-300 text-primary-500 dark:text-primary-300'
+                }`}
+              >
+                Media
+              </li>
+            </Link>
           </ul>
         </nav>
         {!isLanding && (

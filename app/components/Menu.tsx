@@ -60,6 +60,17 @@ const Menu = ({ isMenuOpen, isLanding }: MenuProps) => {
                   Axolotl Engine
                 </li>
               </Link>
+              <Link href="/media">
+                <li
+                  className={`my-3 w-full rounded ${
+                    isLanding
+                      ? 'bg-transparent'
+                      : 'bg-primary-500 dark:bg-primary-400'
+                  } p-3 text-neutral-100  dark:text-neutral-100`}
+                >
+                  Media
+                </li>
+              </Link>
             </ul>
           </nav>
           <LanguageSelector isLanding={isLanding} />

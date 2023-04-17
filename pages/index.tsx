@@ -57,6 +57,7 @@ export default function Home() {
     'discord.png',
   ];
 
+
   const text: BannerLayer = {
     scale: [0.01, 1, 'easeInOutCirc'],
     opacity: [0.01, 1, 'easeInOutCirc'],
@@ -83,6 +84,27 @@ export default function Home() {
     ),
     expanded: false,
   };
+
+  const date = new Date("2023-03-15");
+  let nextMilestone = "VS1";
+  const dates = {
+    "CD": new Date("2023-03-14"),
+    "VS1": new Date("2023-03-28"),
+    "VS2": new Date("2023-04-23"),
+    "VS3": new Date("2023-06-01"),
+    "Alpha": new Date("2023-06-29"),
+    "Beta": new Date("2023-09-13"),
+    "Gold Master": new Date("2023-10-11"),
+    "Release": new Date("2023-11-10")
+  }
+  if(date >= dates.CD && date <= dates.VS1 ) nextMilestone = "VS1";
+  else if(date > dates.VS1 && date <= dates.VS2 ) nextMilestone = "VS2";
+  else if(date > dates.VS2 && date <= dates.VS3 ) nextMilestone = "VS3";
+  else if(date > dates.VS3 && date <= dates.Alpha ) nextMilestone = "Alpha";
+  else if(date > dates.Alpha  && date <= dates.Beta  ) nextMilestone = "Beta";
+  else if(date > dates.Beta && date <= dates['Gold Master']  ) nextMilestone = "GM";
+  else if(date > dates['Gold Master'] && date <= dates.Release ) nextMilestone = "Release";
+  else nextMilestone = "Published";
 
   return (
     <>
@@ -112,34 +134,38 @@ export default function Home() {
             className="min-w-screen min-h-screen w-auto max-w-none"
           />
         </ParallaxProvider>
-        {/* <section className="flex h-screen w-full flex-col justify-center">
+        <section className="flex w-full flex-col justify-center">
           <h2 className="my-8 text-center text-2xl sm:text-4xl">
             Our game development journey
           </h2>
           <div className="items flex w-full justify-center gap-8">
             {!isMobile && (
               <div>
-                <Connection />
-                <Connection animateSlide />
-                <Connection animatePing />
-                <Connection />
-                <Connection />
-                <Connection />
+                <Connection animateSlide={nextMilestone === "VS1"}/>
+                <Connection animatePing={nextMilestone === "VS1"} animateSlide={nextMilestone === "VS2"} />
+                <Connection animatePing={nextMilestone === "VS2"} animateSlide={nextMilestone === "VS3"} />
+                <Connection animatePing={nextMilestone === "VS3"} animateSlide={nextMilestone === "Alpha"} />
+                <Connection animatePing={nextMilestone === "Alpha"} animateSlide={nextMilestone === "Beta"} />
+                <Connection animatePing={nextMilestone === "Beta"} animateSlide={nextMilestone === "GM"} />
+                <Connection animatePing={nextMilestone === "GM"} animateSlide={nextMilestone === "Release"}/>
+                <Connection animatePing={nextMilestone === "Published"} />
               </div>
             )}
             <ol className="flex flex-col justify-center">
-              <li className="mt-[92px] h-28 text-xl">Concept Discovery</li>
-              <li className="h-28 text-xl">Vertical Slice 1</li>
-              <li className="h-28 text-xl font-bold">Vertical Slice 2</li>
-              <li className="h-28 text-xl">Alpha</li>
-              <li className="h-28 text-xl">Beta</li>
-              <li className="h-28 text-xl">Gold Master</li>
+              <li className={`mt-[92px] h-28 text-xl ${nextMilestone === "CD" && "font-bold"}`}>Concept Discovery</li>
+              <li className={`h-28 text-xl ${nextMilestone === "VS1" && "font-bold"}`}>Vertical Slice 1</li>
+              <li className={`h-28 text-xl ${nextMilestone === "VS2" && "font-bold"}`}>Vertical Slice 2</li>
+              <li className={`h-28 text-xl ${nextMilestone === "VS3" && "font-bold"}`}>Vertical Slice 3</li>
+              <li className={`h-28 text-xl ${nextMilestone === "Alpha" && "font-bold"}`}>Alpha</li>
+              <li className={`h-28 text-xl ${nextMilestone === "Beta" && "font-bold"}`}>Beta</li>
+              <li className={`h-28 text-xl ${nextMilestone === "GM" && "font-bold"}`}>Gold Master</li>
+              <li className={`h-28 text-xl ${nextMilestone === "Release" && "font-bold"}`}>Release</li>
             </ol>
             {!isMobile && (
               <div className="ml-20 h-3/4 w-2/3 self-center rounded-xl bg-neutral-900 dark:bg-neutral-800" />
             )}
           </div>
-        </section> */}
+        </section>
         <Carousel images={images} priority />
         <GlowingButton
           mainText="Axolotl Engine 0.3.0"
