@@ -1,65 +1,65 @@
-import { GearIcon } from '@radix-ui/react-icons';
-import useTranslation from 'next-translate/useTranslation';
-import Head from 'next/head';
-import { useEffect } from 'react';
-import Carousel from '../app/components/Carousel';
-import { GlowingButton } from '../app/components/GlowingButton';
-import Layout from '../app/components/Layout';
-import { usePageHandler } from '../app/hooks/usePageInfo';
-import EngineDescription from '../app/components/EngineDescription';
-import FAQs from '../app/components/FAQs';
-import { FAQsContent } from '../app/data/FAQs';
-import { BannerLayer } from 'react-scroll-parallax/dist/components/ParallaxBanner/types';
-import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
-import Connection from '../app/components/Connection';
-import { useDevice } from '../app/hooks/useDevice';
-import Image from 'next/image';
+import { GearIcon } from "@radix-ui/react-icons";
+import useTranslation from "next-translate/useTranslation";
+import Head from "next/head";
+import { useEffect } from "react";
+import Carousel from "../app/components/Carousel";
+import { GlowingButton } from "../app/components/GlowingButton";
+import Layout from "../app/components/Layout";
+import { usePageHandler } from "../app/hooks/usePageInfo";
+import EngineDescription from "../app/components/EngineDescription";
+import FAQs from "../app/components/FAQs";
+import { FAQsContent } from "../app/data/FAQs";
+import { BannerLayer } from "react-scroll-parallax/dist/components/ParallaxBanner/types";
+import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax";
+import Connection from "../app/components/Connection";
+import { useDevice } from "../app/hooks/useDevice";
+import Image from "next/image";
 
 export default function Home() {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
   const PageHandler = usePageHandler();
   const device = useDevice();
-  const isMobile = device === 'mobile';
+  const isMobile = device === "mobile";
 
   useEffect(() => {
-    PageHandler('landing');
+    PageHandler("landing");
   });
 
   const images = [
-    'blog/bix.png',
-    'drones.png',
-    'hangar.png',
-    'skybox.png',
-    'turret.png',
+    "blog/bix.png",
+    "drones.png",
+    "hangar.png",
+    "skybox.png",
+    "turret.png",
   ];
 
   const tools = [
-    'C++.png',
-    'renderDoc.png',
-    'maya.png',
-    'blender.png',
-    'substancePainter.png',
-    'visualStudio.png',
-    'discord.png',
-    'C++.png',
-    'renderDoc.png',
-    'maya.png',
-    'blender.png',
-    'substancePainter.png',
-    'visualStudio.png',
-    'discord.png',
-    'C++.png',
-    'renderDoc.png',
-    'maya.png',
-    'blender.png',
-    'substancePainter.png',
-    'visualStudio.png',
-    'discord.png',
+    "C++.png",
+    "renderDoc.png",
+    "maya.png",
+    "blender.png",
+    "substancePainter.png",
+    "visualStudio.png",
+    "discord.png",
+    "C++.png",
+    "renderDoc.png",
+    "maya.png",
+    "blender.png",
+    "substancePainter.png",
+    "visualStudio.png",
+    "discord.png",
+    "C++.png",
+    "renderDoc.png",
+    "maya.png",
+    "blender.png",
+    "substancePainter.png",
+    "visualStudio.png",
+    "discord.png",
   ];
 
   const text: BannerLayer = {
-    scale: [0.01, 1, 'easeInOutCirc'],
-    opacity: [0.01, 1, 'easeInOutCirc'],
+    scale: [0.01, 1, "easeInOutCirc"],
+    opacity: [0.01, 1, "easeInOutCirc"],
     children: (
       <div className="flex h-screen w-screen items-center justify-center">
         <h1 className=" select-none text-3xl font-bold text-neutral-100 sm:text-6xl lg:text-8xl">
@@ -85,27 +85,27 @@ export default function Home() {
   };
 
   const date = new Date(Date.now());
-  let nextMilestone = 'VS1';
+  let nextMilestone = "VS1";
   const dates = {
-    CD: new Date('2023-03-14'),
-    VS1: new Date('2023-03-20'),
-    VS2: new Date('2023-04-23'),
-    VS3: new Date('2023-06-01'),
-    Alpha: new Date('2023-06-29'),
-    Beta: new Date('2023-09-13'),
-    'Gold Master': new Date('2023-10-11'),
-    Release: new Date('2023-11-10'),
+    CD: new Date("2023-03-14"),
+    VS1: new Date("2023-03-28"),
+    VS2: new Date("2023-04-25"),
+    VS3: new Date("2023-06-01"),
+    Alpha: new Date("2023-06-29"),
+    Beta: new Date("2023-09-13"),
+    "Gold Master": new Date("2023-10-11"),
+    Release: new Date("2023-11-10"),
   };
-  if (date >= dates.CD && date <= dates.VS1) nextMilestone = 'VS1';
-  else if (date > dates.VS1 && date <= dates.VS2) nextMilestone = 'VS2';
-  else if (date > dates.VS2 && date <= dates.VS3) nextMilestone = 'VS3';
-  else if (date > dates.VS3 && date <= dates.Alpha) nextMilestone = 'Alpha';
-  else if (date > dates.Alpha && date <= dates.Beta) nextMilestone = 'Beta';
-  else if (date > dates.Beta && date <= dates['Gold Master'])
-    nextMilestone = 'GM';
-  else if (date > dates['Gold Master'] && date <= dates.Release)
-    nextMilestone = 'Release';
-  else nextMilestone = 'Published';
+  if (date >= dates.CD && date <= dates.VS1) nextMilestone = "VS1";
+  else if (date > dates.VS1 && date <= dates.VS2) nextMilestone = "VS2";
+  else if (date > dates.VS2 && date <= dates.VS3) nextMilestone = "VS3";
+  else if (date > dates.VS3 && date <= dates.Alpha) nextMilestone = "Alpha";
+  else if (date > dates.Alpha && date <= dates.Beta) nextMilestone = "Beta";
+  else if (date > dates.Beta && date <= dates["Gold Master"])
+    nextMilestone = "GM";
+  else if (date > dates["Gold Master"] && date <= dates.Release)
+    nextMilestone = "Release";
+  else nextMilestone = "Published";
 
   return (
     <>
@@ -142,87 +142,87 @@ export default function Home() {
           <div className="items flex w-full justify-center gap-8">
             {!isMobile && (
               <div>
-                <Connection animateSlide={nextMilestone === 'VS1'} />
+                <Connection animateSlide={nextMilestone === "VS1"} />
                 <Connection
-                  animatePing={nextMilestone === 'VS1'}
-                  animateSlide={nextMilestone === 'VS2'}
+                  animatePing={nextMilestone === "VS1"}
+                  animateSlide={nextMilestone === "VS2"}
                 />
                 <Connection
-                  animatePing={nextMilestone === 'VS2'}
-                  animateSlide={nextMilestone === 'VS3'}
+                  animatePing={nextMilestone === "VS2"}
+                  animateSlide={nextMilestone === "VS3"}
                 />
                 <Connection
-                  animatePing={nextMilestone === 'VS3'}
-                  animateSlide={nextMilestone === 'Alpha'}
+                  animatePing={nextMilestone === "VS3"}
+                  animateSlide={nextMilestone === "Alpha"}
                 />
                 <Connection
-                  animatePing={nextMilestone === 'Alpha'}
-                  animateSlide={nextMilestone === 'Beta'}
+                  animatePing={nextMilestone === "Alpha"}
+                  animateSlide={nextMilestone === "Beta"}
                 />
                 <Connection
-                  animatePing={nextMilestone === 'Beta'}
-                  animateSlide={nextMilestone === 'GM'}
+                  animatePing={nextMilestone === "Beta"}
+                  animateSlide={nextMilestone === "GM"}
                 />
                 <Connection
-                  animatePing={nextMilestone === 'GM'}
-                  animateSlide={nextMilestone === 'Release'}
+                  animatePing={nextMilestone === "GM"}
+                  animateSlide={nextMilestone === "Release"}
                 />
-                <Connection animatePing={nextMilestone === 'Published'} />
+                <Connection animatePing={nextMilestone === "Published"} />
               </div>
             )}
             <ol className="flex flex-col justify-center">
               <li
                 className={`mt-[60px] h-20 text-xl ${
-                  nextMilestone === 'CD' && 'font-bold'
+                  nextMilestone === "CD" && "font-bold"
                 }`}
               >
                 Concept Discovery
               </li>
               <li
                 className={`h-20 text-xl ${
-                  nextMilestone === 'VS1' && 'font-bold'
+                  nextMilestone === "VS1" && "font-bold"
                 }`}
               >
                 Vertical Slice 1
               </li>
               <li
                 className={`h-20 text-xl ${
-                  nextMilestone === 'VS2' && 'font-bold'
+                  nextMilestone === "VS2" && "font-bold"
                 }`}
               >
                 Vertical Slice 2
               </li>
               <li
                 className={`h-20 text-xl ${
-                  nextMilestone === 'VS3' && 'font-bold'
+                  nextMilestone === "VS3" && "font-bold"
                 }`}
               >
                 Vertical Slice 3
               </li>
               <li
                 className={`h-20 text-xl ${
-                  nextMilestone === 'Alpha' && 'font-bold'
+                  nextMilestone === "Alpha" && "font-bold"
                 }`}
               >
                 Alpha
               </li>
               <li
                 className={`h-20 text-xl ${
-                  nextMilestone === 'Beta' && 'font-bold'
+                  nextMilestone === "Beta" && "font-bold"
                 }`}
               >
                 Beta
               </li>
               <li
                 className={`h-20 text-xl ${
-                  nextMilestone === 'GM' && 'font-bold'
+                  nextMilestone === "GM" && "font-bold"
                 }`}
               >
                 Gold Master
               </li>
               <li
                 className={`h-20 text-xl ${
-                  nextMilestone === 'Release' && 'font-bold'
+                  nextMilestone === "Release" && "font-bold"
                 }`}
               >
                 Release
@@ -236,7 +236,7 @@ export default function Home() {
         <Carousel images={images} priority />
         <GlowingButton
           mainText="Axolotl Engine 0.3.0"
-          CTAText={t('SEE_NEWS')}
+          CTAText={t("SEE_NEWS")}
           icon={
             <GearIcon className="h-5 w-5 animate-spin text-secondary-600 transition duration-200 sm:animate-none sm:group-hover:animate-spin" />
           }
@@ -266,7 +266,7 @@ export default function Home() {
                     src={`/tools/${tool}`}
                     width={`${isMobile ? 64 : 100}`}
                     height={`${isMobile ? 64 : 100}`}
-                    alt={'C++ logo'}
+                    alt={"C++ logo"}
                   />
                 </li>
               );
