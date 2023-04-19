@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 
-interface SelectorProps {
+type SelectorProps = {
   isLanding?: boolean;
-}
+};
 
 const LanguageSelector = ({ isLanding }: SelectorProps) => {
   const { t } = useTranslation('common');

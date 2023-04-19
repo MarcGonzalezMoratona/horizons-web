@@ -1,9 +1,9 @@
-interface ButtonProps {
+type ButtonProps = {
   variant?: string;
   children?: string;
   className?: string;
   icon?: JSX.Element;
-}
+};
 
 export default function Button({
   variant = 'primary',

@@ -2,10 +2,10 @@ import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
 import LanguageSelector from './LanguageSelector';
 
-interface MenuProps {
+type MenuProps = {
   isMenuOpen: boolean;
   isLanding: boolean;
-}
+};
 
 const Menu = ({ isMenuOpen, isLanding }: MenuProps) => {
   const { t } = useTranslation('common');

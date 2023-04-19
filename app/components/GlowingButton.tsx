@@ -1,11 +1,11 @@
 import { ArrowRightIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 
-interface ButtonProps {
+type ButtonProps = {
   mainText: string;
   CTAText: string;
   icon: JSX.Element;
-}
+};
 
 export const GlowingButton = ({ mainText, CTAText, icon }: ButtonProps) => {
   return (

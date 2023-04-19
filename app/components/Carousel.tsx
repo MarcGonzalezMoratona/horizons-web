@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import { useDevice } from '../hooks/useDevice';
 
-interface CarouselProps {
+type CarouselProps = {
   images: string[];
   priority: boolean;
-}
+};
 
 const Carousel = ({ images, priority }: CarouselProps) => {
   const [currentImage, setCurrentImage] = useState(0);

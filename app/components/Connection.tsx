@@ -1,10 +1,10 @@
 import Dot from './Dot';
 import VerticalLine from './VerticaLine';
 
-interface ConnectionProps {
+type ConnectionProps = {
   animatePing?: boolean;
   animateSlide?: boolean;
-}
+};
 
 export default function Connection({
   animatePing,

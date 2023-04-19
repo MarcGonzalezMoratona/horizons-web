@@ -1,14 +1,16 @@
 import * as Accordion from '@radix-ui/react-accordion';
 import AccordionItem, { AccordionContent } from './AccordionItem';
-interface FAQsContent {
+import useTranslation from 'next-translate/useTranslation';
+type FAQsContent = {
   content: AccordionContent[];
-}
+};
 
 export default function FAQs({ content }: FAQsContent) {
+  const { t } = useTranslation('common');
   return (
     <>
       <h2 className="my-8 text-center text-2xl sm:w-2/3 sm:text-4xl">
-        Preguntas frecuentes
+        {t('FREQUENTLY_ASKED_QUESTIONS')}
       </h2>
       <Accordion.Root
         type="multiple"

@@ -1,8 +1,8 @@
-interface DotProps {
+type DotProps = {
   animateSlide?: boolean;
   animatePing?: boolean;
   className?: string;
-}
+};
 
 export default function Dot({
   animateSlide,

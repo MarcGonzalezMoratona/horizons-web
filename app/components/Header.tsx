@@ -10,9 +10,9 @@ import { SunIcon, MoonIcon } from '@radix-ui/react-icons';
 import { usePageType } from '../hooks/usePageInfo';
 import { useIsDarkMode, useToggleThemeHandler } from '../hooks/useTheme';
 
-interface HeaderProps {
+type HeaderProps = {
   className: string;
-}
+};
 
 const Header = ({ className }: HeaderProps) => {
   const [isMenuOpen, toggleMenu] = useState(false);

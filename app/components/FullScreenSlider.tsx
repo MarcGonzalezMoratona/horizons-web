@@ -6,7 +6,7 @@ import {
   Cross1Icon,
 } from '@radix-ui/react-icons';
 
-interface SliderProps {
+type SliderProps = {
   images: {
     url: string;
     description: string;
@@ -15,7 +15,7 @@ interface SliderProps {
   closeSlider: () => void;
   currentImageIndex: number;
   setCurrentImageIndex: Dispatch<SetStateAction<number>>;
-}
+};
 
 const FullScreenSlider = ({
   images,

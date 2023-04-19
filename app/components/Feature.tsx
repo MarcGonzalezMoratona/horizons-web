@@ -1,10 +1,10 @@
 import * as Accordion from '@radix-ui/react-accordion';
 import AccordionItem from './AccordionItem';
 
-interface FeatureProps {
+type FeatureProps = {
   title: string;
   description: string;
-}
+};
 
 export default function Feature({ title, description }: FeatureProps) {
   return (

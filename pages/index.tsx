@@ -8,12 +8,12 @@ import Layout from '../app/components/Layout';
 import { usePageHandler } from '../app/hooks/usePageInfo';
 import EngineDescription from '../app/components/EngineDescription';
 import FAQs from '../app/components/FAQs';
-import { FAQsContent } from '../app/data/FAQs';
 import { BannerLayer } from 'react-scroll-parallax/dist/components/ParallaxBanner/types';
 import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
-import Connection from '../app/components/Connection';
 import { useDevice } from '../app/hooks/useDevice';
 import Image from 'next/image';
+import ProjectPhases from '../app/components/ProjectPhases';
+import { tools } from '../app/data/tools';
 
 export default function Home() {
   const { t } = useTranslation('common');
@@ -32,30 +32,6 @@ export default function Home() {
     'hangar.png',
     'skybox.png',
     'turret.png',
-  ];
-
-  const tools = [
-    'C++.png',
-    'renderDoc.png',
-    'maya.png',
-    'blender.png',
-    'substancePainter.png',
-    'visualStudio.png',
-    'discord.png',
-    'C++.png',
-    'renderDoc.png',
-    'maya.png',
-    'blender.png',
-    'substancePainter.png',
-    'visualStudio.png',
-    'discord.png',
-    'C++.png',
-    'renderDoc.png',
-    'maya.png',
-    'blender.png',
-    'substancePainter.png',
-    'visualStudio.png',
-    'discord.png',
   ];
 
   const text: BannerLayer = {
@@ -108,6 +84,16 @@ export default function Home() {
     nextMilestone = 'Release';
   else nextMilestone = 'Published';
 
+  const FAQsContent = [
+    { title: t('FAQ_1'), description: t('FAQ_1_ANSWER') },
+    { title: t('FAQ_2'), description: t('FAQ_2_ANSWER') },
+    { title: t('FAQ_3'), description: t('FAQ_3_ANSWER') },
+    { title: t('FAQ_4'), description: t('FAQ_4_ANSWER') },
+    { title: t('FAQ_5'), description: t('FAQ_5_ANSWER') },
+    { title: t('FAQ_6'), description: t('FAQ_6_ANSWER') },
+    { title: t('FAQ_7'), description: t('FAQ_7_ANSWER') },
+  ];
+
   return (
     <>
       <Head>
@@ -145,94 +131,7 @@ export default function Home() {
               isMobile ? 'justify-center' : 'justify-evenly'
             }`}
           >
-            <div className="flex gap-8">
-              <div>
-                <Connection animateSlide={nextMilestone === 'VS1'} />
-                <Connection
-                  animatePing={nextMilestone === 'VS1'}
-                  animateSlide={nextMilestone === 'VS2'}
-                />
-                <Connection
-                  animatePing={nextMilestone === 'VS2'}
-                  animateSlide={nextMilestone === 'VS3'}
-                />
-                <Connection
-                  animatePing={nextMilestone === 'VS3'}
-                  animateSlide={nextMilestone === 'Alpha'}
-                />
-                <Connection
-                  animatePing={nextMilestone === 'Alpha'}
-                  animateSlide={nextMilestone === 'Beta'}
-                />
-                <Connection
-                  animatePing={nextMilestone === 'Beta'}
-                  animateSlide={nextMilestone === 'GM'}
-                />
-                <Connection
-                  animatePing={nextMilestone === 'GM'}
-                  animateSlide={nextMilestone === 'Release'}
-                />
-                <Connection animatePing={nextMilestone === 'Published'} />
-              </div>
-              <ol className="flex flex-col justify-center">
-                <li
-                  className={`mt-[60px] h-20 text-xl ${
-                    nextMilestone === 'CD' && 'font-bold'
-                  }`}
-                >
-                  Concept Discovery
-                </li>
-                <li
-                  className={`h-20 text-xl ${
-                    nextMilestone === 'VS1' && 'font-bold'
-                  }`}
-                >
-                  Vertical Slice 1
-                </li>
-                <li
-                  className={`h-20 text-xl ${
-                    nextMilestone === 'VS2' && 'font-bold'
-                  }`}
-                >
-                  Vertical Slice 2
-                </li>
-                <li
-                  className={`h-20 text-xl ${
-                    nextMilestone === 'VS3' && 'font-bold'
-                  }`}
-                >
-                  Vertical Slice 3
-                </li>
-                <li
-                  className={`h-20 text-xl ${
-                    nextMilestone === 'Alpha' && 'font-bold'
-                  }`}
-                >
-                  Alpha
-                </li>
-                <li
-                  className={`h-20 text-xl ${
-                    nextMilestone === 'Beta' && 'font-bold'
-                  }`}
-                >
-                  Beta
-                </li>
-                <li
-                  className={`h-20 text-xl ${
-                    nextMilestone === 'GM' && 'font-bold'
-                  }`}
-                >
-                  Gold Master
-                </li>
-                <li
-                  className={`h-20 text-xl ${
-                    nextMilestone === 'Release' && 'font-bold'
-                  }`}
-                >
-                  Release
-                </li>
-              </ol>
-            </div>
+            <ProjectPhases nextMilestone={nextMilestone} />
             {isDesktop && (
               <div className="self-center rounded-xl bg-neutral-900 dark:bg-neutral-800 md:h-[270px] md:w-[480px] lg:h-[360px] lg:w-[640px] xl:h-[540px] xl:w-[960px] " />
             )}
@@ -248,7 +147,7 @@ export default function Home() {
         />
         <EngineDescription />
         <h2 className="my-8 text-center text-2xl sm:w-2/3 sm:text-4xl">
-          Herramientas y tecnologías utilizadas
+          {t('USED_TOOLS_AND_TECHNOLOGIES')}
         </h2>
         <div
           className="relative z-0 my-4 h-20 w-5/6 overflow-hidden before:absolute 
@@ -268,10 +167,10 @@ export default function Home() {
                 >
                   <Image
                     className="rounded"
-                    src={`/tools/${tool}`}
+                    src={`/tools/${tool.src}`}
                     width={`${isMobile ? 64 : 100}`}
                     height={`${isMobile ? 64 : 100}`}
-                    alt={'C++ logo'}
+                    alt={tool.alt}
                   />
                 </li>
               );

@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import React from 'react';
 
-interface ImageProps {
+type ImageProps = {
   className?: string;
   priority?: boolean;
-}
+};
 
 export const Horizons = ({ className, priority }: ImageProps) => {
   return (

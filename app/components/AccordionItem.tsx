@@ -1,10 +1,10 @@
 import * as Accordion from '@radix-ui/react-accordion';
 import { MinusIcon, PlusIcon } from '@radix-ui/react-icons';
 
-export interface AccordionContent {
+export type AccordionContent = {
   title: string;
   description: string;
-}
+};
 
 export default function AccordionItem({
   title,
