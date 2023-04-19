@@ -17,7 +17,7 @@ export default function AccordionItem({
     >
       <Accordion.Header className="flex text-lg font-bold">
         <Accordion.Trigger className="group flex w-full items-center justify-between gap-4 text-left">
-          <span className="dark:transition-color dark:duration-300 dark:ease-in-out dark:group-data-[state=open]:text-secondary-200 ">
+          <span className="dark:transition-all dark:duration-300 dark:ease-in-out dark:group-data-[state=open]:text-secondary-200">
             {title}
           </span>
           <PlusIcon className="shrink-0 group-data-[state=open]:hidden" />
