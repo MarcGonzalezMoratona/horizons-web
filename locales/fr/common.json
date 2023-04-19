@@ -43,7 +43,7 @@
   "FAQ_1": "Qu'est-ce que Axolotl Engine?",
   "FAQ_1_ANSWER": "Axolotl Engine est un moteur de création de jeux vidéo développé en C++ par Horizons Games, un studio de jeux vidéo à vocation éducative créé par des étudiants du mastère de l'UPC School à Barcelone (Espagne). C'est un outil puissant qui permet à nos développeurs de créer des jeux avec des graphismes en 3D, des mécaniques de jeu personnalisées et une large gamme de fonctionnalités pour créer des expériences uniques.",
   "FAQ_2": "Comment puis-je télécharger Axolotl Engine?",
-  "FAQ_2_ANSWER": "Notre équipe s'engage envers les principes du code source ouvert et les nombreux avantages qu'offre cette alternative, c'est pourquoi Axolotl Engine est disponible en téléchargement depuis notre dépôt GitHub. À partir de là, vous pouvez accéder au code source du moteur ou le télécharger pour un usage personnel.",
+  "FAQ_2_ANSWER": "Notre équipe s'engage envers les principes du code source ouvert et les nombreux avantages qu'offre cette alternative, c'est pourquoi Axolotl Engine est disponible en téléchargement depuis notre dépôt",
   "FAQ_3": "Quelles seront les caractéristiques du jeu?",
   "FAQ_3_ANSWER": "Le jeu comportera des graphismes en 3D, des mécaniques de jeu personnalisées, des niveaux futuristes, des combats avec des sabres laser et la possibilité de contrôler des personnages dans un environnement de science-fiction.",
   "FAQ_4": "Comment puis-je rester informé des actualités et des mises à jour du jeu?",

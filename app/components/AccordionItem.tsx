@@ -1,14 +1,19 @@
 import * as Accordion from '@radix-ui/react-accordion';
 import { MinusIcon, PlusIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
 
 export type AccordionContent = {
   title: string;
   description: string;
+  url?: string;
+  link?: string;
 };
 
 export default function AccordionItem({
   title,
   description,
+  link,
+  url,
 }: AccordionContent) {
   return (
     <Accordion.Item
@@ -26,6 +31,14 @@ export default function AccordionItem({
       </Accordion.Header>
       <Accordion.Content className="px-4 data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
         {description}
+        {link && url && (
+          <Link
+            className="font-medium text-primary-500 dark:text-secondary-300"
+            href={url}
+          >
+            {link}
+          </Link>
+        )}
       </Accordion.Content>
     </Accordion.Item>
   );

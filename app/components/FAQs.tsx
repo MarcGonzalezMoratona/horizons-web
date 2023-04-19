@@ -1,6 +1,7 @@
 import * as Accordion from '@radix-ui/react-accordion';
 import AccordionItem, { AccordionContent } from './AccordionItem';
 import useTranslation from 'next-translate/useTranslation';
+
 type FAQsContent = {
   content: AccordionContent[];
 };
@@ -16,13 +17,17 @@ export default function FAQs({ content }: FAQsContent) {
         type="multiple"
         className="mx-2 my-4 flex w-5/6 flex-col items-center justify-center gap-4 sm:w-2/3 sm:px-4"
       >
-        {content.map((content) => {
+        {content.map((content, index) => {
           return (
-            <AccordionItem
-              key={content.title}
-              title={content.title}
-              description={content.description}
-            />
+            <>
+              <AccordionItem
+                key={content.title}
+                title={content.title}
+                description={content.description}
+                link={content.link}
+                url={content.url}
+              />
+            </>
           );
         })}
       </Accordion.Root>

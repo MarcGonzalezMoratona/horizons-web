@@ -86,7 +86,12 @@ export default function Home() {
 
   const FAQsContent = [
     { title: t('FAQ_1'), description: t('FAQ_1_ANSWER') },
-    { title: t('FAQ_2'), description: t('FAQ_2_ANSWER') },
+    {
+      title: t('FAQ_2'),
+      description: t('FAQ_2_ANSWER'),
+      link: ' GitHub.',
+      url: 'https://github.com/Horizons-Games/Axolotl-Engine/releases',
+    },
     { title: t('FAQ_3'), description: t('FAQ_3_ANSWER') },
     { title: t('FAQ_4'), description: t('FAQ_4_ANSWER') },
     { title: t('FAQ_5'), description: t('FAQ_5_ANSWER') },
