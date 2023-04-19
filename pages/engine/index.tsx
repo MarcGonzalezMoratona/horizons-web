@@ -58,7 +58,8 @@ export default function Engine() {
           title={t('PARTICLE_SYSTEMS')}
           description={t('PARTICLE_SYSTEMS_DESCRIPTION')}
         />
-        <Feature title={t('PHYSICS')} description={t('PHYSICS_DESCRIPTION')} />
+        <Feature title={t('PHYSICS')} description={t('PHYSICS_DESCRIPTION')} />{' '}
+        <Feature title={t('SOUND')} description={t('SOUND_DESCRIPTION')} />
       </Layout>
     </>
   );
