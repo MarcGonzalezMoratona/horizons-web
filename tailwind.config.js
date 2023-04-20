@@ -55,6 +55,62 @@ module.exports = {
           900: '#1D1D20',
         },
       },
+      keyframes: {
+        slideLeft: {
+          '100%': {
+            transform: 'translateX(-66.6666%)',
+          },
+        },
+        slideDown: {
+          '0%': {
+            height: 0,
+            opacity: 0,
+          },
+          '50%': {
+            opacity: 0,
+          },
+          '100%': {
+            height: 'var(--radix-accordion-content-height)',
+            opacity: 1,
+          },
+        },
+        slideUp: {
+          '0%': {
+            height: 'var(--radix-accordion-content-height)',
+            opacity: 1,
+          },
+          '25%': {
+            opacity: 1,
+          },
+          '100%': {
+            height: 0,
+            opacity: 0,
+          },
+        },
+        dotPing: {
+          '75%, 100%': {
+            opacity: 0,
+          },
+        },
+        dotSlideDown: {
+          '0%': {
+            opacity: 0,
+          },
+          '25%': {
+            opacity: 1,
+          },
+          '100%': {
+            transform: 'translateY(80px)',
+          },
+        },
+      },
+      animation: {
+        slideLeft: 'slideLeft 15s linear infinite',
+        slideDown: 'slideDown 300ms ease-in',
+        slideUp: 'slideUp 300ms ease-out',
+        dotPing: 'dotPing 2s ease-in-out infinite',
+        dotSlideDown: 'dotSlideDown 2s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

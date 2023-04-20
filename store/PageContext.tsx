@@ -5,9 +5,9 @@ const PageContext = createContext({
   PageHandler: (pageType: string) => {},
 });
 
-interface PageProps {
+type PageProps = {
   children?: JSX.Element | Array<JSX.Element>;
-}
+};
 
 export function PageContextProvider(props: PageProps): ReactElement {
   const [pageType, setPageType] = useState('landing');

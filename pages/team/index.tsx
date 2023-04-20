@@ -17,7 +17,7 @@ export default function Team() {
   return (
     <>
       <Head>
-        <title>{`Horizons Games | ${t('THE_TEAM')}`}</title>
+        <title>{`Horizons Games - ${t('THE_TEAM')}`}</title>
         <meta
           name="description"
           content="Welcome to the official website of Horizons Games! We are an AAA video games studio based in Barcelona."
@@ -26,10 +26,10 @@ export default function Team() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <h1 className="text-xl tracking-wider font-semibold sm:text-2xl my-8">
+        <h1 className="my-8 text-xl font-semibold tracking-wide sm:text-4xl">
           {t('THE_TEAM').toUpperCase()}
         </h1>
-        <ul className="grid grid-cols-2 mx-2 sm:mx-8 sm:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-8 md:gap-12 my-8">
+        <ul className="mx-2 my-8 grid grid-cols-2 gap-4 sm:mx-8 sm:grid-cols-3 sm:gap-8 md:gap-12 xl:grid-cols-4">
           {team.partners.map((partner, index) => {
             return (
               <ProfilePicture

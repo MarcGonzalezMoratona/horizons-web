@@ -5,7 +5,7 @@ import Button from './Button';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useTranslation from 'next-translate/useTranslation';
-interface PostProps {
+type PostProps = {
   data: {
     id: number;
     title: string;
@@ -20,15 +20,15 @@ interface PostProps {
     }[];
   };
   locale?: string;
-}
+};
 
 export default function Post({ data, locale }: PostProps) {
   const { t } = useTranslation('common');
 
   return (
     <Link href={`/blog/${data.id}`} locale={locale}>
-      <article className="flex flex-col mx-4 my-4 pt-4 shadow-md overflow-hidden hover:shadow-lg rounded-md dark:bg-neutral-800">
-        <div className="relative w-full h-48 sm:h-64">
+      <article className="mx-4 my-4 flex flex-col overflow-hidden rounded-md pt-4 shadow-md hover:shadow-lg dark:bg-neutral-800">
+        <div className="relative h-48 w-full sm:h-64">
           <Image
             src={`${data.caption ? `/blog/${data.caption}` : `/horizons.svg`}`}
             alt={data.alt || 'horizons logo'}
@@ -38,12 +38,12 @@ export default function Post({ data, locale }: PostProps) {
           />
         </div>
         <section
-          className="m-8 pt-4 flex flex-col justify-between 
-        sm:h-[700px] md:h-[800px] xl:h-[600px] 
-        border-t-4 border-primary-400 dark:border-primary-300"
+          className="m-8 flex flex-col justify-between border-t-4 
+        border-primary-400 pt-4 dark:border-primary-300 
+        sm:h-[700px] md:h-[800px] xl:h-[600px]"
         >
           <div>
-            <span className="flex justify-between my-1">
+            <span className="my-1 flex justify-between">
               <h2>{data.date}</h2>
               <h2>{data.author}</h2>
             </span>

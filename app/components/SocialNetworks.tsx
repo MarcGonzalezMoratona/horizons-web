@@ -10,7 +10,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
-interface SocialNetworksProps {
+type SocialNetworksProps = {
   networks?: {
     twitter?: string;
     instagram?: string;
@@ -21,12 +21,12 @@ interface SocialNetworksProps {
     website?: string | undefined;
   };
   className?: string;
-}
+};
 
 const SocialNetworks = ({ networks, className }: SocialNetworksProps) => {
   return (
     <div
-      className={`flex items-center gap-2 sm:gap-4 text-3xl sm:text-2xl ${className}`}
+      className={`flex items-center gap-2 text-3xl sm:gap-4 sm:text-2xl ${className}`}
     >
       {networks?.twitter && (
         <Link

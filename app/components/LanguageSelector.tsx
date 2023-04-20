@@ -4,7 +4,11 @@ import { useEffect, useState } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 
-const LanguageSelector = () => {
+type SelectorProps = {
+  isLanding?: boolean;
+};
+
+const LanguageSelector = ({ isLanding }: SelectorProps) => {
   const { t } = useTranslation('common');
   const currentLanguage = t('CURRENT_LANGUAGE');
   const [value, setValue] = useState(currentLanguage);
@@ -30,7 +34,7 @@ const LanguageSelector = () => {
       onValueChange={setValue}
       onOpenChange={(open) => toggleSelector(open)}
     >
-      <Select.Trigger className="flex items-center p-2 w-full">
+      <Select.Trigger className="flex w-full items-center p-2">
         <Select.Value aria-label={value}>{value}</Select.Value>
         <Select.Icon className="mx-2">
           {isSelectorOpen ? (
@@ -40,7 +44,11 @@ const LanguageSelector = () => {
           )}
         </Select.Icon>
       </Select.Trigger>
-      <Select.Content className="bg-neutral-100 dark:bg-neutral-700 w-full my-12 z-10">
+      <Select.Content
+        className={`z-10 my-12 w-full cursor-pointer ${
+          isLanding ? 'bg-transparent' : 'bg-neutral-100 dark:bg-neutral-700'
+        }`}
+      >
         <Select.Viewport className="flex flex-col border border-primary-200 dark:border-none">
           {languages.map(
             (language) =>
@@ -48,7 +56,10 @@ const LanguageSelector = () => {
                 <Select.Item
                   key={language}
                   value={language}
-                  className="pl-2 pr-8 py-2 hover:text-primary-500 outline-none hover:outline-none dark:hover:text-primary-300"
+                  className={`py-2 pl-2 pr-8 outline-none ${
+                    !isLanding &&
+                    'hover:text-primary-500 dark:hover:text-primary-300'
+                  } hover:outline-none`}
                 >
                   <Select.ItemText>{language}</Select.ItemText>
                 </Select.Item>

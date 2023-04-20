@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import { useDevice } from '../hooks/useDevice';
 
-interface CarouselProps {
+type CarouselProps = {
   images: string[];
   priority: boolean;
-}
+};
 
 const Carousel = ({ images, priority }: CarouselProps) => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -65,7 +65,7 @@ const Carousel = ({ images, priority }: CarouselProps) => {
 
   return (
     <div
-      className="relative h-[30vh] w-full select-none sm:h-[50vh]"
+      className="relative my-8 h-[30vh] w-full select-none sm:h-[50vh]"
       {...handlers}
     >
       {renderImages()}

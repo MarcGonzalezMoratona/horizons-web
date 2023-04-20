@@ -8,7 +8,7 @@ import React from 'react';
 import Button from './Button';
 import RelatedPost from './RelatedPost';
 
-interface FullPostProps {
+type FullPostProps = {
   data: {
     id: number;
     title: string;
@@ -27,7 +27,7 @@ interface FullPostProps {
       video?: string;
     }[];
   }[];
-}
+};
 
 const FullPost = ({ data }: FullPostProps) => {
   const router = useRouter();
@@ -35,27 +35,27 @@ const FullPost = ({ data }: FullPostProps) => {
   const { t } = useTranslation('common');
 
   return (
-    <section className="flex flex-col xl:grid xl:grid-cols-3 xl:gap-8 my-8">
+    <section className="my-8 flex flex-col xl:grid xl:grid-cols-3 xl:gap-8">
       <article className="col-span-2">
         <div
-          className="grid grid-rows-2 grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 
-        p-4 border-b border-neutral-200 dark:border-neutral-100  items-center justify-center"
+          className="grid grid-cols-3 grid-rows-2 items-center justify-center border-b border-neutral-200 
+        p-4 dark:border-neutral-100 sm:grid-cols-5 md:grid-cols-6  lg:grid-cols-7 xl:grid-cols-8"
         >
-          <div className="rounded-full relative w-16 h-16 row-span-2">
+          <div className="relative row-span-2 h-16 w-16 rounded-full">
             <Image
               src={`/team/${data[id].profile}`}
               alt={data[id].author}
               fill
-              className="object-cover rounded-full"
+              className="rounded-full object-cover"
               sizes="(min-width: 320px) 320px"
             />
           </div>
-          <p className="text-lg col-span-2 sm:col-span-4 md:col-span-5 lg:col-span-6 xl:col-span-7 ">
+          <p className="col-span-2 text-lg sm:col-span-4 md:col-span-5 lg:col-span-6 xl:col-span-7 ">
             {data[id].author}
           </p>
           <p>{data[id].date}</p>
         </div>
-        <h1 className="text-2xl font-semibold my-4">{data[id].title}</h1>
+        <h1 className="my-4 text-2xl font-semibold">{data[id].title}</h1>
         <h2 className="text-xl">{data[id].subtitle}</h2>
         {data[id].paragraphs.map((paragraph, index) => {
           return (
@@ -67,7 +67,7 @@ const FullPost = ({ data }: FullPostProps) => {
               )}
               <p className="my-4">{paragraph.content}</p>
               {paragraph.image && (
-                <div className="flex justify-center relative h-96 lg:my-8">
+                <div className="relative flex h-96 justify-center lg:my-8">
                   <Image
                     src={`/blog/${paragraph.image}`}
                     alt={data[id].alt || 'horizons logo'}
@@ -78,9 +78,9 @@ const FullPost = ({ data }: FullPostProps) => {
                 </div>
               )}
               {paragraph.video && (
-                <div className="relative w-full pt-[56.25%] my-6">
+                <div className="relative my-6 w-full pt-[56.25%]">
                   <iframe
-                    className="absolute top-0 left-0 w-full h-full"
+                    className="absolute top-0 left-0 h-full w-full"
                     src={paragraph.video}
                     allowFullScreen
                   />
@@ -88,14 +88,14 @@ const FullPost = ({ data }: FullPostProps) => {
               )}
               {paragraph.document && (
                 <>
-                  <div className="h-screen hidden sm:block">
+                  <div className="hidden h-screen sm:block">
                     <embed
                       className="h-full w-full"
                       src={`/documents/${paragraph.document}`}
                       type="application/pdf"
                     />
                   </div>
-                  <div className="flex justify-center my-4 dark:bg-neutral-900 text-neutral-100 rounded-sm py-3 lg:mx-40 sm:hidden">
+                  <div className="my-4 flex justify-center rounded-sm py-3 text-neutral-100 dark:bg-neutral-900 sm:hidden lg:mx-40">
                     <Link
                       href={`/documents/${paragraph.document}`}
                       target="_blank"
@@ -119,21 +119,21 @@ const FullPost = ({ data }: FullPostProps) => {
           );
         })}
       </article>
-      <aside className="flex flex-col items-center xl:items-start xl:border-l border-neutral-200 dark:border-neutral-100  p-2 xl:p-8">
-        <div className="flex flex-col items-center xl:items-start my-4">
-          <div className="rounded-full relative w-28 h-28">
+      <aside className="flex flex-col items-center border-neutral-200 p-2 dark:border-neutral-100 xl:items-start  xl:border-l xl:p-8">
+        <div className="my-4 flex flex-col items-center xl:items-start">
+          <div className="relative h-28 w-28 rounded-full">
             <Image
               src={`/team/${data[id].profile}`}
               alt={data[id].author}
               fill
-              className="object-cover rounded-full"
+              className="rounded-full object-cover"
               sizes="(min-width: 320px) 320px"
             />
           </div>
-          <p className="my-2 font-medium text-lg">{data[id].author}</p>
+          <p className="my-2 text-lg font-medium">{data[id].author}</p>
         </div>
         {data.length > 1 && (
-          <h3 className="font-medium mt-4">{t('MORE_POSTS').toUpperCase()}</h3>
+          <h3 className="mt-4 font-medium">{t('MORE_POSTS').toUpperCase()}</h3>
         )}
         {data[id + 1] ? (
           <RelatedPost data={data[id + 1]} />
