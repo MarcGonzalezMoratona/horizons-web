@@ -21,7 +21,7 @@ const ProfilePicture = ({ partner, index }: ProfilePictureProps) => {
           src={`/team/${partner.image}`}
           alt={partner.name}
           fill
-          className="rounded-full object-cover"
+          className={`rounded-full object-cover transition-transform duration-500 hover:scale-105`}
           sizes="(min-width: 320px) 480px"
           priority={index < 12}
         />

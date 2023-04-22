@@ -8,11 +8,18 @@ import Button from '../../../app/components/Button';
 import FullPost from '../../../app/components/FullPost';
 import Layout from '../../../app/components/Layout';
 import { posts } from '../../../app/data/posts';
+import { useEffect } from 'react';
+import { usePageHandler } from '../../../app/hooks/usePageInfo';
 
 export default function Post() {
   const { t } = useTranslation('common');
+  const PageHandler = usePageHandler();
   const router = useRouter();
   const id = Number(router.query.post) - 1;
+
+  useEffect(() => {
+    PageHandler('post');
+  });
 
   return (
     <>
