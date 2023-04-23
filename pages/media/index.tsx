@@ -8,7 +8,6 @@ import { socialNetworks } from '../../app/data/socialNetworks';
 import Image from 'next/image';
 import { conceptArt } from '../../app/data/conceptArt';
 import FullScreenSlider from '../../app/components/FullScreenSlider';
-import ScrollingImages from '../../app/components/ScrollingImages';
 
 export default function Media() {
   const { t } = useTranslation('common');
@@ -41,7 +40,6 @@ export default function Media() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <ScrollingImages />
         <h1 className="mt-8 mb-4 text-xl font-semibold tracking-wide sm:text-4xl">
           {t('MEDIA').toUpperCase()}
         </h1>
