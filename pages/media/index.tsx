@@ -8,12 +8,15 @@ import { socialNetworks } from '../../app/data/socialNetworks';
 import Image from 'next/image';
 import { conceptArt } from '../../app/data/conceptArt';
 import FullScreenSlider from '../../app/components/FullScreenSlider';
+import { useDevice } from '../../app/hooks/useDevice';
 
 export default function Media() {
   const { t } = useTranslation('common');
   const PageHandler = usePageHandler();
   const [isSliderOpen, setIsSliderOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const device = useDevice();
+  const isMobile = device === 'mobile';
 
   const openSlider = (index: any) => {
     setCurrentImageIndex(index);
@@ -43,10 +46,18 @@ export default function Media() {
         <h1 className="mt-8 mb-4 text-xl font-semibold tracking-wide sm:text-4xl">
           {t('MEDIA').toUpperCase()}
         </h1>
-        <section className="flex w-full justify-center">
+        <section className="flex w-2/3 flex-col items-center justify-center">
           <h2 className="my-4 text-center text-2xl sm:w-2/3 sm:text-4xl">
             {t('TRAILERS')}
           </h2>
+          <video controls>
+            <source
+              src={`/animation/${
+                isMobile ? 'bixAnimationVertical' : 'bixAnimation'
+              }.mp4`}
+              type="video/mp4"
+            />
+          </video>
         </section>
         <section className="flex w-full justify-center">
           <h2 className="my-4 text-center text-2xl sm:w-2/3 sm:text-4xl">
