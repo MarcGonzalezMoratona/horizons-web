@@ -7,6 +7,15 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import Button from './Button';
 import RelatedPost from './RelatedPost';
+import CopyToClipboardButton from './CopyToClipboard';
+
+export type language =
+  | 'C++'
+  | 'C#'
+  | 'javascript'
+  | 'typescript'
+  | 'HTML'
+  | 'CSS';
 
 type FullPostProps = {
   data: {
@@ -25,6 +34,10 @@ type FullPostProps = {
       document?: string;
       documentCTA?: string;
       video?: string;
+      link?: string;
+      linkCaption?: string;
+      code?: string;
+      language?: language;
     }[];
   }[];
 };
@@ -66,6 +79,25 @@ const FullPost = ({ data }: FullPostProps) => {
                 </div>
               )}
               <p className="my-4">{paragraph.content}</p>
+              {paragraph.link && (
+                <Link
+                  href={paragraph.link}
+                  className="text-primary-400 dark:text-secondary-400"
+                >
+                  {paragraph.linkCaption || paragraph.link}
+                </Link>
+              )}
+              {paragraph.code && (
+                <div className="flex w-full flex-col rounded-xl border-b-2 border-l-2 border-r-2 border-neutral-800 bg-neutral-900 pb-8">
+                  <CopyToClipboardButton
+                    language={paragraph.language}
+                    content={paragraph.code}
+                  />
+                  <pre>
+                    <code className="text-neutral-100">{paragraph.code}</code>
+                  </pre>
+                </div>
+              )}
               {paragraph.image && (
                 <div className="relative flex h-96 justify-center lg:my-8">
                   <Image

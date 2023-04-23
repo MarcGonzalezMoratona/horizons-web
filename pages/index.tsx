@@ -128,7 +128,7 @@ export default function Home() {
           />
         </ParallaxProvider>
         <section className="flex w-full flex-col justify-center">
-          <h2 className="my-8 text-center text-2xl sm:text-4xl">
+          <h2 className="mx-4 my-8 text-center text-2xl sm:mx-0 sm:text-4xl">
             {t('OUR_GAME_DEVELOPMENT_JOURNEY')}
           </h2>
           <div
@@ -151,7 +151,7 @@ export default function Home() {
           }
         />
         <EngineDescription />
-        <h2 className="my-8 text-center text-2xl sm:w-2/3 sm:text-4xl">
+        <h2 className="my-8 mx-4 text-center text-2xl sm:mx-0 sm:w-2/3 sm:text-4xl">
           {t('USED_TOOLS_AND_TECHNOLOGIES')}
         </h2>
         <div

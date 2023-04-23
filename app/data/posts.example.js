@@ -1,3 +1,12 @@
+const snippet = `
+  #include <iostream>
+  using namespace std;
+
+  int main(){
+    return 0;
+  }
+`;
+
 export const posts = [
   {
     // Unique identifier for the post
@@ -33,6 +42,10 @@ export const posts = [
         document: 'GVD.pdf', // [OPTIONAL]
         // Text of the call-to-action (CTA) for the document download link
         documentCTA: 'Download GVD', // [OPTIONAL]
+        // Code snippet
+        code: snippet, // [OPTIONAL]
+        // Language of the code snippet
+        language: 'C++', // [OPTIONAL]
       },
     ],
   },

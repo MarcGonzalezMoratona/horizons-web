@@ -19,15 +19,13 @@ export default function FAQs({ content }: FAQsContent) {
       >
         {content.map((content, index) => {
           return (
-            <>
-              <AccordionItem
-                key={content.title}
-                title={content.title}
-                description={content.description}
-                link={content.link}
-                url={content.url}
-              />
-            </>
+            <AccordionItem
+              key={content.title}
+              title={content.title}
+              description={content.description}
+              link={content.link}
+              url={content.url}
+            />
           );
         })}
       </Accordion.Root>

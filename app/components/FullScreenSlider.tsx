@@ -56,6 +56,7 @@ const FullScreenSlider = ({
               className="select-none"
               src={images[currentImageIndex].url}
               alt={images[currentImageIndex].description}
+              sizes="(min-width: 320px) 640px, (min-width: 640px) 720px (min-width: 768px) 1080px"
               fill
             />
           </div>

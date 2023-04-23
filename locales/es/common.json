@@ -39,7 +39,7 @@
   "PHYSICS_DESCRIPTION": "Con su motor de física de última generación, los jugadores disfrutarán de movimientos suaves y realistas, colisiones precisas, simulación de objetos y materiales, y efectos de partículas detallados. La funcionalidad de física de Axolotl Engine proporciona a los desarrolladores las herramientas necesarias para crear interacciones realistas, lo que resulta en una experiencia de juego única y emocionante.",
   "SOUND": "Sonido",
   "SOUND_DESCRIPTION": "Sumérgete en la acción con efectos de sonido de alta calidad que te ofrece Axolotl Engine. Desde rugidos de motores de coches de carreras hasta estruendosos ronroneos de naves espaciales, nuestro motor de sonido te sumergirá en una experiencia auditiva inmersiva como nunca antes.",
-  "FREQUENTLY_ASKED_QUESTIONS": "Frequently asked questions",
+  "FREQUENTLY_ASKED_QUESTIONS": "Preguntas frecuentes",
   "FAQ_1": "¿Qué es Axolotl Engine?",
   "FAQ_1_ANSWER": "Axolotl Engine es un motor de creación de videojuegos desarrollado en C++ por Horizons Games, un estudio de videojuegos con fines educativos creado por estudiantes de máster de la UPC School en Barcelona (España). Es una herramienta poderosa que permite a nuestros desarrolladores crear juegos con gráficos en 3D, mecánicas de juego personalizadas y una amplia gama de funcionalidades para crear experiencias únicas.",
   "FAQ_2": "¿Cómo puedo descargar Axolotl Engine?",
