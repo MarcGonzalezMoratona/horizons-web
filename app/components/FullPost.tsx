@@ -80,12 +80,14 @@ const FullPost = ({ data }: FullPostProps) => {
               )}
               <p className="my-4">{paragraph.content}</p>
               {paragraph.link && (
-                <Link
-                  href={paragraph.link}
-                  className="text-primary-400 dark:text-secondary-400"
-                >
-                  {paragraph.linkCaption || paragraph.link}
-                </Link>
+                <span className="my-4">
+                  <Link
+                    href={paragraph.link}
+                    className="text-primary-400 dark:text-secondary-400"
+                  >
+                    {paragraph.linkCaption || paragraph.link}
+                  </Link>
+                </span>
               )}
               {paragraph.code && (
                 <div className="flex w-full flex-col rounded-xl border-b-2 border-l-2 border-r-2 border-neutral-800 bg-neutral-900 pb-8">
