@@ -19,7 +19,6 @@ export default function Home() {
   const { t } = useTranslation('common');
   const PageHandler = usePageHandler();
   const device = useDevice();
-  const isDesktop = device === 'desktop';
   const isMobile = device === 'mobile';
 
   useEffect(() => {
@@ -137,9 +136,6 @@ export default function Home() {
             }`}
           >
             <ProjectPhases nextMilestone={nextMilestone} />
-            {isDesktop && (
-              <div className="self-center rounded-xl bg-neutral-900 dark:bg-neutral-800 md:h-[270px] md:w-[480px] lg:h-[360px] lg:w-[640px] xl:h-[540px] xl:w-[960px] " />
-            )}
           </div>
         </section>
         <Carousel images={images} priority />
