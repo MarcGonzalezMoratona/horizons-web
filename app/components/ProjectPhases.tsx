@@ -122,9 +122,9 @@ export default function ProjectPhases({ nextMilestone }: ProjectPhasesProps) {
             </div>
           )}
           {selectedMilestone === 2 && (
-            <div className="flex h-full w-full items-center justify-center text-2xl">
-              Contenido de la vertical slice 2
-            </div>
+            <video className="rounded-xl" autoPlay controls>
+              <source src="/cargoBay.mp4" type="video/mp4" />
+            </video>
           )}
           {selectedMilestone === 3 && (
             <div className="flex h-full w-full items-center justify-center text-2xl">
