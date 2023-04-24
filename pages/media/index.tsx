@@ -31,6 +31,16 @@ export default function Media() {
     PageHandler('media');
   });
 
+  const videoSourceMap = [
+    {
+      mobile: 'bixAnimationVertical',
+      desktop: 'bixAnimation',
+    },
+    {
+      mobile: 'droneAnimationVertical',
+      desktop: 'droneAnimation',
+    },
+  ];
   return (
     <>
       <Head>
@@ -50,14 +60,20 @@ export default function Media() {
           <h2 className="my-4 text-center text-2xl sm:w-2/3 sm:text-4xl">
             {t('TRAILERS')}
           </h2>
-          <video controls>
-            <source
-              src={`/animation/${
-                isMobile ? 'bixAnimationVertical' : 'bixAnimation'
-              }.mp4`}
-              type="video/mp4"
-            />
-          </video>
+          <div className="flex flex-col gap-4 sm:flex-row">
+            {videoSourceMap.map((video) => {
+              return (
+                <video controls key={video.mobile} className="sm:w-1/2">
+                  <source
+                    src={`/animation/${
+                      isMobile ? video.mobile : video.desktop
+                    }.mp4`}
+                    type="video/mp4"
+                  />
+                </video>
+              );
+            })}
+          </div>
         </section>
         <section className="flex w-full justify-center">
           <h2 className="my-4 text-center text-2xl sm:w-2/3 sm:text-4xl">
