@@ -1,21 +1,13 @@
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import useTranslation from 'next-translate/useTranslation';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import React from 'react';
-import Button from './Button';
-import RelatedPost from './RelatedPost';
-import CopyToClipboardButton from './CopyToClipboard';
-
-export type language =
-  | 'C++'
-  | 'C#'
-  | 'javascript'
-  | 'typescript'
-  | 'HTML'
-  | 'CSS';
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useTranslation from "next-translate/useTranslation";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React from "react";
+import Button from "./Button";
+import RelatedPost from "./RelatedPost";
+import CopyToClipboardButton from "./CopyToClipboard";
 
 type FullPostProps = {
   data: {
@@ -37,7 +29,7 @@ type FullPostProps = {
       link?: string;
       linkCaption?: string;
       code?: string;
-      language?: language;
+      language?: string;
     }[];
   }[];
 };
@@ -45,7 +37,7 @@ type FullPostProps = {
 const FullPost = ({ data }: FullPostProps) => {
   const router = useRouter();
   const id = Number(router.query.post) - 1;
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
 
   return (
     <section className="my-8 flex flex-col xl:grid xl:grid-cols-3 xl:gap-8">
@@ -104,7 +96,7 @@ const FullPost = ({ data }: FullPostProps) => {
                 <div className="relative flex h-96 justify-center lg:my-8">
                   <Image
                     src={`/blog/${paragraph.image}`}
-                    alt={data[id].alt || 'horizons logo'}
+                    alt={data[id].alt || "horizons logo"}
                     fill
                     className="object-contain"
                     sizes="(min-width: 320px) 640px, (min-width: 640px) 720px (min-width: 768px) 1080px"
@@ -167,7 +159,7 @@ const FullPost = ({ data }: FullPostProps) => {
           <p className="my-2 text-lg font-medium">{data[id].author}</p>
         </div>
         {data.length > 1 && (
-          <h3 className="mt-4 font-medium">{t('MORE_POSTS').toUpperCase()}</h3>
+          <h3 className="mt-4 font-medium">{t("MORE_POSTS").toUpperCase()}</h3>
         )}
         {data[id + 1] ? (
           <RelatedPost data={data[id + 1]} />

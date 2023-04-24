@@ -1,3 +1,66 @@
+const snippet = `
+    // an instance of a user script
+    Script myUserScript;
+    // get the "Type" of the instance, which holds reflective information
+    Type scriptType = typeof(myUserScript);
+    // get all the public members of the script
+    PropertyInfo[] scriptMembers = scriptType.GetProperties();
+    // iterate through all of the members
+    foreach (PropertyInfo member : scriptMembers)
+    {
+      // get the declared name of the member
+      string memberName = member.Name;
+      // get the value of the member for the script instance
+      // equivalent of doing "myUserScript.{memberName}"
+      object? memberValue = member.GetValue(myUserScript);
+    
+      //Render and process the graphical interface
+    
+      // set the value of the member for the script instance
+      // equivalent of doing "myUserScript.{memberName} = memberValue"
+      member.SetValue(myUserScript, memberValue);
+    }`;
+
+const templateSnippet = `
+    template<typename T>
+    struct Field
+    {
+    public:
+        std::string name;
+        std::function<T(void)> getter;
+        std::function<void(T)> setter;
+    
+        Field(const std::string& name,
+            const std::function<T(void)>& getter,
+            const std::function<void(T)>& setter) :
+            name(name),
+            getter(getter),
+            setter(setter)
+        {
+        }
+      
+      ~Field() = default;
+    };`;
+
+const snippetDeclaration = `
+    this->members.push_back(
+      std::make_pair(
+        FieldType::FLOAT,
+        Field<float>("Value",
+               [this] ()
+               {
+                return this->GetValue();
+               },
+               [this](float value)
+               {
+                 return this->SetValue(value);
+               })
+      )
+    );`;
+
+const snippetRegister = `
+    REGISTER_FIELD(Value, float);`;
+
 export const posts = [
   {
     id: 1,
@@ -75,7 +138,6 @@ export const posts = [
     ],
   },
   {
-    // Unique identifier for the post
     id: 3,
     title: "The engineering process: adding reflection to our scripts",
     subtitle: `How we assessed our problem, thought of existing solutions and implemented our own`,
@@ -91,7 +153,6 @@ export const posts = [
       },
       {
         heading: "What was the problem?",
-
         content: `OK, I'm getting ahead of myself. First things first: what was the problem we needed to solve?`,
       },
       {
@@ -107,7 +168,6 @@ export const posts = [
       },
       {
         heading: "The solution is reflection! Kind of...",
-
         content: `The answer to that question is really easy: with reflection! Reflection in computer science is defined as
         "is the ability of a process to examine, introspect, and modify its own structure and behavior". In layman's terms,
         it's the ability for a class to know about its contents at runtime, like the name of the class, the methods it contains...
@@ -116,29 +176,7 @@ export const posts = [
       },
       {
         content: `For instance, this is how we could achieve this in C#:`,
-        code: `
-    // an instance of a user script
-    Script myUserScript;
-    // get the "Type" of the instance, which holds reflective information
-    Type scriptType = typeof(myUserScript);
-    // get all the public members of the script
-    PropertyInfo[] scriptMembers = scriptType.GetProperties();
-    // iterate through all of the members
-    foreach (PropertyInfo member : scriptMembers)
-    {
-      // get the declared name of the member
-      string memberName = member.Name;
-      // get the value of the member for the script instance
-      // equivalent of doing "myUserScript.{memberName}"
-      object? memberValue = member.GetValue(myUserScript);
-    
-      //Render and process the graphical interface
-    
-      // set the value of the member for the script instance
-      // equivalent of doing "myUserScript.{memberName} = memberValue"
-      member.SetValue(myUserScript, memberValue);
-    }
-      `,
+        code: snippet,
         language: "C#",
       },
       {
@@ -155,27 +193,7 @@ export const posts = [
         So, the first step of this task was to define our version of reflection with the minimum features required.
         That was easy: we needed to have the name of the member, and a way to read and write it. So, using the "function" class in the standard library
         we wrote a relatively simple template class to fit our needs:`,
-        code: `
-    template<typename T>
-    struct Field
-    {
-    public:
-        std::string name;
-        std::function<T(void)> getter;
-        std::function<void(T)> setter;
-    
-        Field(const std::string& name,
-            const std::function<T(void)>& getter,
-            const std::function<void(T)>& setter) :
-            name(name),
-            getter(getter),
-            setter(setter)
-        {
-        }
-      
-      ~Field() = default;
-    };
-      `,
+        code: templateSnippet,
         language: "C++",
       },
       {
@@ -201,29 +219,12 @@ export const posts = [
       },
       {
         content: `How simple, you may ask? Well, this is what a manual declaration looks like:`,
-        code: `
-    this->members.push_back(
-      std::make_pair(
-        FieldType::FLOAT,
-        Field<float>("Value",
-               [this] ()
-               {
-                return this->GetValue();
-               },
-               [this](float value)
-               {
-                 return this->SetValue(value);
-               })
-      )
-    );
-          `,
+        code: snippetDeclaration,
         language: "C++",
       },
       {
         content: `And this is how our gameplay programmers can achieve the exact same thing right now:`,
-        code: `
-    REGISTER_FIELD(Value, float);
-          `,
+        code: snippetRegister,
         language: "C++",
       },
       {
@@ -231,7 +232,6 @@ export const posts = [
       },
       {
         heading: "Conclusion",
-
         content: `To sum up: we assessed our problem, used our knowledge to figure out what we needed to solve it
         and achieved it through research and the help of those more knowledgeable than ourselves.
         We considered a few possibilities for certain things, gauged their impact on the extensibility of the project
