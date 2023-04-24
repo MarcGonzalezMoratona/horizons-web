@@ -29,7 +29,7 @@ const CopyToClipboardButton = ({ content, language }: CopyToClipboardProps) => {
   };
 
   return (
-    <div className="flex items-center justify-between rounded-t-xl bg-neutral-800 text-neutral-100">
+    <div className="flex items-center justify-between rounded-t-xl bg-[#2d2d2d] text-neutral-100">
       <p className="my-2 ml-4 text-sm">{language}</p>
       <button className={"my-2 mr-4"} onClick={handleCopy}>
         <span className=" flex items-center gap-2 text-sm">

@@ -4,10 +4,21 @@ import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
-import Button from "./Button";
+import React, { useEffect } from "react";
 import RelatedPost from "./RelatedPost";
 import CopyToClipboardButton from "./CopyToClipboard";
+import Button from "./Button";
+import Prism from "prismjs";
+import "prismjs/themes/prism-tomorrow.css";
+import "prismjs/components/prism-csharp";
+import "prismjs/components/prism-markup";
+import "prismjs/components/prism-css";
+import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-jsx";
+import "prismjs/components/prism-tsx";
+import "prismjs/components/prism-json";
+import "prismjs/components/prism-markdown";
+import "prismjs/components/prism-bash";
 
 type FullPostProps = {
   data: {
@@ -38,6 +49,13 @@ const FullPost = ({ data }: FullPostProps) => {
   const router = useRouter();
   const id = Number(router.query.post) - 1;
   const { t } = useTranslation("common");
+
+  useEffect(() => {
+    const highlight = async () => {
+      await Prism.highlightAll();
+    };
+    highlight();
+  }, [data]);
 
   return (
     <section className="my-8 flex flex-col xl:grid xl:grid-cols-3 xl:gap-8">
@@ -82,13 +100,15 @@ const FullPost = ({ data }: FullPostProps) => {
                 </span>
               )}
               {paragraph.code && (
-                <div className="flex w-full flex-col rounded-xl border-b-2 border-l-2 border-r-2 border-neutral-800 bg-neutral-900 pb-8">
+                <div className="flex max-w-[85vw] flex-col justify-self-center rounded-xl border-b-2 border-l-2 border-r-2 border-neutral-800 bg-[#2d2d2d] sm:max-w-none">
                   <CopyToClipboardButton
                     language={paragraph.language}
                     content={paragraph.code}
                   />
-                  <pre>
-                    <code className="text-neutral-100">{paragraph.code}</code>
+                  <pre className="overflow-x-auto">
+                    <code className="language-csharp w-full">
+                      {paragraph.code}
+                    </code>
                   </pre>
                 </div>
               )}

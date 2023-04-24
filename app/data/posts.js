@@ -1,5 +1,4 @@
-const snippet = `
-    // an instance of a user script
+const snippet = `   // an instance of a user script
     Script myUserScript;
     // get the "Type" of the instance, which holds reflective information
     Type scriptType = typeof(myUserScript);
@@ -21,8 +20,7 @@ const snippet = `
       member.SetValue(myUserScript, memberValue);
     }`;
 
-const templateSnippet = `
-    template<typename T>
+const templateSnippet = `   template<typename T>
     struct Field
     {
     public:
@@ -42,8 +40,7 @@ const templateSnippet = `
       ~Field() = default;
     };`;
 
-const snippetDeclaration = `
-    this->members.push_back(
+const snippetDeclaration = `    this->members.push_back(
       std::make_pair(
         FieldType::FLOAT,
         Field<float>("Value",
@@ -56,10 +53,10 @@ const snippetDeclaration = `
                  return this->SetValue(value);
                })
       )
-    );`;
+    );
+`;
 
-const snippetRegister = `
-    REGISTER_FIELD(Value, float);`;
+const snippetRegister = `   REGISTER_FIELD(Value, float);`;
 
 export const posts = [
   {
