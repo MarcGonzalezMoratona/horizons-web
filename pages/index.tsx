@@ -72,14 +72,14 @@ export default function Home() {
     'Gold Master': new Date('2023-10-11'),
     Release: new Date('2023-11-10'),
   };
-  if (date >= dates.CD && date <= dates.VS1) nextMilestone = 'VS1';
-  else if (date > dates.VS1 && date <= dates.VS2) nextMilestone = 'VS2';
-  else if (date > dates.VS2 && date <= dates.VS3) nextMilestone = 'VS3';
-  else if (date > dates.VS3 && date <= dates.Alpha) nextMilestone = 'Alpha';
-  else if (date > dates.Alpha && date <= dates.Beta) nextMilestone = 'Beta';
-  else if (date > dates.Beta && date <= dates['Gold Master'])
+  if (date >= dates.CD && date < dates.VS1) nextMilestone = 'VS1';
+  else if (date >= dates.VS1 && date < dates.VS2) nextMilestone = 'VS2';
+  else if (date >= dates.VS2 && date < dates.VS3) nextMilestone = 'VS3';
+  else if (date >= dates.VS3 && date < dates.Alpha) nextMilestone = 'Alpha';
+  else if (date >= dates.Alpha && date < dates.Beta) nextMilestone = 'Beta';
+  else if (date >= dates.Beta && date < dates['Gold Master'])
     nextMilestone = 'GM';
-  else if (date > dates['Gold Master'] && date <= dates.Release)
+  else if (date >= dates['Gold Master'] && date < dates.Release)
     nextMilestone = 'Release';
   else nextMilestone = 'Published';
 
