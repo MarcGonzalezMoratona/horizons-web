@@ -170,7 +170,8 @@ export const posts = [
         "the ability of a process to examine, introspect, and modify its own structure and behavior". In layman's terms,
         it's the ability for a class to know about its contents at runtime, like the name of the class, the methods it contains...
         and its members! That's what we want!`,
-        // link: `https://en.wikipedia.org/wiki/Reflective_programming`,
+        link: `https://en.wikipedia.org/wiki/Reflective_programming`,
+        linkCaption: "Reflective programming - Wikipedia",
       },
       {
         content: `For instance, this is how we could achieve this in C#:`,
