@@ -1,41 +1,41 @@
-import { GearIcon } from '@radix-ui/react-icons';
-import useTranslation from 'next-translate/useTranslation';
-import Head from 'next/head';
-import { useEffect } from 'react';
-import Carousel from '../app/components/Carousel';
-import { GlowingButton } from '../app/components/GlowingButton';
-import Layout from '../app/components/Layout';
-import { usePageHandler } from '../app/hooks/usePageInfo';
-import EngineDescription from '../app/components/EngineDescription';
-import FAQs from '../app/components/FAQs';
-import { BannerLayer } from 'react-scroll-parallax/dist/components/ParallaxBanner/types';
-import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
-import { useDevice } from '../app/hooks/useDevice';
-import Image from 'next/image';
-import ProjectPhases from '../app/components/ProjectPhases';
-import { tools } from '../app/data/tools';
+import { GearIcon } from "@radix-ui/react-icons";
+import useTranslation from "next-translate/useTranslation";
+import Head from "next/head";
+import { useEffect } from "react";
+import Carousel from "../app/components/Carousel";
+import { GlowingButton } from "../app/components/GlowingButton";
+import Layout from "../app/components/Layout";
+import { usePageHandler } from "../app/hooks/usePageInfo";
+import EngineDescription from "../app/components/EngineDescription";
+import FAQs from "../app/components/FAQs";
+import { BannerLayer } from "react-scroll-parallax/dist/components/ParallaxBanner/types";
+import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax";
+import { useDevice } from "../app/hooks/useDevice";
+import Image from "next/image";
+import ProjectPhases from "../app/components/ProjectPhases";
+import { tools } from "../app/data/tools";
 
 export default function Home() {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
   const PageHandler = usePageHandler();
   const device = useDevice();
-  const isMobile = device === 'mobile';
+  const isMobile = device === "mobile";
 
   useEffect(() => {
-    PageHandler('landing');
+    PageHandler("landing");
   });
 
   const images = [
-    'blog/bix.png',
-    'drones.png',
-    'hangar.png',
-    'skybox.png',
-    'turret.png',
+    "blog/bix.png",
+    "drones.png",
+    "hangar.png",
+    "skybox.png",
+    "turret.png",
   ];
 
   const text: BannerLayer = {
-    scale: [0.01, 1, 'easeInOutCirc'],
-    opacity: [0.01, 1, 'easeInOutCirc'],
+    scale: [0.01, 1, "easeInOutCirc"],
+    opacity: [0.01, 1, "easeInOutCirc"],
     children: (
       <div className="flex h-screen w-screen items-center justify-center">
         <h1 className=" select-none text-3xl font-bold text-neutral-100 sm:text-6xl lg:text-8xl">
@@ -61,41 +61,41 @@ export default function Home() {
   };
 
   const date = new Date(Date.now());
-  let nextMilestone = 'VS1';
+  let nextMilestone = "VS1";
   const dates = {
-    CD: new Date('2023-03-14'),
-    VS1: new Date('2023-03-28'),
-    VS2: new Date('2023-04-25'),
-    VS3: new Date('2023-06-01'),
-    Alpha: new Date('2023-06-29'),
-    Beta: new Date('2023-09-13'),
-    'Gold Master': new Date('2023-10-11'),
-    Release: new Date('2023-11-10'),
+    CD: new Date("2023-03-14"),
+    VS1: new Date("2023-03-28"),
+    VS2: new Date("2023-04-25"),
+    VS3: new Date("2023-06-01"),
+    Alpha: new Date("2023-06-29"),
+    Beta: new Date("2023-09-13"),
+    "Gold Master": new Date("2023-10-11"),
+    Release: new Date("2023-11-10"),
   };
-  if (date >= dates.CD && date < dates.VS1) nextMilestone = 'VS1';
-  else if (date >= dates.VS1 && date < dates.VS2) nextMilestone = 'VS2';
-  else if (date >= dates.VS2 && date < dates.VS3) nextMilestone = 'VS3';
-  else if (date >= dates.VS3 && date < dates.Alpha) nextMilestone = 'Alpha';
-  else if (date >= dates.Alpha && date < dates.Beta) nextMilestone = 'Beta';
-  else if (date >= dates.Beta && date < dates['Gold Master'])
-    nextMilestone = 'GM';
-  else if (date >= dates['Gold Master'] && date < dates.Release)
-    nextMilestone = 'Release';
-  else nextMilestone = 'Published';
+  if (date >= dates.CD && date < dates.VS1) nextMilestone = "VS1";
+  else if (date >= dates.VS1 && date < dates.VS2) nextMilestone = "VS2";
+  else if (date >= dates.VS2 && date < dates.VS3) nextMilestone = "VS3";
+  else if (date >= dates.VS3 && date < dates.Alpha) nextMilestone = "Alpha";
+  else if (date >= dates.Alpha && date < dates.Beta) nextMilestone = "Beta";
+  else if (date >= dates.Beta && date < dates["Gold Master"])
+    nextMilestone = "GM";
+  else if (date >= dates["Gold Master"] && date < dates.Release)
+    nextMilestone = "Release";
+  else nextMilestone = "Published";
 
   const FAQsContent = [
-    { title: t('FAQ_1'), description: t('FAQ_1_ANSWER') },
+    { title: t("FAQ_1"), description: t("FAQ_1_ANSWER") },
     {
-      title: t('FAQ_2'),
-      description: t('FAQ_2_ANSWER'),
-      link: ' GitHub.',
-      url: 'https://github.com/Horizons-Games/Axolotl-Engine/releases',
+      title: t("FAQ_2"),
+      description: t("FAQ_2_ANSWER"),
+      link: " GitHub.",
+      url: "https://github.com/Horizons-Games/Axolotl-Engine/releases",
     },
-    { title: t('FAQ_3'), description: t('FAQ_3_ANSWER') },
-    { title: t('FAQ_4'), description: t('FAQ_4_ANSWER') },
-    { title: t('FAQ_5'), description: t('FAQ_5_ANSWER') },
-    { title: t('FAQ_6'), description: t('FAQ_6_ANSWER') },
-    { title: t('FAQ_7'), description: t('FAQ_7_ANSWER') },
+    { title: t("FAQ_3"), description: t("FAQ_3_ANSWER") },
+    { title: t("FAQ_4"), description: t("FAQ_4_ANSWER") },
+    { title: t("FAQ_5"), description: t("FAQ_5_ANSWER") },
+    { title: t("FAQ_6"), description: t("FAQ_6_ANSWER") },
+    { title: t("FAQ_7"), description: t("FAQ_7_ANSWER") },
   ];
 
   return (
@@ -126,29 +126,17 @@ export default function Home() {
             className="min-w-screen min-h-screen w-auto max-w-none"
           />
         </ParallaxProvider>
-        <section className="flex w-full flex-col justify-center">
-          <h2 className="mx-4 my-8 text-center text-2xl sm:mx-0 sm:text-4xl">
-            {t('OUR_GAME_DEVELOPMENT_JOURNEY')}
-          </h2>
-          <div
-            className={`flex w-full ${
-              isMobile ? 'justify-center' : 'justify-evenly'
-            }`}
-          >
-            <ProjectPhases nextMilestone={nextMilestone} />
-          </div>
-        </section>
         <Carousel images={images} priority />
         <GlowingButton
           mainText="Axolotl Engine 0.3.0"
-          CTAText={t('SEE_NEWS')}
+          CTAText={t("SEE_NEWS")}
           icon={
             <GearIcon className="h-5 w-5 animate-spin text-secondary-600 transition duration-200 sm:animate-none sm:group-hover:animate-spin" />
           }
         />
         <EngineDescription />
         <h2 className="my-8 mx-4 text-center text-2xl sm:mx-0 sm:w-2/3 sm:text-4xl">
-          {t('USED_TOOLS_AND_TECHNOLOGIES')}
+          {t("USED_TOOLS_AND_TECHNOLOGIES")}
         </h2>
         <div
           className="relative z-0 my-4 h-20 w-5/6 overflow-hidden before:absolute 
@@ -178,6 +166,18 @@ export default function Home() {
             })}
           </ul>
         </div>
+        <section className="flex w-full flex-col justify-center">
+          <h2 className="mx-4 my-8 text-center text-2xl sm:mx-0 sm:text-4xl">
+            {t("OUR_GAME_DEVELOPMENT_JOURNEY")}
+          </h2>
+          <div
+            className={`flex w-full ${
+              isMobile ? "justify-center" : "justify-evenly"
+            }`}
+          >
+            <ProjectPhases nextMilestone={nextMilestone} />
+          </div>
+        </section>
         <FAQs content={FAQsContent} />
       </Layout>
     </>
