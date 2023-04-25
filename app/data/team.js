@@ -175,7 +175,7 @@ export const team = {
     },
     {
       name: 'Marc Alcón',
-      image: 'placeholder.jpg',
+      image: 'MarcAlcon.jpg',
       role: 'Gameplay Programmer',
       networks: {
         github: 'https://github.com/markmeliaa',
