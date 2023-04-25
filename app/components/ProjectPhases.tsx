@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Connection from "../../app/components/Connection";
 import { useDevice } from "../hooks/useDevice";
+import useTranslation from "next-translate/useTranslation";
 
 type ProjectPhasesProps = {
   nextMilestone: string;
@@ -10,7 +11,7 @@ export default function ProjectPhases({ nextMilestone }: ProjectPhasesProps) {
   const device = useDevice();
   const isDesktop = device === "desktop";
   const [selectedMilestone, setSelectedMilestone] = useState(0);
-
+  const { t } = useTranslation("common");
   const milestones = [
     "Concept Discovery",
     "Vertical Slice 1",
@@ -147,32 +148,27 @@ export default function ProjectPhases({ nextMilestone }: ProjectPhasesProps) {
             )}
             {selectedMilestone === 3 && (
               <div className="flex h-full w-full items-center justify-center text-2xl text-neutral-100">
-                El contenido de la vertical slice 3 estará disponible a partir
-                del 01/06/2023.
+                {t("CONTENT_VS3")}
               </div>
             )}
             {selectedMilestone === 4 && (
               <div className="flex h-full w-full items-center justify-center text-2xl text-neutral-100">
-                El contenido de la alpha estará disponible a partir del
-                29/06/2023.
+                {t("CONTENT_ALPHA")}
               </div>
             )}
             {selectedMilestone === 5 && (
               <div className="flex h-full w-full items-center justify-center text-2xl text-neutral-100">
-                El contenido de la beta estará disponible a partir del
-                13/09/2023.
+                {t("CONTENT_BETA")}
               </div>
             )}
             {selectedMilestone === 6 && (
               <div className="flex h-full w-full items-center justify-center text-2xl text-neutral-100">
-                El contenido de la gold master estará disponible a partir del
-                11/10/2023.
+                {t("CONTENT_GM")}
               </div>
             )}
             {selectedMilestone === 7 && (
               <div className="flex h-full w-full items-center justify-center text-2xl text-neutral-100">
-                El contenido de la release estará disponible a partir del
-                10/11/2023.
+                {t("CONTENT_RELEASE")}
               </div>
             )}
           </div>

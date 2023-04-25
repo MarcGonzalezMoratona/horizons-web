@@ -53,5 +53,10 @@
   "FAQ_6": "¿Cuándo estará disponible el juego para jugarlo?",
   "FAQ_6_ANSWER": "Estamos emocionados de anunciar que la fecha de lanzamiento de nuestro juego está programada para el 11 de noviembre de 2023. Estamos trabajando arduamente para ofrecer una experiencia de juego emocionante y única a nuestros jugadores en esa fecha.",
   "FAQ_7": "¿Qué plataformas serán compatibles con el juego?",
-  "FAQ_7_ANSWER": "El juego creado con Axolotl Engine estará disponible exclusivamente para PC. Nuestro enfoque principal es desarrollar y optimizar el juego para Windows, ofreciendo la mejor experiencia de juego posible en esta plataforma. No tenemos planes de lanzar el juego en otras plataformas en este momento."
+  "FAQ_7_ANSWER": "El juego creado con Axolotl Engine estará disponible exclusivamente para PC. Nuestro enfoque principal es desarrollar y optimizar el juego para Windows, ofreciendo la mejor experiencia de juego posible en esta plataforma. No tenemos planes de lanzar el juego en otras plataformas en este momento.",
+  "CONTENT_VS3": "El contenido de la vertical slice 3 estará disponible a partir del 1 de Junio de 2023.",
+  "CONTENT_ALPHA": "El contenido de la alpha estará disponible a partir del 29 de Junio de 2023.",
+  "CONTENT_BETA": "El contenido de la beta estará disponible a partir del 13 de Septiembre de 2023.",
+  "CONTENT_GM": "El contenido de la gold master estará disponible a partir del 11 de Octubre de 2023.",
+  "CONTENT_RELEASE": "El contenido de la release estará disponible a partir del 10 de Noviembre de 2023."
 }

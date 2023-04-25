@@ -53,5 +53,10 @@
   "FAQ_6": "When will the game be available to play?",
   "FAQ_6_ANSWER": "We are excited to announce that the release date for our game is scheduled for November 11, 2023. We are working hard to deliver an exciting and unique gaming experience to our players on that date.",
   "FAQ_7": "Which platforms will be compatible with the game?",
-  "FAQ_7_ANSWER": "The game created with Axolotl Engine will be exclusively available for PC. Our main focus is to develop and optimize the game for Windows, offering the best gaming experience possible on this platform. We have no plans to release the game on other platforms at this time."
+  "FAQ_7_ANSWER": "The game created with Axolotl Engine will be exclusively available for PC. Our main focus is to develop and optimize the game for Windows, offering the best gaming experience possible on this platform. We have no plans to release the game on other platforms at this time.",
+  "CONTENT_VS3": "Vertical slice 3 content will be available on June 1, 2023.",
+  "CONTENT_ALPHA": "Alpha content will be available on June 29, 2023.",
+  "CONTENT_BETA": "Beta content will be available on September 13, 2023.",
+  "CONTENT_GM": "Gold master content will be available on October 11, 2023.",
+  "CONTENT_RELEASE": "Release content will be available on November 10, 102023."
 }
