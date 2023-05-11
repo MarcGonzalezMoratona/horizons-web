@@ -1,2 +1,4 @@
 User-agent: *
+Allow: /
+
 Sitemap: https://horizons-games.vercel.app/sitemap.xml
