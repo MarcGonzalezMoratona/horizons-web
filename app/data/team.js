@@ -94,6 +94,7 @@ export const team = {
       networks: {
         github: 'https://github.com/AuxPort66',
         linkedin: 'https://www.linkedin.com/in/sara-izquierdo-elfau-285109222',
+        website: 'https://auxport66.itch.io/',
       },
     },
     {
