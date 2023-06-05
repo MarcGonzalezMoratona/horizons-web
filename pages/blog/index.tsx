@@ -14,6 +14,7 @@ export default function Blog({ query }: { query: ParsedUrlQuery }) {
   const PageHandler = usePageHandler();
   const { page } = query;
   const currentPage = Number(page);
+  const sortedPosts = [...posts].sort((a, b) => b.id - a.id);
 
   useEffect(() => {
     PageHandler('blog');
@@ -35,11 +36,13 @@ export default function Blog({ query }: { query: ParsedUrlQuery }) {
           {t('BLOG').toUpperCase()}
         </h1>
         <section className="flex flex-col gap-8 sm:grid sm:grid-cols-2 lg:w-2/3">
-          {posts.map((post) => {
+          {sortedPosts.map((post) => {
             return (
               <React.Fragment key={post.id}>
-                {post.id <= currentPage * 4 &&
-                  post.id > (currentPage - 1) * 4 && <Post data={post} />}
+                {post.id > posts.length - currentPage * 4 &&
+                  post.id <= posts.length - (currentPage - 1) * 4 && (
+                    <Post data={post} />
+                  )}
               </React.Fragment>
             );
           })}

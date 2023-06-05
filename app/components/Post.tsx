@@ -30,7 +30,7 @@ export default function Post({ data, locale }: PostProps) {
       <article className="mx-4 my-4 flex flex-col overflow-hidden rounded-md pt-4 shadow-md hover:shadow-lg dark:bg-neutral-800">
         <div className="relative h-48 w-full sm:h-64">
           <Image
-            src={`${data.caption ? `/blog/${data.caption}` : `/horizons.svg`}`}
+            src={`${data.caption ? `/blog/${data.caption}` : '/horizons.svg'}`}
             alt={data.alt || 'horizons logo'}
             fill
             className="object-contain"

@@ -19,9 +19,9 @@ const Pagination = ({ pages, page }: PaginationProps) => {
           className={`my-4 flex h-10 w-10 cursor-pointer items-center justify-center
           border border-r-0 border-neutral-300 text-lg ${
             Number(page) === i
-              ? `bg-primary-100 text-primary-600 hover:bg-primary-100 hover:text-primary-600`
-              : `hover:bg-neutral-100 dark:hover:bg-primary-100 dark:hover:text-primary-600`
-          } ${pages === i && `border-r`}`}
+              ? 'bg-primary-100 text-primary-600 hover:bg-primary-100 hover:text-primary-600'
+              : 'hover:bg-neutral-100 dark:hover:bg-primary-100 dark:hover:text-primary-600'
+          } ${pages === i && 'border-r'}`}
           key={`page ${i}`}
         >
           {i}

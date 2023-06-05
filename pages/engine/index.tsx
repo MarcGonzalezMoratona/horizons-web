@@ -16,7 +16,7 @@ export default function Engine() {
   return (
     <>
       <Head>
-        <title>{`Horizons Games - Axolotl Engine`}</title>
+        <title>{'Horizons Games - Axolotl Engine'}</title>
         <meta
           name="description"
           content="Welcome to the official website of Horizons Games! We are an AAA video games studio based in Barcelona."

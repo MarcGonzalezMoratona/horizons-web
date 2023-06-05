@@ -1,7 +1,7 @@
-import { useState } from "react";
-import Connection from "../../app/components/Connection";
-import { useDevice } from "../hooks/useDevice";
-import useTranslation from "next-translate/useTranslation";
+import { useState } from 'react';
+import Connection from '../../app/components/Connection';
+import { useDevice } from '../hooks/useDevice';
+import useTranslation from 'next-translate/useTranslation';
 
 type ProjectPhasesProps = {
   nextMilestone: string;
@@ -9,55 +9,55 @@ type ProjectPhasesProps = {
 
 export default function ProjectPhases({ nextMilestone }: ProjectPhasesProps) {
   const device = useDevice();
-  const isDesktop = device === "desktop";
+  const isDesktop = device === 'desktop';
   const [selectedMilestone, setSelectedMilestone] = useState(0);
-  const { t } = useTranslation("common");
+  const { t } = useTranslation('common');
   const milestones = [
-    "Concept Discovery",
-    "Vertical Slice 1",
-    "Vertical Slice 2",
-    "Vertical Slice 3",
-    "Alpha",
-    "Beta",
-    "Gold Master",
-    "Release",
+    'Concept Discovery',
+    'Vertical Slice 1',
+    'Vertical Slice 2',
+    'Vertical Slice 3',
+    'Alpha',
+    'Beta',
+    'Gold Master',
+    'Release',
   ];
 
   return (
     <>
       <div className="flex gap-8">
         <div>
-          <Connection animateSlide={nextMilestone === "VS1"} />
+          <Connection animateSlide={nextMilestone === 'VS1'} />
           <Connection
-            animatePing={nextMilestone === "VS1"}
-            animateSlide={nextMilestone === "VS2"}
+            animatePing={nextMilestone === 'VS1'}
+            animateSlide={nextMilestone === 'VS2'}
           />
           <Connection
-            animatePing={nextMilestone === "VS2"}
-            animateSlide={nextMilestone === "VS3"}
+            animatePing={nextMilestone === 'VS2'}
+            animateSlide={nextMilestone === 'VS3'}
           />
           <Connection
-            animatePing={nextMilestone === "VS3"}
-            animateSlide={nextMilestone === "Alpha"}
+            animatePing={nextMilestone === 'VS3'}
+            animateSlide={nextMilestone === 'Alpha'}
           />
           <Connection
-            animatePing={nextMilestone === "Alpha"}
-            animateSlide={nextMilestone === "Beta"}
+            animatePing={nextMilestone === 'Alpha'}
+            animateSlide={nextMilestone === 'Beta'}
           />
           <Connection
-            animatePing={nextMilestone === "Beta"}
-            animateSlide={nextMilestone === "GM"}
+            animatePing={nextMilestone === 'Beta'}
+            animateSlide={nextMilestone === 'GM'}
           />
           <Connection
-            animatePing={nextMilestone === "GM"}
-            animateSlide={nextMilestone === "Release"}
+            animatePing={nextMilestone === 'GM'}
+            animateSlide={nextMilestone === 'Release'}
           />
-          <Connection animatePing={nextMilestone === "Published"} />
+          <Connection animatePing={nextMilestone === 'Published'} />
         </div>
         <ol className="flex flex-col justify-center">
           <li
             className={`mt-[60px] h-20 cursor-pointer select-none text-xl ${
-              nextMilestone === "CD" && "font-bold"
+              nextMilestone === 'CD' && 'font-bold'
             }`}
             onClick={() => setSelectedMilestone(0)}
           >
@@ -65,7 +65,7 @@ export default function ProjectPhases({ nextMilestone }: ProjectPhasesProps) {
           </li>
           <li
             className={`h-20 cursor-pointer select-none text-xl ${
-              nextMilestone === "VS1" && "font-bold"
+              nextMilestone === 'VS1' && 'font-bold'
             }`}
             onClick={() => setSelectedMilestone(1)}
           >
@@ -73,7 +73,7 @@ export default function ProjectPhases({ nextMilestone }: ProjectPhasesProps) {
           </li>
           <li
             className={`h-20 cursor-pointer select-none text-xl ${
-              nextMilestone === "VS2" && "font-bold"
+              nextMilestone === 'VS2' && 'font-bold'
             }`}
             onClick={() => setSelectedMilestone(2)}
           >
@@ -81,7 +81,7 @@ export default function ProjectPhases({ nextMilestone }: ProjectPhasesProps) {
           </li>
           <li
             className={`h-20 cursor-pointer select-none text-xl ${
-              nextMilestone === "VS3" && "font-bold"
+              nextMilestone === 'VS3' && 'font-bold'
             }`}
             onClick={() => setSelectedMilestone(3)}
           >
@@ -89,7 +89,7 @@ export default function ProjectPhases({ nextMilestone }: ProjectPhasesProps) {
           </li>
           <li
             className={`h-20 cursor-pointer select-none text-xl ${
-              nextMilestone === "Alpha" && "font-bold"
+              nextMilestone === 'Alpha' && 'font-bold'
             }`}
             onClick={() => setSelectedMilestone(4)}
           >
@@ -97,7 +97,7 @@ export default function ProjectPhases({ nextMilestone }: ProjectPhasesProps) {
           </li>
           <li
             className={`h-20 cursor-pointer select-none text-xl ${
-              nextMilestone === "Beta" && "font-bold"
+              nextMilestone === 'Beta' && 'font-bold'
             }`}
             onClick={() => setSelectedMilestone(5)}
           >
@@ -105,7 +105,7 @@ export default function ProjectPhases({ nextMilestone }: ProjectPhasesProps) {
           </li>
           <li
             className={`h-20 cursor-pointer select-none text-xl ${
-              nextMilestone === "GM" && "font-bold"
+              nextMilestone === 'GM' && 'font-bold'
             }`}
             onClick={() => setSelectedMilestone(6)}
           >
@@ -113,7 +113,7 @@ export default function ProjectPhases({ nextMilestone }: ProjectPhasesProps) {
           </li>
           <li
             className={`h-20 cursor-pointer select-none text-xl ${
-              nextMilestone === "Release" && "font-bold"
+              nextMilestone === 'Release' && 'font-bold'
             }`}
             onClick={() => setSelectedMilestone(7)}
           >
@@ -148,27 +148,27 @@ export default function ProjectPhases({ nextMilestone }: ProjectPhasesProps) {
             )}
             {selectedMilestone === 3 && (
               <div className="flex h-full w-full items-center justify-center text-2xl text-neutral-100">
-                {t("CONTENT_VS3")}
+                {t('CONTENT_VS3')}
               </div>
             )}
             {selectedMilestone === 4 && (
               <div className="flex h-full w-full items-center justify-center text-2xl text-neutral-100">
-                {t("CONTENT_ALPHA")}
+                {t('CONTENT_ALPHA')}
               </div>
             )}
             {selectedMilestone === 5 && (
               <div className="flex h-full w-full items-center justify-center text-2xl text-neutral-100">
-                {t("CONTENT_BETA")}
+                {t('CONTENT_BETA')}
               </div>
             )}
             {selectedMilestone === 6 && (
               <div className="flex h-full w-full items-center justify-center text-2xl text-neutral-100">
-                {t("CONTENT_GM")}
+                {t('CONTENT_GM')}
               </div>
             )}
             {selectedMilestone === 7 && (
               <div className="flex h-full w-full items-center justify-center text-2xl text-neutral-100">
-                {t("CONTENT_RELEASE")}
+                {t('CONTENT_RELEASE')}
               </div>
             )}
           </div>

@@ -33,7 +33,7 @@ const RelatedPost = ({ data }: RelatedPostProps) => {
             <div className="relative row-span-2 ">
               <Image
                 src={`${
-                  data.caption ? `/blog/${data.caption}` : `/horizons.svg`
+                  data.caption ? `/blog/${data.caption}` : '/horizons.svg'
                 }`}
                 alt={data.alt || 'horizons logo'}
                 fill
