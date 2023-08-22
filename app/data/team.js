@@ -130,6 +130,7 @@ export const team = {
       networks: {
         github: 'https://www.github.com/MarcGonzalezMoratona',
         linkedin: 'https://www.linkedin.com/in/marc-gonzalez-moratona',
+        website: 'https://marc-gonzalez-moratona.vercel.app',
       },
     },
     {
