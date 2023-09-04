@@ -120,7 +120,7 @@ export default function Home() {
         </ParallaxProvider>
         <EngineDescription />
         <GlowingButton
-          mainText="Axolotl Engine 0.5.0"
+          mainText="Axolotl Engine 0.6.0"
           CTAText={t('SEE_NEWS')}
           icon={
             <GearIcon className="h-5 w-5 animate-spin text-secondary-600 transition duration-200 sm:animate-none sm:group-hover:animate-spin" />
