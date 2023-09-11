@@ -23,3 +23,13 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  ::selection {
+    color: rgb(255, 255, 255);
+    background: rgb(77, 77, 255);
+  }
+}
