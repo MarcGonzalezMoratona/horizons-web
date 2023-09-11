@@ -14,7 +14,7 @@ export const posts = [
     // Title of the post
     title: 'Axolotl project: the development starts',
     // Subtitle of the post
-    subtitle: `Horizons Team begins development of Axolotl Project`,
+    subtitle: 'Horizons Team begins development of Axolotl Project',
     // Image file name for the post preview
     caption: 'smash.jpg', // [OPTIONAL]
     // Alternate text for the image file
@@ -31,7 +31,7 @@ export const posts = [
         // Heading of the paragraph
         heading: 'First heading', // [OPTIONAL]
         // Content of the paragraph
-        content: `Content of the first paragraph.`,
+        content: 'Content of the first paragraph.',
         // Image file name for the paragraph
         image: '../horizons.svg', // [OPTIONAL]
         // URL of a video that should be embedded with the paragraph
