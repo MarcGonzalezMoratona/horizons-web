@@ -34,9 +34,9 @@ const Header = ({ className }: HeaderProps) => {
       <div className="flex items-center justify-between">
         <Link href="/">
           {isDarkMode || isLanding ? (
-            <HorizonsWhite className="ml-4 h-12 w-12" priority />
+            <HorizonsWhite className="ml-4 h-12 w-12 select-none" priority />
           ) : (
-            <Horizons className="ml-4 h-12 w-12" priority />
+            <Horizons className="ml-4 h-12 w-12 select-none" priority />
           )}
         </Link>
         <nav className="hidden sm:mx-12 sm:block">

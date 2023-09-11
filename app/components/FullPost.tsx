@@ -69,7 +69,7 @@ const FullPost = ({ data }: FullPostProps) => {
               src={`/team/${data[id].profile}`}
               alt={data[id].author}
               fill
-              className="rounded-full object-cover"
+              className="select-none rounded-full object-cover"
               sizes="(min-width: 320px) 320px"
             />
           </div>
@@ -118,7 +118,7 @@ const FullPost = ({ data }: FullPostProps) => {
                     src={`/blog/${paragraph.image}`}
                     alt={data[id].alt || 'horizons logo'}
                     fill
-                    className="object-contain"
+                    className="select-none object-contain"
                     sizes="(min-width: 320px) 640px, (min-width: 640px) 720px (min-width: 768px) 1080px"
                   />
                 </div>
@@ -172,7 +172,7 @@ const FullPost = ({ data }: FullPostProps) => {
               src={`/team/${data[id].profile}`}
               alt={data[id].author}
               fill
-              className="rounded-full object-cover"
+              className="select-none rounded-full object-cover"
               sizes="(min-width: 320px) 320px"
             />
           </div>

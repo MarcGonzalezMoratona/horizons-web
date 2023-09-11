@@ -50,7 +50,7 @@ const Carousel = ({ images, priority }: CarouselProps) => {
             key={`image ${index}`}
             src={`/${image}`}
             alt={'Lego Star Wars'}
-            className={`object-contain transition-opacity duration-[2000ms] ${
+            className={`select-none object-contain transition-opacity duration-[2000ms] ${
               isAnimating
                 ? 'opacity-0 duration-500 ease-in-out'
                 : 'opacity-100 duration-[2000ms] ease-in-out'

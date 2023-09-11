@@ -22,7 +22,7 @@ const ProfilePicture = ({ partner, index }: ProfilePictureProps) => {
           alt={partner.name}
           fill
           className={
-            'rounded-full object-cover transition-transform duration-500 hover:scale-105'
+            'select-none rounded-full object-cover transition-transform duration-500 hover:scale-105'
           }
           sizes="(min-width: 320px) 480px"
           priority={index < 12}

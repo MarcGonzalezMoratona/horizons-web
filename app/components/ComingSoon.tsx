@@ -7,16 +7,16 @@ const ComingSoon = () => {
   const isDarkMode = useIsDarkMode();
 
   return (
-    <div className="w-full flex flex-col items-center gap-4 mt-12">
+    <div className="mt-12 flex w-full flex-col items-center gap-4">
       {isDarkMode ? (
-        <HorizonsWhite className="h-32 w-32" />
+        <HorizonsWhite className="h-32 w-32 select-none" />
       ) : (
-        <Horizons className="h-32 w-32" />
+        <Horizons className="h-32 w-32 select-none" />
       )}
-      <h1 className="text-4xl sm:text-6xl font-semibold text-center mx-2">
+      <h1 className="mx-2 text-center text-4xl font-semibold sm:text-6xl">
         {t('COMING_SOON').toUpperCase()}
       </h1>
-      <h2 className="text-xl sm:text-2xl text-center mx-2">
+      <h2 className="mx-2 text-center text-xl sm:text-2xl">
         {t('UNDER_CONSTRUCTION')}
       </h2>
     </div>

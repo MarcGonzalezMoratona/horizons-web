@@ -32,7 +32,7 @@ export default function Home() {
               src="/darthVader.png"
               alt="LEGO darth vader"
               fill
-              className="object-contain"
+              className="select-none object-contain"
             />
           </div>
           <div className="mx-8 flex h-64 flex-col items-center justify-center text-center sm:h-96 sm:text-left lg:w-1/2 lg:items-start">

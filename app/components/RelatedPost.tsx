@@ -24,7 +24,7 @@ const RelatedPost = ({ data }: RelatedPostProps) => {
                   src={`/team/${data.profile}`}
                   alt={data.author}
                   fill
-                  className="rounded-full object-cover"
+                  className="select-none rounded-full object-cover"
                   sizes="(min-width: 320px) 320px"
                 />
               </div>
@@ -37,7 +37,7 @@ const RelatedPost = ({ data }: RelatedPostProps) => {
                 }`}
                 alt={data.alt || 'horizons logo'}
                 fill
-                className="object-contain"
+                className="select-none object-contain"
                 sizes="(min-width: 320px) 320px"
               />
             </div>

@@ -33,7 +33,7 @@ export default function Post({ data, locale }: PostProps) {
             src={`${data.caption ? `/blog/${data.caption}` : '/horizons.svg'}`}
             alt={data.alt || 'horizons logo'}
             fill
-            className="object-contain"
+            className="select-none object-contain"
             sizes="(min-width: 320px) 720px"
           />
         </div>

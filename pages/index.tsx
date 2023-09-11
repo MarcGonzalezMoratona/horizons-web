@@ -144,7 +144,7 @@ export default function Home() {
                   key={index}
                 >
                   <Image
-                    className="rounded"
+                    className="select-none rounded"
                     src={`/tools/${tool.src}`}
                     width={`${isMobile ? 64 : 100}`}
                     height={`${isMobile ? 64 : 100}`}
