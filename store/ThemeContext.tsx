@@ -1,3 +1,4 @@
+'use client';
 import { createContext, ReactElement, useEffect, useState } from 'react';
 
 const ThemeContext = createContext({
@@ -19,7 +20,7 @@ export function ThemeContextProvider(props: ThemeProps): ReactElement {
 
   function initialThemeHandler(): void {
     if (isLocalStorageEmpty()) {
-      localStorage.setItem('isDarkMode', `true`);
+      localStorage.setItem('isDarkMode', 'true');
       document!.querySelector('body')!.classList.add('dark');
       setIsDarkMode(true);
     } else {

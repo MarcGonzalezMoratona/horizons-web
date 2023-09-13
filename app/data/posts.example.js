@@ -1,12 +1,3 @@
-const snippet = `
-  #include <iostream>
-  using namespace std;
-
-  int main(){
-    return 0;
-  }
-`;
-
 export const posts = [
   {
     // Unique identifier for the post
@@ -25,15 +16,9 @@ export const posts = [
     author: 'Marc González',
     // Date when the post was published
     date: '14/03/2023',
-    // An array of objects that contain the text content and media assets for each paragraph in the post
+    // An array of objects that contain the media assets for each paragraph in the post
     paragraphs: [
       {
-        // Heading of the paragraph
-        heading: 'First heading', // [OPTIONAL]
-        // Content of the paragraph
-        content: 'Content of the first paragraph.',
-        // Image file name for the paragraph
-        image: '../horizons.svg', // [OPTIONAL]
         // URL of a video that should be embedded with the paragraph
         // Supported video types: YouTube, Vimeo, Dailymotion,
         // and other video hosting services that support embeddable iframes.
@@ -42,10 +27,6 @@ export const posts = [
         document: 'GVD.pdf', // [OPTIONAL]
         // Text of the call-to-action (CTA) for the document download link
         documentCTA: 'Download GVD', // [OPTIONAL]
-        // Code snippet
-        code: snippet, // [OPTIONAL]
-        // Language of the code snippet
-        language: 'C++', // [OPTIONAL]
       },
     ],
   },

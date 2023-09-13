@@ -33,3 +33,35 @@
     background: rgb(77, 77, 255);
   }
 }
+
+.markdown p {
+  @apply my-4;
+}
+
+.markdown h1 {
+  @apply my-2 text-2xl font-semibold md:my-4;
+}
+
+.markdown h2 {
+  @apply my-2 text-xl font-medium md:my-4;
+}
+
+.markdown h3 {
+  @apply my-2 text-lg font-medium md:my-4;
+}
+
+.markdown a {
+  @apply break-words font-medium text-primary-400 underline dark:text-secondary-400;
+}
+
+.markdown table {
+  @apply w-full text-left text-xs sm:text-sm md:text-base;
+}
+
+.markdown img {
+  @apply mx-auto w-3/4;
+}
+
+.markdown pre {
+  @apply flex max-w-[85vw] flex-col justify-self-center rounded-xl border-b-2 border-l-2 border-r-2 border-neutral-800 bg-[#2d2d2d] py-4 sm:max-w-none;
+}

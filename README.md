@@ -22,8 +22,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 To add a new blog post to our website, follow these steps:
 
 1. Open the [posts.js](https://github.com/MarcGonzalezMoratona/horizons-web/blob/main/app/data/posts.js) file located in the `app/data` folder of the repository.
-2. Create a new object following the structure of the existing posts in the array, with a unique `id`, a `title`, a `subtitle`, an optional `caption` and `alt` for the preview image, the `profile` image file name and the `author` name, the `date` when the post was published, and an array of `paragraphs`.
-3. In the `paragraphs` array, create a new object for each paragraph with an optional `heading`, a `content` paragraph, and any optional `image`, `video`, `document`, and `documentCTA` properties.
+2. Create a markdown file inside the `app/data` folder, which must be called exactly as the post slug. e.g. If the slug of your post is `how-to-create-a-post`, your file should be called `how-to-create-a-post.md`
+3. Create a new object following the structure of the existing posts in the array, with a unique `id`, `slug`, a `title`, a `subtitle`, an optional `caption` and `alt` for the preview image, the `profile` image file name and the `author` name, the `date` when the post was published, and an array of `paragraphs`.
+4. In the `paragraphs` array, create a new object for each paragraph with any optional `video`, `document`, and `documentCTA` properties.
 
 Note: Check the [posts.example.js](https://github.com/MarcGonzalezMoratona/horizons-web/blob/main/app/data/posts.example.js) file in the app/data folder for an example object that you can use as a reference.
 
