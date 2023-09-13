@@ -32,27 +32,27 @@ and its members! That's what we want!
 For instance, this is how we could achieve this in C#:
 
 ```
-   // an instance of a user script
-    Script myUserScript;
-    // get the "Type" of the instance, which holds reflective information
-    Type scriptType = typeof(myUserScript);
-    // get all the public members of the script
-    PropertyInfo[] scriptMembers = scriptType.GetProperties();
-    // iterate through all of the members
-    foreach (PropertyInfo member : scriptMembers)
-    {
-      // get the declared name of the member
-      string memberName = member.Name;
-      // get the value of the member for the script instance
-      // equivalent of doing "myUserScript.{memberName}"
-      object? memberValue = member.GetValue(myUserScript);
+  // an instance of a user script
+  Script myUserScript;
+  // get the "Type" of the instance, which holds reflective information
+  Type scriptType = typeof(myUserScript);
+  // get all the public members of the script
+  PropertyInfo[] scriptMembers = scriptType.GetProperties();
+  // iterate through all of the members
+  foreach (PropertyInfo member : scriptMembers)
+  {
+    // get the declared name of the member
+    string memberName = member.Name;
+    // get the value of the member for the script instance
+    // equivalent of doing "myUserScript.{memberName}"
+    object? memberValue = member.GetValue(myUserScript);
 
-      //Render and process the graphical interface
+    // Render and process the graphical interface
 
-      // set the value of the member for the script instance
-      // equivalent of doing "myUserScript.{memberName} = memberValue"
-      member.SetValue(myUserScript, memberValue);
-    }
+    // set the value of the member for the script instance
+    // equivalent of doing "myUserScript.{memberName} = memberValue"
+    member.SetValue(myUserScript, memberValue);
+  }
 ```
 
 But if you're looking at the scrollbar, you can probably guess that that's not the end of this story.
@@ -68,25 +68,25 @@ So, the first step of this task was to define our version of reflection with the
 That was easy: we needed to have the name of the member, and a way to read and write it. So, using the "function" class in the standard library we wrote a relatively simple template class to fit our needs:
 
 ```
-   template<typename T>
-    struct Field
+  template<typename T>
+  struct Field
+  {
+  public:
+    std::string name;
+    std::function<T(void)> getter;
+    std::function<void(T)> setter;
+
+    Field(const std::string& name,
+      const std::function<T(void)>& getter,
+      const std::function<void(T)>& setter) :
+      name(name),
+      getter(getter),
+      setter(setter)
     {
-    public:
-        std::string name;
-        std::function<T(void)> getter;
-        std::function<void(T)> setter;
+    }
 
-        Field(const std::string& name,
-            const std::function<T(void)>& getter,
-            const std::function<void(T)>& setter) :
-            name(name),
-            getter(getter),
-            setter(setter)
-        {
-        }
-
-      ~Field() = default;
-    };
+    ~Field() = default;
+  };
 ```
 
 And now came the harder part: how can this be used by the rest of the engine? There were two big problems:
@@ -110,26 +110,26 @@ After some iteration, I managed to make it really simple, if I do say so myself.
 How simple, you may ask? Well, this is what a manual declaration looks like:
 
 ```
-    this->members.push_back(
-      std::make_pair(
-        FieldType::FLOAT,
-        Field<float>("Value",
-               [this] ()
-               {
-                return this->GetValue();
-               },
-               [this](float value)
-               {
-                 return this->SetValue(value);
-               })
-      )
-    );
+  this->members.push_back(
+    std::make_pair(
+      FieldType::FLOAT,
+      Field<float>("Value",
+              [this] ()
+              {
+              return this->GetValue();
+              },
+              [this](float value)
+              {
+                return this->SetValue(value);
+              })
+    )
+  );
 ```
 
 And this is how our gameplay programmers can achieve the exact same thing right now:
 
 ```
-    REGISTER_FIELD(Value, float);
+  REGISTER_FIELD(Value, float);
 ```
 
 Pretty good, if you ask me!
