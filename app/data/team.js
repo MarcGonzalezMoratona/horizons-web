@@ -142,42 +142,5 @@ export const team = {
         github: 'https://github.com/Vlukkee',
       },
     },
-    {
-      name: 'Santiago Carbó',
-      image: 'SantiagoCarbo.jpg',
-      networks: {
-        github: 'https://github.com/sncarbo',
-        linkedin: 'https://www.linkedin.com/in/santiago-carb%C3%B3-00805510b',
-        website: 'https://santiago-carbo.com',
-      },
-    },
-    {
-      name: 'Jesús Miguel Adrián',
-      image: 'JesusMiguelAdrian.jpg',
-      networks: {
-        github: 'https://github.com/elbuho12Jesus',
-      },
-    },
-    {
-      name: 'David García',
-      image: 'DavidGarcia.jpg',
-      networks: {
-        github: 'https://github.com/DGMC117',
-      },
-    },
-    {
-      name: 'Jan Marc Costa',
-      image: 'JanMarcCosta.jpg',
-      networks: {
-        github: 'https://github.com/TheGeminis',
-      },
-    },
-    {
-      name: 'Andrés Machado',
-      image: 'AndresMachado.jpg',
-      networks: {
-        github: 'https://github.com/AndresM2',
-      },
-    },
   ],
 };
