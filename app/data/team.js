@@ -1,6 +1,22 @@
 export const team = {
   partners: [
     {
+      name: 'Marc Alcón',
+      image: 'MarcAlcon.jpg',
+      networks: {
+        github: 'https://github.com/markmeliaa',
+        linkedin: 'https://www.linkedin.com/in/markmeliaa',
+        website: 'https://markmeliaa.github.io',
+      },
+    },
+    {
+      name: 'Sandra Campaña',
+      image: 'SandraCampaña.jpg',
+      networks: {
+        github: 'https://github.com/csandra24',
+      },
+    },
+    {
       name: 'David Castro',
       image: 'DavidCastro.jpg',
       networks: {
@@ -8,28 +24,26 @@ export const team = {
       },
     },
     {
-      name: 'Diego Mejía',
-      image: 'DiegoMejia.jpg',
+      name: 'Pablo Cebollada',
+      image: 'PabloCebollada.jpg',
       networks: {
-        github: 'https://github.com/diegusmejia117',
+        github: 'https://github.com/PaablooCH',
       },
     },
     {
-      name: 'Gerard Queralt',
-      image: 'GerardQueralt.jpg',
+      name: 'Eric Dacal',
+      image: 'EricDacal.jpg',
       networks: {
-        github: 'https://github.com/gerard-queralt',
-        linkedin:
-          'https://www.linkedin.com/in/gerard-queralt-ferr%C3%A9-071283266',
+        github: 'https://github.com/ericdacal',
+        linkedin: 'https://www.linkedin.com/in/erdasa',
       },
     },
     {
-      name: 'Miquel Prieto',
-      image: 'MiquelPrieto.jpg',
+      name: 'Alexis Dieu',
+      image: 'AlexisDieu.jpg',
       networks: {
-        github: 'https://github.com/MacXxs',
-        linkedin:
-          'https://www.linkedin.com/in/miquel-prieto-molin%C3%A9-a57a30ab',
+        github: 'https://github.com/AlexisDieu',
+        linkedin: 'https://www.linkedin.com/in/alexis-dieu-705ab81a3',
       },
     },
     {
@@ -43,29 +57,12 @@ export const team = {
       },
     },
     {
-      name: 'Alexis Dieu',
-      image: 'AlexisDieu.jpg',
+      name: 'Marc González',
+      image: 'MarcGonzalez.jpg',
       networks: {
-        github: 'https://github.com/AlexisDieu',
-        linkedin: 'https://www.linkedin.com/in/alexis-dieu-705ab81a3',
-      },
-    },
-    {
-      name: 'David Martín',
-      image: 'DavidMartin.jpg',
-      networks: {
-        github: 'https://github.com/Dedado3000',
-        linkedin: 'https://www.linkedin.com/in/davidmartínsaladms',
-        website: 'https://dedado.carrd.co',
-      },
-    },
-    {
-      name: 'Marc Alcón',
-      image: 'MarcAlcon.jpg',
-      networks: {
-        github: 'https://github.com/markmeliaa',
-        linkedin: 'https://www.linkedin.com/in/markmeliaa',
-        website: 'https://markmeliaa.github.io',
+        github: 'https://www.github.com/MarcGonzalezMoratona',
+        linkedin: 'https://www.linkedin.com/in/marc-gonzalez-moratona',
+        website: 'https://marc-gonzalez-moratona.vercel.app',
       },
     },
     {
@@ -78,18 +75,33 @@ export const team = {
       },
     },
     {
-      name: 'Eric Dacal',
-      image: 'EricDacal.jpg',
-      networks: {
-        github: 'https://github.com/ericdacal',
-        linkedin: 'https://www.linkedin.com/in/erdasa',
-      },
-    },
-    {
       name: 'Xavier Llubés',
       image: 'XavierLlubes.jpg',
       networks: {
         github: 'https://github.com/xavi1111',
+      },
+    },
+    {
+      name: 'David Martín',
+      image: 'DavidMartin.jpg',
+      networks: {
+        github: 'https://github.com/Dedado3000',
+        linkedin: 'https://www.linkedin.com/in/davidmartínsaladms',
+        website: 'https://dedado.carrd.co',
+      },
+    },
+    {
+      name: 'Alejandro Matus',
+      image: 'AlejandroMatus.jpg',
+      networks: {
+        github: 'https://github.com/Vlukkee',
+      },
+    },
+    {
+      name: 'Diego Mejía',
+      image: 'DiegoMejia.jpg',
+      networks: {
+        github: 'https://github.com/diegusmejia117',
       },
     },
     {
@@ -102,27 +114,21 @@ export const team = {
       },
     },
     {
-      name: 'Marc González',
-      image: 'MarcGonzalez.jpg',
+      name: 'Miquel Prieto',
+      image: 'MiquelPrieto.jpg',
       networks: {
-        github: 'https://www.github.com/MarcGonzalezMoratona',
-        linkedin: 'https://www.linkedin.com/in/marc-gonzalez-moratona',
-        website: 'https://marc-gonzalez-moratona.vercel.app',
+        github: 'https://github.com/MacXxs',
+        linkedin:
+          'https://www.linkedin.com/in/miquel-prieto-molin%C3%A9-a57a30ab',
       },
     },
     {
-      name: 'Oriol Sors',
-      image: 'OriolSors.jpg',
+      name: 'Gerard Queralt',
+      image: 'GerardQueralt.jpg',
       networks: {
-        github: 'https://github.com/OriolSors',
-        linkedin: 'https://www.linkedin.com/in/oriol-sors-vidal-4361491b9',
-      },
-    },
-    {
-      name: 'Sandra Campaña',
-      image: 'SandraCampaña.jpg',
-      networks: {
-        github: 'https://github.com/csandra24',
+        github: 'https://github.com/gerard-queralt',
+        linkedin:
+          'https://www.linkedin.com/in/gerard-queralt-ferr%C3%A9-071283266',
       },
     },
     {
@@ -134,17 +140,11 @@ export const team = {
       },
     },
     {
-      name: 'Pablo Cebollada',
-      image: 'PabloCebollada.jpg',
+      name: 'Oriol Sors',
+      image: 'OriolSors.jpg',
       networks: {
-        github: 'https://github.com/PaablooCH',
-      },
-    },
-    {
-      name: 'Alejandro Matus',
-      image: 'AlejandroMatus.jpg',
-      networks: {
-        github: 'https://github.com/Vlukkee',
+        github: 'https://github.com/OriolSors',
+        linkedin: 'https://www.linkedin.com/in/oriol-sors-vidal-4361491b9',
       },
     },
   ],
