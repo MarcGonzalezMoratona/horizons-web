@@ -37,6 +37,9 @@ export const team = {
       image: 'PeterGonzalez.jpg',
       networks: {
         github: 'https://github.com/Piterga12',
+        linkedin: 'https://www.linkedin.com/in/pedro-gatf',
+        website:
+          'https://portfolio-pedro-gonzalez-anta-torrents-faura.vercel.app',
       },
     },
     {
@@ -52,6 +55,8 @@ export const team = {
       image: 'DavidMartin.jpg',
       networks: {
         github: 'https://github.com/Dedado3000',
+        linkedin: 'https://www.linkedin.com/in/davidmartínsaladms',
+        website: 'https://dedado.carrd.co',
       },
     },
     {
