@@ -129,7 +129,7 @@ export default async function FullPost({
                     <Link
                       href={`/documents/${paragraph.document}`}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener"
                     >
                       <Button
                         icon={

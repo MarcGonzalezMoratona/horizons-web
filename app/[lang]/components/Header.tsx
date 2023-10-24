@@ -91,7 +91,11 @@ const Header = ({ className, locale, lang }: HeaderProps) => {
                 Axolotl Engine
               </li>
             </Link>
-            <Link href="https://starfall-rebellion.vercel.app" target="_blank">
+            <Link
+              href="https://starfall-rebellion.vercel.app"
+              target="_blank"
+              rel="noopener"
+            >
               <li
                 className={`mx-4 py-0.5 ${
                   !isLanding &&

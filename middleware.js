@@ -30,9 +30,14 @@ export function middleware(request) {
   }
 
   // Avoid redirection if the URL ends with these extensions
-  const isMediaExtension = ['.png', '.svg', '.jpg', '.mp4', '.pdf'].some(
-    (extension) => pathname.endsWith(extension)
-  );
+  const isMediaExtension = [
+    '.png',
+    '.svg',
+    '.jpg',
+    '.mp4',
+    '.pdf',
+    '.ico',
+  ].some((extension) => pathname.endsWith(extension));
 
   const locale = getLocale(request);
 
@@ -51,9 +56,7 @@ export function middleware(request) {
 
   if (pathnameIsMissingLocale && !isMediaExtension) {
     // Redirect if there is no locale
-    return NextResponse.redirect(
-      new URL(`/${locale}/${pathname}`, request.url)
-    );
+    return NextResponse.redirect(new URL(`/${locale}${pathname}`, request.url));
   }
 }
 

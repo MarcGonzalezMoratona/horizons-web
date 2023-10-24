@@ -33,6 +33,7 @@ const SocialNetworks = ({ networks, className }: SocialNetworksProps) => {
           href={networks.twitter}
           target="_blank"
           aria-label="Take a look at our twitter account"
+          rel="noopener"
         >
           <FontAwesomeIcon
             icon={faTwitter}
@@ -44,6 +45,7 @@ const SocialNetworks = ({ networks, className }: SocialNetworksProps) => {
         <Link
           href={networks.instagram}
           target="_blank"
+          rel="noopener"
           aria-label="Take a look at our instagram account"
         >
           <FontAwesomeIcon
@@ -56,6 +58,7 @@ const SocialNetworks = ({ networks, className }: SocialNetworksProps) => {
         <Link
           href={networks.youtube}
           target="_blank"
+          rel="noopener"
           aria-label="Take a look at our youtube channel"
         >
           <FontAwesomeIcon
@@ -68,6 +71,7 @@ const SocialNetworks = ({ networks, className }: SocialNetworksProps) => {
         <Link
           href={networks.tiktok}
           target="_blank"
+          rel="noopener"
           aria-label="Take a look at our tiktok account"
         >
           <FontAwesomeIcon
@@ -80,6 +84,7 @@ const SocialNetworks = ({ networks, className }: SocialNetworksProps) => {
         <Link
           href={networks.linkedin}
           target="_blank"
+          rel="noopener"
           aria-label="Take a look at our linkedin account"
         >
           <FontAwesomeIcon
@@ -92,6 +97,7 @@ const SocialNetworks = ({ networks, className }: SocialNetworksProps) => {
         <Link
           href={networks.github}
           target="_blank"
+          rel="noopener"
           aria-label="Take a look at our github account"
         >
           <FontAwesomeIcon
@@ -104,6 +110,7 @@ const SocialNetworks = ({ networks, className }: SocialNetworksProps) => {
         <Link
           href={networks.website}
           target="_blank"
+          rel="noopener"
           aria-label="Take a look at our github account"
         >
           <FontAwesomeIcon

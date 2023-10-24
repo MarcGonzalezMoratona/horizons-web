@@ -63,6 +63,7 @@ const Menu = ({ isMenuOpen, isLanding, locale, lang }: MenuProps) => {
               <Link
                 href="https://starfall-rebellion.vercel.app"
                 target="_blank"
+                rel="noopener"
               >
                 <li
                   className={`my-3 w-full rounded ${
