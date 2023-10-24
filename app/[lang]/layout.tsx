@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   viewport: { width: 'device-width', initialScale: 1 },
   creator: 'Horizons Games Team',
   alternates: {
-    canonical: 'https://horizons-games.vercel.app',
+    canonical: '/',
     languages: {
       en: 'https://horizons-games.vercel.app/en',
       es: 'https://horizons-games.vercel.app/es',
