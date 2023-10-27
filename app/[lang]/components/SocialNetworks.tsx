@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faTwitter,
+  faXTwitter,
   faYoutube,
   faTiktok,
   faInstagram,
@@ -36,7 +36,7 @@ const SocialNetworks = ({ networks, className }: SocialNetworksProps) => {
           rel="noopener"
         >
           <FontAwesomeIcon
-            icon={faTwitter}
+            icon={faXTwitter}
             className="hover:text-primary-500 dark:hover:text-primary-300"
           />
         </Link>
