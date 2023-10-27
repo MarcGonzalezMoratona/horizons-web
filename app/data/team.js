@@ -102,6 +102,8 @@ export const team = {
       image: 'DiegoMejia.jpg',
       networks: {
         github: 'https://github.com/diegusmejia117',
+        linkedin: 'https://www.linkedin.com/in/diego-mejia-142727104',
+        website: 'https://diegomejia4.wixsite.com/diegomejia-section9',
       },
     },
     {
