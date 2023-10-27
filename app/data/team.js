@@ -28,6 +28,8 @@ export const team = {
       image: 'PabloCebollada.jpg',
       networks: {
         github: 'https://github.com/PaablooCH',
+        linkedin: 'https://www.linkedin.com/in/pablo-cebollada-hern%C3%A1ndez',
+        website: 'https://paablooch.github.io',
       },
     },
     {
