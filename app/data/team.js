@@ -86,6 +86,13 @@ export const team = {
       },
     },
     {
+      name: 'Andrés Machado',
+      image: 'AndresMachado.jpg',
+      networks: {
+        github: 'https://github.com/AndresM2',
+      },
+    },
+    {
       name: 'David Martín',
       image: 'DavidMartin.jpg',
       networks: {
@@ -108,6 +115,14 @@ export const team = {
         github: 'https://github.com/diegusmejia117',
         linkedin: 'https://www.linkedin.com/in/diego-mejia-142727104',
         website: 'https://diegomejia4.wixsite.com/diegomejia-section9',
+      },
+    },
+    {
+      name: 'Jesús Miguel Adrián',
+      image: 'JesusMiguelAdrian.jpg',
+      role: 'Gameplay Programmer',
+      networks: {
+        github: 'https://github.com/elbuho12Jesus',
       },
     },
     {
