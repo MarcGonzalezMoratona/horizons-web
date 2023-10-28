@@ -21,6 +21,8 @@ export const team = {
       image: 'DavidCastro.jpg',
       networks: {
         github: 'https://github.com/DADSILVER',
+        linkedin: 'https://www.linkedin.com/in/david-castro-salazar-98833b17a',
+        website: 'https://dadsilver.github.io',
       },
     },
     {
