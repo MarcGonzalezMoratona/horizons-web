@@ -81,7 +81,7 @@ export const team = {
       },
     },
     {
-      name: 'Xavier Llubés',
+      name: 'Xavier Llubes',
       image: 'XavierLlubes.jpg',
       networks: {
         github: 'https://github.com/xavi1111',
