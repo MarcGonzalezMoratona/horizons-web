@@ -1,4 +1,4 @@
-# Axolotl project: the development starts
+# Axolotl Project: the development starts
 
 ## Horizons Team begins development of Axolotl Project
 
