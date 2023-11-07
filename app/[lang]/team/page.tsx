@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { team } from '../../data/team';
+import { collaborators } from '../../data/collaborators';
 import ProfilePicture from '../components/ProfilePicture';
 import { getLocale } from '../locales';
 
@@ -33,6 +34,22 @@ export default async function Team({
               partner={partner}
               index={index}
               key={partner.name}
+              folder="team"
+            />
+          );
+        })}
+      </ul>
+      <h2 className="my-8 text-xl font-semibold tracking-wide sm:text-4xl">
+        {locale.SOUND_TEAM.toUpperCase()}
+      </h2>
+      <ul className="mx-2 my-8 grid grid-cols-2 gap-4 sm:mx-8 sm:grid-cols-3 sm:gap-8 md:gap-12 xl:grid-cols-4">
+        {collaborators.partners.map((partner, index) => {
+          return (
+            <ProfilePicture
+              partner={partner}
+              index={index}
+              key={partner.name}
+              folder="collaborators"
             />
           );
         })}

@@ -11,14 +11,15 @@ type ProfilePictureProps = {
     };
   };
   index: number;
+  folder: string;
 };
 
-const ProfilePicture = ({ partner, index }: ProfilePictureProps) => {
+const ProfilePicture = ({ partner, index, folder }: ProfilePictureProps) => {
   return (
     <li className="flex flex-col items-center">
       <div className="relative h-36 w-36 rounded-full sm:h-48 sm:w-48 md:h-60 md:w-60">
         <Image
-          src={`/team/${partner.image}`}
+          src={`/${folder}/${partner.image}`}
           alt={partner.name}
           fill
           className={
