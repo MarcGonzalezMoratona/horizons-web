@@ -24,9 +24,12 @@ export default async function Team({
 
   return (
     <main className="flex flex-col items-center justify-center bg-neutral-100 font-montserrat text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100">
-      <h1 className="my-8 text-xl font-semibold tracking-wide sm:text-4xl">
+      <h1 className="my-8 text-2xl font-semibold tracking-wide sm:text-4xl">
         {locale.THE_TEAM.toUpperCase()}
       </h1>
+      <h2 className="my-8 text-lg font-semibold tracking-wide sm:text-2xl">
+        {locale.DEVELOPMENT_TEAM.toUpperCase()}
+      </h2>
       <ul className="mx-2 my-8 grid grid-cols-2 gap-4 sm:mx-8 sm:grid-cols-3 sm:gap-8 md:gap-12 xl:grid-cols-4">
         {team.partners.map((partner, index) => {
           return (
@@ -39,7 +42,7 @@ export default async function Team({
           );
         })}
       </ul>
-      <h2 className="my-8 text-xl font-semibold tracking-wide sm:text-4xl">
+      <h2 className="my-8 text-lg font-semibold tracking-wide sm:text-2xl">
         {locale.SOUND_TEAM.toUpperCase()}
       </h2>
       <ul className="mx-2 my-8 grid grid-cols-2 gap-4 sm:mx-8 sm:grid-cols-3 sm:gap-8 md:gap-12 xl:grid-cols-4">
