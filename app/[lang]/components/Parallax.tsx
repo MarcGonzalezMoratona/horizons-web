@@ -22,6 +22,7 @@ const video: BannerLayer = {
       autoPlay
       muted
       loop
+      poster="/cosmosThumbnail.png"
     >
       <source src="/cosmos.mp4" type="video/mp4" />
     </video>
