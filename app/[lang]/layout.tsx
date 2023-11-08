@@ -45,15 +45,6 @@ export const metadata: Metadata = {
   ],
   viewport: { width: 'device-width', initialScale: 1 },
   creator: 'Horizons Games Team',
-  alternates: {
-    canonical: '/',
-    languages: {
-      en: 'https://horizons-games.vercel.app/en',
-      es: 'https://horizons-games.vercel.app/es',
-      ca: 'https://horizons-games.vercel.app/ca',
-      fr: 'https://horizons-games.vercel.app/fr',
-    },
-  },
   icons: 'https://horizons-games.vercel.app/favicon.ico',
   verification: { google: 'rXKwXvp4XkJ34NRVZ0HkNfRoylLC7zR_IyROC-FhIPg' },
 };
