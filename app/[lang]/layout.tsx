@@ -96,7 +96,7 @@ export default async function RootLayout({
               dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             <>{children}</>
-            <Footer />
+            <Footer locale={locale} />
             <Analytics />
           </ThemeContextProvider>
         </DeviceContextProvider>

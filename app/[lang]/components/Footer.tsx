@@ -3,8 +3,9 @@ import SocialNetworks from './SocialNetworks';
 import { Horizons, HorizonsWhite } from './Horizons';
 import { socialNetworks } from '../../data/socialNetworks';
 import { useIsDarkMode } from '../hooks/useTheme';
+import { Locale } from '../locales/types/locales';
 
-const Footer = () => {
+const Footer = ({ locale }: { locale: Locale }) => {
   const currentYear = new Date().getFullYear();
   const isDarkMode = useIsDarkMode();
 
@@ -21,8 +22,8 @@ const Footer = () => {
         </div>
         <SocialNetworks networks={socialNetworks} className="text-3xl" />
       </div>
-      <p className="text-sm text-white">
-        Designed and developed by Marc González Moratona
+      <p className="font-montserrat text-sm text-white">
+        {locale.WEB_DEVELOPER}
       </p>
     </footer>
   );

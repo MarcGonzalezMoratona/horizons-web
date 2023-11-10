@@ -51,4 +51,5 @@ export type Locale = {
   CONTENT_BETA: string;
   CONTENT_GM: string;
   CONTENT_RELEASE: string;
+  WEB_DEVELOPER: string;
 };
