@@ -6,8 +6,8 @@ export const modelImportingImages = [
   },
   {
     src: 'import-fbx-bones.png',
-    name: 'Model importing',
-    alt: 'Model importing',
+    name: 'Model importing bones',
+    alt: 'Model importing bones',
   },
 ];
 
