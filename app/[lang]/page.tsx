@@ -46,11 +46,16 @@ export default async function Home({
       link: ' GitHub.',
       url: 'https://github.com/Horizons-Games/Axolotl-Engine/releases',
     },
-    // { title: locale.FAQ_3, description: locale.FAQ_3_ANSWER },
-    // { title: locale.FAQ_4, description: locale.FAQ_4_ANSWER },
-    // { title: locale.FAQ_5, description: locale.FAQ_5_ANSWER },
-    // { title: locale.FAQ_6, description: locale.FAQ_6_ANSWER },
-    // { title: locale.FAQ_7, description: locale.FAQ_7_ANSWER },
+    {
+      title: locale.FAQ_3,
+      description: locale.FAQ_3_ANSWER,
+      link: ' GitHub.',
+      url: 'https://github.com/Horizons-Games/Axolotl-Engine/releases',
+    },
+    { title: locale.FAQ_4, description: locale.FAQ_4_ANSWER },
+    { title: locale.FAQ_5, description: locale.FAQ_5_ANSWER },
+    { title: locale.FAQ_6, description: locale.FAQ_6_ANSWER },
+    { title: locale.FAQ_7, description: locale.FAQ_7_ANSWER },
   ];
 
   return (
