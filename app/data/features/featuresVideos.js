@@ -1,12 +1,12 @@
-export const modelImportingVideos = [
+export const modelImportingVideos = [];
+
+export const animationVideos = [
   {
     src: 'state-machines',
     name: 'State Machines',
     thumbnail: 'state-machines-thumbnail',
   },
 ];
-
-export const animationVideos = [];
 
 export const scriptingVideos = [];
 
