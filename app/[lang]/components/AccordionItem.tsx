@@ -2,6 +2,8 @@ import * as Accordion from '@radix-ui/react-accordion';
 import { MinusIcon, PlusIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
 import Link from 'next/link';
+import FullScreenSlider from './FullScreenSlider';
+import { useState } from 'react';
 
 export type featureImage = {
   name: string;
@@ -32,6 +34,18 @@ export default function AccordionItem({
   featureImages,
   featureVideos,
 }: AccordionContent) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentSlider, setCurrentSlider] = useState(-1);
+
+  const openSlider = (index: any, slider: number) => {
+    setCurrentImageIndex(index);
+    setCurrentSlider(slider);
+  };
+
+  const closeSlider = () => {
+    setCurrentSlider(-1);
+  };
+
   return (
     <Accordion.Item
       value={title}
@@ -57,18 +71,29 @@ export default function AccordionItem({
           </Link>
         )}
         <div className="flex flex-col items-center">
-          {featureImages?.map((image) => {
+          {featureImages?.map((image, index) => {
             return (
               <Image
+                onClick={() => openSlider(index, 0)}
                 key={`${title} ${image.name}`}
                 src={`/features/${image.src}`}
-                className="my-8 w-3/4"
+                className="my-8 w-3/4 cursor-pointer select-none"
                 alt={`${image.alt}`}
                 height={1080}
                 width={1920}
               />
             );
           })}
+          {featureImages && (
+            <FullScreenSlider
+              sizes="h-[180px] w-[320px] sm:h-[270px] sm:w-[480px] md:h-[360px] md:w-[640px] lg:h-[540px] lg:w-[960px] xl:h-[720px] xl:w-[1280px]"
+              images={featureImages}
+              isSliderOpen={currentSlider === 0}
+              closeSlider={closeSlider}
+              currentImageIndex={currentImageIndex}
+              setCurrentImageIndex={setCurrentImageIndex}
+            />
+          )}
           {featureVideos?.map((video) => {
             return (
               <video

@@ -5,16 +5,15 @@ import {
   ChevronRightIcon,
   Cross1Icon,
 } from '@radix-ui/react-icons';
+import { featureImage } from './AccordionItem';
 
 type SliderProps = {
-  images: {
-    url: string;
-    description: string;
-  }[];
+  images: featureImage[];
   isSliderOpen: boolean;
   closeSlider: () => void;
   currentImageIndex: number;
   setCurrentImageIndex: Dispatch<SetStateAction<number>>;
+  sizes: string;
 };
 
 const FullScreenSlider = ({
@@ -23,6 +22,7 @@ const FullScreenSlider = ({
   isSliderOpen,
   closeSlider,
   currentImageIndex,
+  sizes,
 }: SliderProps) => {
   useEffect(() => {
     if (isSliderOpen) document.body.style.overflow = 'hidden';
@@ -51,11 +51,11 @@ const FullScreenSlider = ({
             dark:border-b-neutral-700 dark:bg-neutral-600 sm:right-8 sm:transition-transform sm:duration-300 sm:hover:translate-y-1"
             onClick={closeSlider}
           />
-          <div className="relative h-[180px] w-[320px] sm:h-[270px] sm:w-[480px] md:h-[360px] md:w-[640px] lg:h-[540px] lg:w-[960px] xl:h-[720px] xl:w-[1280px]">
+          <div className={`relative ${sizes}`}>
             <Image
               className="select-none"
-              src={images[currentImageIndex].url}
-              alt={images[currentImageIndex].description}
+              src={`/features/${images[currentImageIndex].src}`}
+              alt={images[currentImageIndex].alt}
               sizes="(min-width: 320px) 640px, (min-width: 640px) 720px (min-width: 768px) 1080px"
               fill
             />
