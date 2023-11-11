@@ -77,7 +77,7 @@ export default function AccordionItem({
                 onClick={() => openSlider(index, 0)}
                 key={`${title} ${image.name}`}
                 src={`/features/${image.src}`}
-                className="my-8 w-3/4 cursor-pointer select-none"
+                className="my-4 cursor-pointer select-none sm:my-8 sm:w-3/4"
                 alt={`${image.alt}`}
                 height={1080}
                 width={1920}
