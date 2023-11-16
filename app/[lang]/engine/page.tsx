@@ -2,7 +2,7 @@ import Feature from '../components/Feature';
 import { getLocale } from '../locales';
 import {
   animationImages,
-  lightningImages,
+  lightingImages,
   materialsImages,
   modelImportingImages,
   particleSystemsImages,
@@ -14,7 +14,7 @@ import {
 
 import {
   animationVideos,
-  lightningVideos,
+  lightingVideos,
   materialsVideos,
   modelImportingVideos,
   particleSystemsVideos,
@@ -67,10 +67,10 @@ export default async function Engine({
         featureVideos={scriptingVideos}
       />
       <Feature
-        title={locale.LIGHTNING}
-        description={locale.LIGHTNING_DESCRIPTION}
-        featureImages={lightningImages}
-        featureVideos={lightningVideos}
+        title={locale.LIGHTING}
+        description={locale.LIGHTING_DESCRIPTION}
+        featureImages={lightingImages}
+        featureVideos={lightingVideos}
       />
       <Feature
         title={locale.MATERIALS}

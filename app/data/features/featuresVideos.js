@@ -10,7 +10,7 @@ export const animationVideos = [
 
 export const scriptingVideos = [];
 
-export const lightningVideos = [];
+export const lightingVideos = [];
 
 export const materialsVideos = [];
 

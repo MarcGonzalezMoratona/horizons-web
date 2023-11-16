@@ -21,7 +21,7 @@ export type Locale = {
   MODEL_IMPORTING: string;
   MODEL_IMPORTING_DESCRIPTION: string;
   SCRIPTING_DESCRIPTION: string;
-  LIGHTNING_DESCRIPTION: string;
+  LIGHTING_DESCRIPTION: string;
   MATERIALS: string;
   MATERIALS_DESCRIPTION: string;
   RAYCASTING: string;

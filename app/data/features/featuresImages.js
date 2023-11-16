@@ -27,11 +27,11 @@ export const scriptingImages = [
   },
 ];
 
-export const lightningImages = [
+export const lightingImages = [
   {
-    src: 'lightning.png',
-    name: 'Lightning',
-    alt: 'Lightning',
+    src: 'lighting.png',
+    name: 'Lighting',
+    alt: 'Lighting',
   },
 ];
 
