@@ -67,7 +67,7 @@ export default async function Home({
           description={locale.ENGINE_DESCRIPTION}
         />
         <GlowingButton
-          mainText="Axolotl Engine 0.7.0"
+          mainText="Axolotl Engine 0.8.0"
           CTAText={locale.SEE_NEWS}
           icon={
             <GearIcon className="h-5 w-5 animate-spin text-secondary-600 transition duration-200 sm:animate-none sm:group-hover:animate-spin" />
