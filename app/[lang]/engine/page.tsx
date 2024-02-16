@@ -23,6 +23,8 @@ import {
   scriptingVideos,
   soundVideos,
 } from '../../data/features/featuresVideos';
+import { GlowingButton } from '../components/GlowingButton';
+import { GearIcon } from '@radix-ui/react-icons';
 
 export async function generateMetadata() {
   return {
@@ -42,6 +44,14 @@ export default async function Engine({
       <h1 className="mt-8 mb-4 text-2xl font-semibold tracking-wide sm:text-4xl">
         AXOLOTL ENGINE
       </h1>
+      <GlowingButton
+        mainText="Axolotl Engine 1.0.0"
+        CTAText={locale.DOWNLOAD}
+        url="https://github.com/Horizons-Games/Axolotl-Engine/releases/download/v1.0/AxolotlEngine.1.0.zip"
+        icon={
+          <GearIcon className="h-5 w-5 animate-spin text-secondary-600 transition duration-200 sm:animate-none sm:group-hover:animate-spin" />
+        }
+      />
       <h2 className="my-4 text-xl tracking-wide sm:text-3xl">
         {locale.FEATURES}
       </h2>

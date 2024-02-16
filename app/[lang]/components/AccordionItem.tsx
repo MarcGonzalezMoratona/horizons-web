@@ -64,6 +64,8 @@ export default function AccordionItem({
         <p className="inline">{description}</p>
         {link && url && (
           <Link
+            target="_blank"
+            rel="noopener"
             className="font-medium text-primary-500 dark:text-secondary-300"
             href={url}
           >

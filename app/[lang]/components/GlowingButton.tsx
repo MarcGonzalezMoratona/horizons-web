@@ -5,9 +5,15 @@ type ButtonProps = {
   mainText: string;
   CTAText: string;
   icon: JSX.Element;
+  url: string;
 };
 
-export const GlowingButton = ({ mainText, CTAText, icon }: ButtonProps) => {
+export const GlowingButton = ({
+  mainText,
+  CTAText,
+  icon,
+  url,
+}: ButtonProps) => {
   return (
     <div className="m-6 flex flex-col items-start justify-center gap-8">
       <div className="group relative">
@@ -16,7 +22,9 @@ export const GlowingButton = ({ mainText, CTAText, icon }: ButtonProps) => {
         transition duration-1000 group-hover:opacity-100 group-hover:duration-200"
         />
         <Link
-          href="https://github.com/Horizons-Games/Axolotl-Engine/releases"
+          target="_blank"
+          rel="noopener"
+          href={url}
           className="relative flex items-center gap-4 rounded-lg bg-neutral-900 px-4 py-4 sm:gap-8"
         >
           <span className="flex items-center gap-2 text-neutral-100 sm:gap-4">

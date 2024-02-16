@@ -9,6 +9,7 @@ export type Locale = {
   READ_MORE: string;
   MORE_POSTS: string;
   SEE_NEWS: string;
+  DOWNLOAD: string;
   NOT_FOUND: string;
   NOT_FOUND_MESSAGE: string;
   GO_HOME: string;

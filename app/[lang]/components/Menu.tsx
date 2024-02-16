@@ -75,6 +75,21 @@ const Menu = ({ isMenuOpen, isLanding, locale, lang }: MenuProps) => {
                   Starfall Rebellion
                 </li>
               </Link>
+              <Link
+                href="https://github.com/Horizons-Games/Axolotl-Engine/releases/download/v1.0/AxolotlEngine.1.0.zip"
+                target="_blank"
+                rel="noopener"
+              >
+                <li
+                  className={`my-3 w-full rounded ${
+                    isLanding
+                      ? 'bg-transparent'
+                      : 'bg-primary-500 dark:bg-primary-400'
+                  } p-3 text-neutral-100  dark:text-neutral-100`}
+                >
+                  {locale.DOWNLOAD}
+                </li>
+              </Link>
             </ul>
           </nav>
           <LanguageSelector isLanding={isLanding} locale={locale} />

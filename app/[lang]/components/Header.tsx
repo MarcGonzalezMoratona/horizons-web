@@ -105,6 +105,20 @@ const Header = ({ className, locale, lang }: HeaderProps) => {
                 Starfall Rebellion
               </li>
             </Link>
+            <Link
+              href="https://github.com/Horizons-Games/Axolotl-Engine/releases/download/v1.0/AxolotlEngine.1.0.zip"
+              target="_blank"
+              rel="noopener"
+            >
+              <li
+                className={`mx-4 py-0.5 ${
+                  !isLanding &&
+                  'hover:text-primary-500 dark:hover:text-primary-300'
+                } `}
+              >
+                {locale.DOWNLOAD}
+              </li>
+            </Link>
           </ul>
         </nav>
         {!isLanding && (

@@ -44,7 +44,7 @@ export default async function Home({
       title: locale.FAQ_2,
       description: locale.FAQ_2_ANSWER,
       link: ' GitHub.',
-      url: 'https://github.com/Horizons-Games/Axolotl-Engine/releases',
+      url: 'https://github.com/Horizons-Games/Axolotl-Engine/releases/download/v1.0/AxolotlEngine.1.0.zip',
     },
     {
       title: locale.FAQ_3,
@@ -67,8 +67,9 @@ export default async function Home({
           description={locale.ENGINE_DESCRIPTION}
         />
         <GlowingButton
-          mainText="Axolotl Engine 0.8.0"
+          mainText="Axolotl Engine 1.0.0"
           CTAText={locale.SEE_NEWS}
+          url="https://github.com/Horizons-Games/Axolotl-Engine/releases"
           icon={
             <GearIcon className="h-5 w-5 animate-spin text-secondary-600 transition duration-200 sm:animate-none sm:group-hover:animate-spin" />
           }
